@@ -1,3 +1,6 @@
+#' ServiceFactory
+#'
+#' @export
 ServiceFactory <- R6::R6Class("ServiceFactory", public = list(issueMessageService = NULL, 
     workerService = NULL, fileService = NULL, garbageCollectorService = NULL, lockService = NULL, 
     issueService = NULL, subscriptionPlanService = NULL, workerEndpointService = NULL, 
