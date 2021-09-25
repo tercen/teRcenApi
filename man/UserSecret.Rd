@@ -12,7 +12,7 @@ UserSecret
 UserSecret
 }
 \section{Super classes}{
-\code{\link[tercen:Base]{tercen::Base}} -> \code{\link[tercen:IdObject]{tercen::IdObject}} -> \code{\link[tercen:PersistentObject]{tercen::PersistentObject}} -> \code{UserSecret}
+\code{\link[tercenApi:Base]{tercenApi::Base}} -> \code{\link[tercenApi:IdObject]{tercenApi::IdObject}} -> \code{\link[tercenApi:PersistentObject]{tercenApi::PersistentObject}} -> \code{UserSecret}
 }
 \section{Public fields}{
 \if{html}{\out{<div class="r6-fields">}}

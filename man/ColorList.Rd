@@ -12,7 +12,7 @@ ColorList
 ColorList
 }
 \section{Super class}{
-\code{\link[tercen:Base]{tercen::Base}} -> \code{ColorList}
+\code{\link[tercenApi:Base]{tercenApi::Base}} -> \code{ColorList}
 }
 \section{Public fields}{
 \if{html}{\out{<div class="r6-fields">}}

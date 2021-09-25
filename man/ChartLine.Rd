@@ -12,7 +12,7 @@ ChartLine
 ChartLine
 }
 \section{Super classes}{
-\code{\link[tercen:Base]{tercen::Base}} -> \code{\link[tercen:Chart]{tercen::Chart}} -> \code{\link[tercen:ChartSize]{tercen::ChartSize}} -> \code{ChartLine}
+\code{\link[tercenApi:Base]{tercenApi::Base}} -> \code{\link[tercenApi:Chart]{tercenApi::Chart}} -> \code{\link[tercenApi:ChartSize]{tercenApi::ChartSize}} -> \code{ChartLine}
 }
 \section{Public fields}{
 \if{html}{\out{<div class="r6-fields">}}

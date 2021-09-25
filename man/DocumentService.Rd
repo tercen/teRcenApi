@@ -22,7 +22,7 @@ DocumentService
 }
 
 \section{Super class}{
-\code{\link[tercen:HttpClientService]{tercen::HttpClientService}} -> \code{DocumentService}
+\code{\link[tercenApi:HttpClientService]{tercenApi::HttpClientService}} -> \code{DocumentService}
 }
 \section{Methods}{
 \subsection{Public methods}{
@@ -43,17 +43,17 @@ DocumentService
 \if{html}{
 \out{<details ><summary>Inherited methods</summary>}
 \itemize{
-\item \out{<span class="pkg-link" data-pkg="tercen" data-topic="HttpClientService" data-id="create">}\href{../../tercen/html/HttpClientService.html#method-create}{\code{tercen::HttpClientService$create()}}\out{</span>}
-\item \out{<span class="pkg-link" data-pkg="tercen" data-topic="HttpClientService" data-id="delete">}\href{../../tercen/html/HttpClientService.html#method-delete}{\code{tercen::HttpClientService$delete()}}\out{</span>}
-\item \out{<span class="pkg-link" data-pkg="tercen" data-topic="HttpClientService" data-id="findKeys">}\href{../../tercen/html/HttpClientService.html#method-findKeys}{\code{tercen::HttpClientService$findKeys()}}\out{</span>}
-\item \out{<span class="pkg-link" data-pkg="tercen" data-topic="HttpClientService" data-id="findStartKeys">}\href{../../tercen/html/HttpClientService.html#method-findStartKeys}{\code{tercen::HttpClientService$findStartKeys()}}\out{</span>}
-\item \out{<span class="pkg-link" data-pkg="tercen" data-topic="HttpClientService" data-id="fromTson">}\href{../../tercen/html/HttpClientService.html#method-fromTson}{\code{tercen::HttpClientService$fromTson()}}\out{</span>}
-\item \out{<span class="pkg-link" data-pkg="tercen" data-topic="HttpClientService" data-id="get">}\href{../../tercen/html/HttpClientService.html#method-get}{\code{tercen::HttpClientService$get()}}\out{</span>}
-\item \out{<span class="pkg-link" data-pkg="tercen" data-topic="HttpClientService" data-id="getServiceUri">}\href{../../tercen/html/HttpClientService.html#method-getServiceUri}{\code{tercen::HttpClientService$getServiceUri()}}\out{</span>}
-\item \out{<span class="pkg-link" data-pkg="tercen" data-topic="HttpClientService" data-id="list">}\href{../../tercen/html/HttpClientService.html#method-list}{\code{tercen::HttpClientService$list()}}\out{</span>}
-\item \out{<span class="pkg-link" data-pkg="tercen" data-topic="HttpClientService" data-id="onResponseError">}\href{../../tercen/html/HttpClientService.html#method-onResponseError}{\code{tercen::HttpClientService$onResponseError()}}\out{</span>}
-\item \out{<span class="pkg-link" data-pkg="tercen" data-topic="HttpClientService" data-id="toTson">}\href{../../tercen/html/HttpClientService.html#method-toTson}{\code{tercen::HttpClientService$toTson()}}\out{</span>}
-\item \out{<span class="pkg-link" data-pkg="tercen" data-topic="HttpClientService" data-id="update">}\href{../../tercen/html/HttpClientService.html#method-update}{\code{tercen::HttpClientService$update()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="tercenApi" data-topic="HttpClientService" data-id="create">}\href{../../tercenApi/html/HttpClientService.html#method-create}{\code{tercenApi::HttpClientService$create()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="tercenApi" data-topic="HttpClientService" data-id="delete">}\href{../../tercenApi/html/HttpClientService.html#method-delete}{\code{tercenApi::HttpClientService$delete()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="tercenApi" data-topic="HttpClientService" data-id="findKeys">}\href{../../tercenApi/html/HttpClientService.html#method-findKeys}{\code{tercenApi::HttpClientService$findKeys()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="tercenApi" data-topic="HttpClientService" data-id="findStartKeys">}\href{../../tercenApi/html/HttpClientService.html#method-findStartKeys}{\code{tercenApi::HttpClientService$findStartKeys()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="tercenApi" data-topic="HttpClientService" data-id="fromTson">}\href{../../tercenApi/html/HttpClientService.html#method-fromTson}{\code{tercenApi::HttpClientService$fromTson()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="tercenApi" data-topic="HttpClientService" data-id="get">}\href{../../tercenApi/html/HttpClientService.html#method-get}{\code{tercenApi::HttpClientService$get()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="tercenApi" data-topic="HttpClientService" data-id="getServiceUri">}\href{../../tercenApi/html/HttpClientService.html#method-getServiceUri}{\code{tercenApi::HttpClientService$getServiceUri()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="tercenApi" data-topic="HttpClientService" data-id="list">}\href{../../tercenApi/html/HttpClientService.html#method-list}{\code{tercenApi::HttpClientService$list()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="tercenApi" data-topic="HttpClientService" data-id="onResponseError">}\href{../../tercenApi/html/HttpClientService.html#method-onResponseError}{\code{tercenApi::HttpClientService$onResponseError()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="tercenApi" data-topic="HttpClientService" data-id="toTson">}\href{../../tercenApi/html/HttpClientService.html#method-toTson}{\code{tercenApi::HttpClientService$toTson()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="tercenApi" data-topic="HttpClientService" data-id="update">}\href{../../tercenApi/html/HttpClientService.html#method-update}{\code{tercenApi::HttpClientService$update()}}\out{</span>}
 }
 \out{</details>}
 }

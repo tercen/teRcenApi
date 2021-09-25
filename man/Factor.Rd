@@ -12,7 +12,7 @@ Factor
 Factor
 }
 \section{Super class}{
-\code{\link[tercen:Base]{tercen::Base}} -> \code{Factor}
+\code{\link[tercenApi:Base]{tercenApi::Base}} -> \code{Factor}
 }
 \section{Public fields}{
 \if{html}{\out{<div class="r6-fields">}}

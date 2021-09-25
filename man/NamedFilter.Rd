@@ -12,7 +12,7 @@ NamedFilter
 NamedFilter
 }
 \section{Super classes}{
-\code{\link[tercen:Base]{tercen::Base}} -> \code{\link[tercen:FilterTopExpr]{tercen::FilterTopExpr}} -> \code{\link[tercen:Filter]{tercen::Filter}} -> \code{NamedFilter}
+\code{\link[tercenApi:Base]{tercenApi::Base}} -> \code{\link[tercenApi:FilterTopExpr]{tercenApi::FilterTopExpr}} -> \code{\link[tercenApi:Filter]{tercenApi::Filter}} -> \code{NamedFilter}
 }
 \section{Public fields}{
 \if{html}{\out{<div class="r6-fields">}}

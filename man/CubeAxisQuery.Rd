@@ -12,7 +12,7 @@ CubeAxisQuery
 CubeAxisQuery
 }
 \section{Super class}{
-\code{\link[tercen:Base]{tercen::Base}} -> \code{CubeAxisQuery}
+\code{\link[tercenApi:Base]{tercenApi::Base}} -> \code{CubeAxisQuery}
 }
 \section{Public fields}{
 \if{html}{\out{<div class="r6-fields">}}

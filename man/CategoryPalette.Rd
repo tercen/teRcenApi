@@ -12,7 +12,7 @@ CategoryPalette
 CategoryPalette
 }
 \section{Super classes}{
-\code{\link[tercen:Base]{tercen::Base}} -> \code{\link[tercen:Palette]{tercen::Palette}} -> \code{CategoryPalette}
+\code{\link[tercenApi:Base]{tercenApi::Base}} -> \code{\link[tercenApi:Palette]{tercenApi::Palette}} -> \code{CategoryPalette}
 }
 \section{Public fields}{
 \if{html}{\out{<div class="r6-fields">}}

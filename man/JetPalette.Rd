@@ -12,7 +12,7 @@ JetPalette
 JetPalette
 }
 \section{Super classes}{
-\code{\link[tercen:Base]{tercen::Base}} -> \code{\link[tercen:Palette]{tercen::Palette}} -> \code{\link[tercen:RampPalette]{tercen::RampPalette}} -> \code{JetPalette}
+\code{\link[tercenApi:Base]{tercenApi::Base}} -> \code{\link[tercenApi:Palette]{tercenApi::Palette}} -> \code{\link[tercenApi:RampPalette]{tercenApi::RampPalette}} -> \code{JetPalette}
 }
 \section{Public fields}{
 \if{html}{\out{<div class="r6-fields">}}

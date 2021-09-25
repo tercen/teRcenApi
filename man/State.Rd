@@ -12,7 +12,7 @@ State
 State
 }
 \section{Super class}{
-\code{\link[tercen:Base]{tercen::Base}} -> \code{State}
+\code{\link[tercenApi:Base]{tercenApi::Base}} -> \code{State}
 }
 \section{Methods}{
 \subsection{Public methods}{

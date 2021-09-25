@@ -12,7 +12,7 @@ MappingFilter
 MappingFilter
 }
 \section{Super class}{
-\code{\link[tercen:Base]{tercen::Base}} -> \code{MappingFilter}
+\code{\link[tercenApi:Base]{tercenApi::Base}} -> \code{MappingFilter}
 }
 \section{Public fields}{
 \if{html}{\out{<div class="r6-fields">}}

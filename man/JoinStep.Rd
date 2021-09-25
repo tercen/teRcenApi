@@ -12,7 +12,7 @@ JoinStep
 JoinStep
 }
 \section{Super classes}{
-\code{\link[tercen:Base]{tercen::Base}} -> \code{\link[tercen:IdObject]{tercen::IdObject}} -> \code{\link[tercen:Step]{tercen::Step}} -> \code{\link[tercen:ModelStep]{tercen::ModelStep}} -> \code{\link[tercen:RelationStep]{tercen::RelationStep}} -> \code{\link[tercen:NamespaceStep]{tercen::NamespaceStep}} -> \code{JoinStep}
+\code{\link[tercenApi:Base]{tercenApi::Base}} -> \code{\link[tercenApi:IdObject]{tercenApi::IdObject}} -> \code{\link[tercenApi:Step]{tercenApi::Step}} -> \code{\link[tercenApi:ModelStep]{tercenApi::ModelStep}} -> \code{\link[tercenApi:RelationStep]{tercenApi::RelationStep}} -> \code{\link[tercenApi:NamespaceStep]{tercenApi::NamespaceStep}} -> \code{JoinStep}
 }
 \section{Public fields}{
 \if{html}{\out{<div class="r6-fields">}}

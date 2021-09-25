@@ -12,7 +12,7 @@ BillingInfo
 BillingInfo
 }
 \section{Super class}{
-\code{\link[tercen:Base]{tercen::Base}} -> \code{BillingInfo}
+\code{\link[tercenApi:Base]{tercenApi::Base}} -> \code{BillingInfo}
 }
 \section{Public fields}{
 \if{html}{\out{<div class="r6-fields">}}

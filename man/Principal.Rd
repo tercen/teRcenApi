@@ -12,7 +12,7 @@ Principal
 Principal
 }
 \section{Super class}{
-\code{\link[tercen:Base]{tercen::Base}} -> \code{Principal}
+\code{\link[tercenApi:Base]{tercenApi::Base}} -> \code{Principal}
 }
 \section{Public fields}{
 \if{html}{\out{<div class="r6-fields">}}

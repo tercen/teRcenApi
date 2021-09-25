@@ -1,4 +1,4 @@
-Package: tercen
+Package: tercenApi
 Type: Package
 Title: Tercen R api
 Version: 0.11.0
@@ -13,11 +13,8 @@ Suggests:
 Imports:
     R6,
     teRcenHttp (>= 1.0.21),
-    mtercen (>= 1.0.7),
-    dplyr,
-    tibble,
-    yaml,
-    openssl
+    yaml
 URL: https://github.com/tercen/teRcenApi
 BugReports: https://github.com/tercen/teRcenApi/issues
 RoxygenNote: 7.1.1
+Encoding: UTF-8

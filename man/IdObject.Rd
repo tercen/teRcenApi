@@ -12,7 +12,7 @@ IdObject
 IdObject
 }
 \section{Super class}{
-\code{\link[tercen:Base]{tercen::Base}} -> \code{IdObject}
+\code{\link[tercenApi:Base]{tercenApi::Base}} -> \code{IdObject}
 }
 \section{Public fields}{
 \if{html}{\out{<div class="r6-fields">}}

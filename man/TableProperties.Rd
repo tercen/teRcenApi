@@ -12,7 +12,7 @@ TableProperties
 TableProperties
 }
 \section{Super class}{
-\code{\link[tercen:Base]{tercen::Base}} -> \code{TableProperties}
+\code{\link[tercenApi:Base]{tercenApi::Base}} -> \code{TableProperties}
 }
 \section{Public fields}{
 \if{html}{\out{<div class="r6-fields">}}

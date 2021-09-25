@@ -12,7 +12,7 @@ OperatorRef
 OperatorRef
 }
 \section{Super class}{
-\code{\link[tercen:Base]{tercen::Base}} -> \code{OperatorRef}
+\code{\link[tercenApi:Base]{tercenApi::Base}} -> \code{OperatorRef}
 }
 \section{Public fields}{
 \if{html}{\out{<div class="r6-fields">}}

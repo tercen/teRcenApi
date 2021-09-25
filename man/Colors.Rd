@@ -12,7 +12,7 @@ Colors
 Colors
 }
 \section{Super class}{
-\code{\link[tercen:Base]{tercen::Base}} -> \code{Colors}
+\code{\link[tercenApi:Base]{tercenApi::Base}} -> \code{Colors}
 }
 \section{Public fields}{
 \if{html}{\out{<div class="r6-fields">}}

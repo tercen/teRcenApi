@@ -12,7 +12,7 @@ Table
 Table
 }
 \section{Super class}{
-\code{\link[tercen:Base]{tercen::Base}} -> \code{Table}
+\code{\link[tercenApi:Base]{tercenApi::Base}} -> \code{Table}
 }
 \section{Public fields}{
 \if{html}{\out{<div class="r6-fields">}}

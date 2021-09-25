@@ -12,7 +12,7 @@ EnumeratedProperty
 EnumeratedProperty
 }
 \section{Super classes}{
-\code{\link[tercen:Base]{tercen::Base}} -> \code{\link[tercen:Property]{tercen::Property}} -> \code{\link[tercen:StringProperty]{tercen::StringProperty}} -> \code{EnumeratedProperty}
+\code{\link[tercenApi:Base]{tercenApi::Base}} -> \code{\link[tercenApi:Property]{tercenApi::Property}} -> \code{\link[tercenApi:StringProperty]{tercenApi::StringProperty}} -> \code{EnumeratedProperty}
 }
 \section{Public fields}{
 \if{html}{\out{<div class="r6-fields">}}

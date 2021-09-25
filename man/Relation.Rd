@@ -12,7 +12,7 @@ Relation
 Relation
 }
 \section{Super classes}{
-\code{\link[tercen:Base]{tercen::Base}} -> \code{\link[tercen:IdObject]{tercen::IdObject}} -> \code{Relation}
+\code{\link[tercenApi:Base]{tercenApi::Base}} -> \code{\link[tercenApi:IdObject]{tercenApi::IdObject}} -> \code{Relation}
 }
 \section{Public fields}{
 \if{html}{\out{<div class="r6-fields">}}

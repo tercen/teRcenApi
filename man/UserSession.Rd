@@ -12,7 +12,7 @@ UserSession
 UserSession
 }
 \section{Super class}{
-\code{\link[tercen:Base]{tercen::Base}} -> \code{UserSession}
+\code{\link[tercenApi:Base]{tercenApi::Base}} -> \code{UserSession}
 }
 \section{Public fields}{
 \if{html}{\out{<div class="r6-fields">}}

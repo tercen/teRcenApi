@@ -12,7 +12,7 @@ GarbageTasks
 GarbageTasks
 }
 \section{Super classes}{
-\code{\link[tercen:Base]{tercen::Base}} -> \code{\link[tercen:IdObject]{tercen::IdObject}} -> \code{\link[tercen:PersistentObject]{tercen::PersistentObject}} -> \code{\link[tercen:GarbageObject]{tercen::GarbageObject}} -> \code{GarbageTasks}
+\code{\link[tercenApi:Base]{tercenApi::Base}} -> \code{\link[tercenApi:IdObject]{tercenApi::IdObject}} -> \code{\link[tercenApi:PersistentObject]{tercenApi::PersistentObject}} -> \code{\link[tercenApi:GarbageObject]{tercenApi::GarbageObject}} -> \code{GarbageTasks}
 }
 \section{Public fields}{
 \if{html}{\out{<div class="r6-fields">}}

@@ -12,7 +12,7 @@ Profiles
 Profiles
 }
 \section{Super class}{
-\code{\link[tercen:Base]{tercen::Base}} -> \code{Profiles}
+\code{\link[tercenApi:Base]{tercenApi::Base}} -> \code{Profiles}
 }
 \section{Public fields}{
 \if{html}{\out{<div class="r6-fields">}}

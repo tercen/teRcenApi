@@ -12,7 +12,7 @@ Ulimits
 Ulimits
 }
 \section{Super class}{
-\code{\link[tercen:Base]{tercen::Base}} -> \code{Ulimits}
+\code{\link[tercenApi:Base]{tercenApi::Base}} -> \code{Ulimits}
 }
 \section{Public fields}{
 \if{html}{\out{<div class="r6-fields">}}

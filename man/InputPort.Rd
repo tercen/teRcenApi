@@ -12,7 +12,7 @@ InputPort
 InputPort
 }
 \section{Super classes}{
-\code{\link[tercen:Base]{tercen::Base}} -> \code{\link[tercen:IdObject]{tercen::IdObject}} -> \code{\link[tercen:Port]{tercen::Port}} -> \code{InputPort}
+\code{\link[tercenApi:Base]{tercenApi::Base}} -> \code{\link[tercenApi:IdObject]{tercenApi::IdObject}} -> \code{\link[tercenApi:Port]{tercenApi::Port}} -> \code{InputPort}
 }
 \section{Public fields}{
 \if{html}{\out{<div class="r6-fields">}}

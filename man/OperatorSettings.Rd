@@ -12,7 +12,7 @@ OperatorSettings
 OperatorSettings
 }
 \section{Super class}{
-\code{\link[tercen:Base]{tercen::Base}} -> \code{OperatorSettings}
+\code{\link[tercenApi:Base]{tercenApi::Base}} -> \code{OperatorSettings}
 }
 \section{Public fields}{
 \if{html}{\out{<div class="r6-fields">}}

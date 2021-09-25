@@ -12,7 +12,7 @@ PendingState
 PendingState
 }
 \section{Super classes}{
-\code{\link[tercen:Base]{tercen::Base}} -> \code{\link[tercen:State]{tercen::State}} -> \code{PendingState}
+\code{\link[tercenApi:Base]{tercenApi::Base}} -> \code{\link[tercenApi:State]{tercenApi::State}} -> \code{PendingState}
 }
 \section{Methods}{
 \subsection{Public methods}{

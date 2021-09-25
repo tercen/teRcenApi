@@ -12,7 +12,7 @@ ResourceSummary
 ResourceSummary
 }
 \section{Super class}{
-\code{\link[tercen:Base]{tercen::Base}} -> \code{ResourceSummary}
+\code{\link[tercenApi:Base]{tercenApi::Base}} -> \code{ResourceSummary}
 }
 \section{Public fields}{
 \if{html}{\out{<div class="r6-fields">}}

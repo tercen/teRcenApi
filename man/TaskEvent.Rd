@@ -12,7 +12,7 @@ TaskEvent
 TaskEvent
 }
 \section{Super classes}{
-\code{\link[tercen:Base]{tercen::Base}} -> \code{\link[tercen:IdObject]{tercen::IdObject}} -> \code{\link[tercen:PersistentObject]{tercen::PersistentObject}} -> \code{\link[tercen:Event]{tercen::Event}} -> \code{TaskEvent}
+\code{\link[tercenApi:Base]{tercenApi::Base}} -> \code{\link[tercenApi:IdObject]{tercenApi::IdObject}} -> \code{\link[tercenApi:PersistentObject]{tercenApi::PersistentObject}} -> \code{\link[tercenApi:Event]{tercenApi::Event}} -> \code{TaskEvent}
 }
 \section{Public fields}{
 \if{html}{\out{<div class="r6-fields">}}

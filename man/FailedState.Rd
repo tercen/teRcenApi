@@ -12,7 +12,7 @@ FailedState
 FailedState
 }
 \section{Super classes}{
-\code{\link[tercen:Base]{tercen::Base}} -> \code{\link[tercen:State]{tercen::State}} -> \code{FailedState}
+\code{\link[tercenApi:Base]{tercenApi::Base}} -> \code{\link[tercenApi:State]{tercenApi::State}} -> \code{FailedState}
 }
 \section{Public fields}{
 \if{html}{\out{<div class="r6-fields">}}

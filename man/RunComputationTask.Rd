@@ -12,7 +12,7 @@ RunComputationTask
 RunComputationTask
 }
 \section{Super classes}{
-\code{\link[tercen:Base]{tercen::Base}} -> \code{\link[tercen:IdObject]{tercen::IdObject}} -> \code{\link[tercen:PersistentObject]{tercen::PersistentObject}} -> \code{\link[tercen:Task]{tercen::Task}} -> \code{\link[tercen:ProjectTask]{tercen::ProjectTask}} -> \code{\link[tercen:CubeQueryTask]{tercen::CubeQueryTask}} -> \code{\link[tercen:ComputationTask]{tercen::ComputationTask}} -> \code{\link[tercen:SaveComputationResultTask]{tercen::SaveComputationResultTask}} -> \code{RunComputationTask}
+\code{\link[tercenApi:Base]{tercenApi::Base}} -> \code{\link[tercenApi:IdObject]{tercenApi::IdObject}} -> \code{\link[tercenApi:PersistentObject]{tercenApi::PersistentObject}} -> \code{\link[tercenApi:Task]{tercenApi::Task}} -> \code{\link[tercenApi:ProjectTask]{tercenApi::ProjectTask}} -> \code{\link[tercenApi:CubeQueryTask]{tercenApi::CubeQueryTask}} -> \code{\link[tercenApi:ComputationTask]{tercenApi::ComputationTask}} -> \code{\link[tercenApi:SaveComputationResultTask]{tercenApi::SaveComputationResultTask}} -> \code{RunComputationTask}
 }
 \section{Public fields}{
 \if{html}{\out{<div class="r6-fields">}}

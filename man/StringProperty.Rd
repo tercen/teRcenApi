@@ -12,7 +12,7 @@ StringProperty
 StringProperty
 }
 \section{Super classes}{
-\code{\link[tercen:Base]{tercen::Base}} -> \code{\link[tercen:Property]{tercen::Property}} -> \code{StringProperty}
+\code{\link[tercenApi:Base]{tercenApi::Base}} -> \code{\link[tercenApi:Property]{tercenApi::Property}} -> \code{StringProperty}
 }
 \section{Public fields}{
 \if{html}{\out{<div class="r6-fields">}}

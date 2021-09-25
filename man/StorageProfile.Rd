@@ -12,7 +12,7 @@ StorageProfile
 StorageProfile
 }
 \section{Super classes}{
-\code{\link[tercen:Base]{tercen::Base}} -> \code{\link[tercen:Profile]{tercen::Profile}} -> \code{StorageProfile}
+\code{\link[tercenApi:Base]{tercenApi::Base}} -> \code{\link[tercenApi:Profile]{tercenApi::Profile}} -> \code{StorageProfile}
 }
 \section{Public fields}{
 \if{html}{\out{<div class="r6-fields">}}

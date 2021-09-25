@@ -12,7 +12,7 @@ ComputedTableSchema
 ComputedTableSchema
 }
 \section{Super classes}{
-\code{\link[tercen:Base]{tercen::Base}} -> \code{\link[tercen:IdObject]{tercen::IdObject}} -> \code{\link[tercen:PersistentObject]{tercen::PersistentObject}} -> \code{\link[tercen:Document]{tercen::Document}} -> \code{\link[tercen:ProjectDocument]{tercen::ProjectDocument}} -> \code{\link[tercen:Schema]{tercen::Schema}} -> \code{ComputedTableSchema}
+\code{\link[tercenApi:Base]{tercenApi::Base}} -> \code{\link[tercenApi:IdObject]{tercenApi::IdObject}} -> \code{\link[tercenApi:PersistentObject]{tercenApi::PersistentObject}} -> \code{\link[tercenApi:Document]{tercenApi::Document}} -> \code{\link[tercenApi:ProjectDocument]{tercenApi::ProjectDocument}} -> \code{\link[tercenApi:Schema]{tercenApi::Schema}} -> \code{ComputedTableSchema}
 }
 \section{Public fields}{
 \if{html}{\out{<div class="r6-fields">}}

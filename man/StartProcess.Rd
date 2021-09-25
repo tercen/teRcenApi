@@ -12,7 +12,7 @@ StartProcess
 StartProcess
 }
 \section{Super classes}{
-\code{\link[tercen:Base]{tercen::Base}} -> \code{\link[tercen:IdObject]{tercen::IdObject}} -> \code{StartProcess}
+\code{\link[tercenApi:Base]{tercenApi::Base}} -> \code{\link[tercenApi:IdObject]{tercenApi::IdObject}} -> \code{StartProcess}
 }
 \section{Public fields}{
 \if{html}{\out{<div class="r6-fields">}}

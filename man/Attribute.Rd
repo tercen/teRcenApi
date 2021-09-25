@@ -12,7 +12,7 @@ Attribute
 Attribute
 }
 \section{Super classes}{
-\code{\link[tercen:Base]{tercen::Base}} -> \code{\link[tercen:Factor]{tercen::Factor}} -> \code{Attribute}
+\code{\link[tercenApi:Base]{tercenApi::Base}} -> \code{\link[tercenApi:Factor]{tercenApi::Factor}} -> \code{Attribute}
 }
 \section{Public fields}{
 \if{html}{\out{<div class="r6-fields">}}

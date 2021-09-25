@@ -12,7 +12,7 @@ WizardStepModel
 WizardStepModel
 }
 \section{Super classes}{
-\code{\link[tercen:Base]{tercen::Base}} -> \code{\link[tercen:StepModel]{tercen::StepModel}} -> \code{WizardStepModel}
+\code{\link[tercenApi:Base]{tercenApi::Base}} -> \code{\link[tercenApi:StepModel]{tercenApi::StepModel}} -> \code{WizardStepModel}
 }
 \section{Public fields}{
 \if{html}{\out{<div class="r6-fields">}}

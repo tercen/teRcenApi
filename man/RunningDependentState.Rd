@@ -12,7 +12,7 @@ RunningDependentState
 RunningDependentState
 }
 \section{Super classes}{
-\code{\link[tercen:Base]{tercen::Base}} -> \code{\link[tercen:State]{tercen::State}} -> \code{RunningDependentState}
+\code{\link[tercenApi:Base]{tercenApi::Base}} -> \code{\link[tercenApi:State]{tercenApi::State}} -> \code{RunningDependentState}
 }
 \section{Methods}{
 \subsection{Public methods}{

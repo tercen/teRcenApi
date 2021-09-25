@@ -12,7 +12,7 @@ JoinOperator
 JoinOperator
 }
 \section{Super class}{
-\code{\link[tercen:Base]{tercen::Base}} -> \code{JoinOperator}
+\code{\link[tercenApi:Base]{tercenApi::Base}} -> \code{JoinOperator}
 }
 \section{Public fields}{
 \if{html}{\out{<div class="r6-fields">}}

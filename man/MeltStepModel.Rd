@@ -12,7 +12,7 @@ MeltStepModel
 MeltStepModel
 }
 \section{Super classes}{
-\code{\link[tercen:Base]{tercen::Base}} -> \code{\link[tercen:StepModel]{tercen::StepModel}} -> \code{MeltStepModel}
+\code{\link[tercenApi:Base]{tercenApi::Base}} -> \code{\link[tercenApi:StepModel]{tercenApi::StepModel}} -> \code{MeltStepModel}
 }
 \section{Public fields}{
 \if{html}{\out{<div class="r6-fields">}}

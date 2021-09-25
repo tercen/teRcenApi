@@ -12,7 +12,7 @@ DoubleColorElement
 DoubleColorElement
 }
 \section{Super classes}{
-\code{\link[tercen:Base]{tercen::Base}} -> \code{\link[tercen:ColorElement]{tercen::ColorElement}} -> \code{DoubleColorElement}
+\code{\link[tercenApi:Base]{tercenApi::Base}} -> \code{\link[tercenApi:ColorElement]{tercenApi::ColorElement}} -> \code{DoubleColorElement}
 }
 \section{Public fields}{
 \if{html}{\out{<div class="r6-fields">}}

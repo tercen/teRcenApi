@@ -12,7 +12,7 @@ StepModel
 StepModel
 }
 \section{Super class}{
-\code{\link[tercen:Base]{tercen::Base}} -> \code{StepModel}
+\code{\link[tercenApi:Base]{tercenApi::Base}} -> \code{StepModel}
 }
 \section{Methods}{
 \subsection{Public methods}{

@@ -12,7 +12,7 @@ Privilege
 Privilege
 }
 \section{Super class}{
-\code{\link[tercen:Base]{tercen::Base}} -> \code{Privilege}
+\code{\link[tercenApi:Base]{tercenApi::Base}} -> \code{Privilege}
 }
 \section{Public fields}{
 \if{html}{\out{<div class="r6-fields">}}

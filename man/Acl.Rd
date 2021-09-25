@@ -12,7 +12,7 @@ Acl
 Acl
 }
 \section{Super class}{
-\code{\link[tercen:Base]{tercen::Base}} -> \code{Acl}
+\code{\link[tercenApi:Base]{tercenApi::Base}} -> \code{Acl}
 }
 \section{Public fields}{
 \if{html}{\out{<div class="r6-fields">}}

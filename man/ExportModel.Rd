@@ -12,7 +12,7 @@ ExportModel
 ExportModel
 }
 \section{Super classes}{
-\code{\link[tercen:Base]{tercen::Base}} -> \code{\link[tercen:StepModel]{tercen::StepModel}} -> \code{ExportModel}
+\code{\link[tercenApi:Base]{tercenApi::Base}} -> \code{\link[tercenApi:StepModel]{tercenApi::StepModel}} -> \code{ExportModel}
 }
 \section{Methods}{
 \subsection{Public methods}{

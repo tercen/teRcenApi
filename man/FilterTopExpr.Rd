@@ -12,7 +12,7 @@ FilterTopExpr
 FilterTopExpr
 }
 \section{Super class}{
-\code{\link[tercen:Base]{tercen::Base}} -> \code{FilterTopExpr}
+\code{\link[tercenApi:Base]{tercenApi::Base}} -> \code{FilterTopExpr}
 }
 \section{Methods}{
 \subsection{Public methods}{

@@ -12,7 +12,7 @@ DoubleProperty
 DoubleProperty
 }
 \section{Super classes}{
-\code{\link[tercen:Base]{tercen::Base}} -> \code{\link[tercen:Property]{tercen::Property}} -> \code{DoubleProperty}
+\code{\link[tercenApi:Base]{tercenApi::Base}} -> \code{\link[tercenApi:Property]{tercenApi::Property}} -> \code{DoubleProperty}
 }
 \section{Public fields}{
 \if{html}{\out{<div class="r6-fields">}}

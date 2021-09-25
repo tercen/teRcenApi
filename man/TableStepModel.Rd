@@ -12,7 +12,7 @@ TableStepModel
 TableStepModel
 }
 \section{Super classes}{
-\code{\link[tercen:Base]{tercen::Base}} -> \code{\link[tercen:StepModel]{tercen::StepModel}} -> \code{TableStepModel}
+\code{\link[tercenApi:Base]{tercenApi::Base}} -> \code{\link[tercenApi:StepModel]{tercenApi::StepModel}} -> \code{TableStepModel}
 }
 \section{Public fields}{
 \if{html}{\out{<div class="r6-fields">}}

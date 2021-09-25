@@ -12,7 +12,7 @@ Errors
 Errors
 }
 \section{Super class}{
-\code{\link[tercen:Base]{tercen::Base}} -> \code{Errors}
+\code{\link[tercenApi:Base]{tercenApi::Base}} -> \code{Errors}
 }
 \section{Public fields}{
 \if{html}{\out{<div class="r6-fields">}}

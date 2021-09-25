@@ -12,7 +12,7 @@ CSVParserParam
 CSVParserParam
 }
 \section{Super class}{
-\code{\link[tercen:Base]{tercen::Base}} -> \code{CSVParserParam}
+\code{\link[tercenApi:Base]{tercenApi::Base}} -> \code{CSVParserParam}
 }
 \section{Public fields}{
 \if{html}{\out{<div class="r6-fields">}}

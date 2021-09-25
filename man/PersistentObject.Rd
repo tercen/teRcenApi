@@ -12,7 +12,7 @@ PersistentObject
 PersistentObject
 }
 \section{Super classes}{
-\code{\link[tercen:Base]{tercen::Base}} -> \code{\link[tercen:IdObject]{tercen::IdObject}} -> \code{PersistentObject}
+\code{\link[tercenApi:Base]{tercenApi::Base}} -> \code{\link[tercenApi:IdObject]{tercenApi::IdObject}} -> \code{PersistentObject}
 }
 \section{Public fields}{
 \if{html}{\out{<div class="r6-fields">}}

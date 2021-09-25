@@ -12,7 +12,7 @@ PropertyValue
 PropertyValue
 }
 \section{Super class}{
-\code{\link[tercen:Base]{tercen::Base}} -> \code{PropertyValue}
+\code{\link[tercenApi:Base]{tercenApi::Base}} -> \code{PropertyValue}
 }
 \section{Public fields}{
 \if{html}{\out{<div class="r6-fields">}}

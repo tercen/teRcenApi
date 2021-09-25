@@ -12,7 +12,7 @@ MappingFactor
 MappingFactor
 }
 \section{Super classes}{
-\code{\link[tercen:Base]{tercen::Base}} -> \code{\link[tercen:Factor]{tercen::Factor}} -> \code{MappingFactor}
+\code{\link[tercenApi:Base]{tercenApi::Base}} -> \code{\link[tercenApi:Factor]{tercenApi::Factor}} -> \code{MappingFactor}
 }
 \section{Public fields}{
 \if{html}{\out{<div class="r6-fields">}}

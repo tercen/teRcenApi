@@ -12,7 +12,7 @@ FilterExpr
 FilterExpr
 }
 \section{Super classes}{
-\code{\link[tercen:Base]{tercen::Base}} -> \code{\link[tercen:FilterTopExpr]{tercen::FilterTopExpr}} -> \code{FilterExpr}
+\code{\link[tercenApi:Base]{tercenApi::Base}} -> \code{\link[tercenApi:FilterTopExpr]{tercenApi::FilterTopExpr}} -> \code{FilterExpr}
 }
 \section{Public fields}{
 \if{html}{\out{<div class="r6-fields">}}

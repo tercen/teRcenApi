@@ -12,7 +12,7 @@ Axis
 Axis
 }
 \section{Super class}{
-\code{\link[tercen:Base]{tercen::Base}} -> \code{Axis}
+\code{\link[tercenApi:Base]{tercenApi::Base}} -> \code{Axis}
 }
 \section{Public fields}{
 \if{html}{\out{<div class="r6-fields">}}

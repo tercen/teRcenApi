@@ -12,7 +12,7 @@ ChartBar
 ChartBar
 }
 \section{Super classes}{
-\code{\link[tercen:Base]{tercen::Base}} -> \code{\link[tercen:Chart]{tercen::Chart}} -> \code{ChartBar}
+\code{\link[tercenApi:Base]{tercenApi::Base}} -> \code{\link[tercenApi:Chart]{tercenApi::Chart}} -> \code{ChartBar}
 }
 \section{Public fields}{
 \if{html}{\out{<div class="r6-fields">}}

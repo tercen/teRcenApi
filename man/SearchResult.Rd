@@ -12,7 +12,7 @@ SearchResult
 SearchResult
 }
 \section{Super class}{
-\code{\link[tercen:Base]{tercen::Base}} -> \code{SearchResult}
+\code{\link[tercenApi:Base]{tercenApi::Base}} -> \code{SearchResult}
 }
 \section{Public fields}{
 \if{html}{\out{<div class="r6-fields">}}

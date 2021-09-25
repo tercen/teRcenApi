@@ -12,7 +12,7 @@ CSVFileMetadata
 CSVFileMetadata
 }
 \section{Super classes}{
-\code{\link[tercen:Base]{tercen::Base}} -> \code{\link[tercen:FileMetadata]{tercen::FileMetadata}} -> \code{CSVFileMetadata}
+\code{\link[tercenApi:Base]{tercenApi::Base}} -> \code{\link[tercenApi:FileMetadata]{tercenApi::FileMetadata}} -> \code{CSVFileMetadata}
 }
 \section{Public fields}{
 \if{html}{\out{<div class="r6-fields">}}

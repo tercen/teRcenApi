@@ -12,7 +12,7 @@ Plan
 Plan
 }
 \section{Super class}{
-\code{\link[tercen:Base]{tercen::Base}} -> \code{Plan}
+\code{\link[tercenApi:Base]{tercenApi::Base}} -> \code{Plan}
 }
 \section{Public fields}{
 \if{html}{\out{<div class="r6-fields">}}

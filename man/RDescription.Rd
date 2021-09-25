@@ -12,7 +12,7 @@ RDescription
 RDescription
 }
 \section{Super class}{
-\code{\link[tercen:Base]{tercen::Base}} -> \code{RDescription}
+\code{\link[tercenApi:Base]{tercenApi::Base}} -> \code{RDescription}
 }
 \section{Public fields}{
 \if{html}{\out{<div class="r6-fields">}}

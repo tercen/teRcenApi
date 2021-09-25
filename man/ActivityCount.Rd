@@ -12,7 +12,7 @@ ActivityCount
 ActivityCount
 }
 \section{Super class}{
-\code{\link[tercen:Base]{tercen::Base}} -> \code{ActivityCount}
+\code{\link[tercenApi:Base]{tercenApi::Base}} -> \code{ActivityCount}
 }
 \section{Public fields}{
 \if{html}{\out{<div class="r6-fields">}}

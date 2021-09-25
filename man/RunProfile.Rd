@@ -12,7 +12,7 @@ RunProfile
 RunProfile
 }
 \section{Super classes}{
-\code{\link[tercen:Base]{tercen::Base}} -> \code{\link[tercen:Profile]{tercen::Profile}} -> \code{RunProfile}
+\code{\link[tercenApi:Base]{tercenApi::Base}} -> \code{\link[tercenApi:Profile]{tercenApi::Profile}} -> \code{RunProfile}
 }
 \section{Public fields}{
 \if{html}{\out{<div class="r6-fields">}}
