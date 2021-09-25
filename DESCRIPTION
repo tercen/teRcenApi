@@ -1,0 +1,23 @@
+Package: tercen
+Type: Package
+Title: Tercen R api
+Version: 0.11.0
+Date: 2021-09-25
+Author: Alexandre Maurel
+Maintainer: Alexandre Maurel <alexandre.maurel@tercen.com>
+Description: Access Tercen data, workflow and computation resources with R.
+  Build R operator for Tercen.
+License: Apache License Version 2.0
+Suggests:
+    testthat
+Imports:
+    R6,
+    teRcenHttp (>= 1.0.21),
+    mtercen (>= 1.0.7),
+    dplyr,
+    tibble,
+    yaml,
+    openssl
+URL: https://github.com/tercen/teRcenApi
+BugReports: https://github.com/tercen/teRcenApi/issues
+RoxygenNote: 7.1.1
