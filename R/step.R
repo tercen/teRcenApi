@@ -11,11 +11,7 @@
 #' @field state object of class \code{\link{StepState}}.
 Step <- R6::R6Class("Step", inherit = IdObject, public = list(groupId = NULL, name = NULL, 
     inputs = NULL, outputs = NULL, rectangle = NULL, state = NULL, initialize = function(json = NULL) {
-        if (!is.null(json)) {
-            self$initJson(json)
-        } else {
-            self$init()
-        }
+        super$initialize(json = json)
     }, init = function() {
         super$init()
         self$groupId = ""
@@ -42,7 +38,4 @@ Step <- R6::R6Class("Step", inherit = IdObject, public = list(groupId = NULL, na
         if (!is.null(self$rectangle)) m$rectangle = self$rectangle$toTson()
         if (!is.null(self$state)) m$state = self$state$toTson()
         return(m)
-    }, print = function(...) {
-        cat(yaml::as.yaml(self$toTson()))
-        invisible(self)
     }))

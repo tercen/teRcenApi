@@ -6,11 +6,7 @@
 #' @field targetUrl of type String.
 RProxy <- R6::R6Class("RProxy", inherit = Base, public = list(name = NULL, targetUrl = NULL, 
     initialize = function(json = NULL) {
-        if (!is.null(json)) {
-            self$initJson(json)
-        } else {
-            self$init()
-        }
+        super$initialize(json = json)
     }, init = function() {
         super$init()
         self$name = ""
@@ -25,7 +21,4 @@ RProxy <- R6::R6Class("RProxy", inherit = Base, public = list(name = NULL, targe
         m$name = tson.scalar(self$name)
         m$targetUrl = tson.scalar(self$targetUrl)
         return(m)
-    }, print = function(...) {
-        cat(yaml::as.yaml(self$toTson()))
-        invisible(self)
     }))

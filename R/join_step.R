@@ -13,11 +13,7 @@
 #' @field rightAttributes list of class \code{\link{Attribute}}.
 JoinStep <- R6::R6Class("JoinStep", inherit = NamespaceStep, public = list(model = NULL, 
     rightAttributes = NULL, initialize = function(json = NULL) {
-        if (!is.null(json)) {
-            self$initJson(json)
-        } else {
-            self$init()
-        }
+        super$initialize(json = json)
     }, init = function() {
         super$init()
         self$model = JoinStepModel$new()
@@ -32,7 +28,4 @@ JoinStep <- R6::R6Class("JoinStep", inherit = NamespaceStep, public = list(model
         if (!is.null(self$model)) m$model = self$model$toTson()
         m$rightAttributes = lapply(self$rightAttributes, function(each) each$toTson())
         return(m)
-    }, print = function(...) {
-        cat(yaml::as.yaml(self$toTson()))
-        invisible(self)
     }))

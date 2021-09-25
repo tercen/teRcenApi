@@ -24,11 +24,7 @@
 ImportGitWorkflowTask <- R6::R6Class("ImportGitWorkflowTask", inherit = ProjectTask, 
     public = list(url = NULL, version = NULL, workflowId = NULL, gitToken = NULL, 
         initialize = function(json = NULL) {
-            if (!is.null(json)) {
-                self$initJson(json)
-            } else {
-                self$init()
-            }
+            super$initialize(json = json)
         }, init = function() {
             super$init()
             self$version = ""
@@ -49,7 +45,4 @@ ImportGitWorkflowTask <- R6::R6Class("ImportGitWorkflowTask", inherit = ProjectT
             m$workflowId = tson.scalar(self$workflowId)
             m$gitToken = tson.scalar(self$gitToken)
             return(m)
-        }, print = function(...) {
-            cat(yaml::as.yaml(self$toTson()))
-            invisible(self)
         }))

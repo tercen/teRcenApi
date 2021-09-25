@@ -7,11 +7,7 @@
 #' @field factor object of class \code{\link{Factor}}.
 FilterExpr <- R6::R6Class("FilterExpr", inherit = FilterTopExpr, public = list(filterOp = NULL, 
     stringValue = NULL, factor = NULL, initialize = function(json = NULL) {
-        if (!is.null(json)) {
-            self$initJson(json)
-        } else {
-            self$init()
-        }
+        super$initialize(json = json)
     }, init = function() {
         super$init()
         self$filterOp = ""
@@ -29,7 +25,4 @@ FilterExpr <- R6::R6Class("FilterExpr", inherit = FilterTopExpr, public = list(f
         m$stringValue = tson.scalar(self$stringValue)
         if (!is.null(self$factor)) m$factor = self$factor$toTson()
         return(m)
-    }, print = function(...) {
-        cat(yaml::as.yaml(self$toTson()))
-        invisible(self)
     }))

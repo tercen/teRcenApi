@@ -6,11 +6,7 @@
 #' @field aces list of class \code{\link{Ace}}.
 Acl <- R6::R6Class("Acl", inherit = Base, public = list(owner = NULL, aces = NULL, 
     initialize = function(json = NULL) {
-        if (!is.null(json)) {
-            self$initJson(json)
-        } else {
-            self$init()
-        }
+        super$initialize(json = json)
     }, init = function() {
         super$init()
         self$owner = ""
@@ -25,7 +21,4 @@ Acl <- R6::R6Class("Acl", inherit = Base, public = list(owner = NULL, aces = NUL
         m$owner = tson.scalar(self$owner)
         m$aces = lapply(self$aces, function(each) each$toTson())
         return(m)
-    }, print = function(...) {
-        cat(yaml::as.yaml(self$toTson()))
-        invisible(self)
     }))

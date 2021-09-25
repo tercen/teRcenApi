@@ -15,11 +15,7 @@
 #' @field offset object of class \code{\link{Point}}.
 GroupStep <- R6::R6Class("GroupStep", inherit = RelationStep, public = list(appId = NULL, 
     appName = NULL, version = NULL, offset = NULL, initialize = function(json = NULL) {
-        if (!is.null(json)) {
-            self$initJson(json)
-        } else {
-            self$init()
-        }
+        super$initialize(json = json)
     }, init = function() {
         super$init()
         self$appId = ""
@@ -40,7 +36,4 @@ GroupStep <- R6::R6Class("GroupStep", inherit = RelationStep, public = list(appI
         m$version = tson.scalar(self$version)
         if (!is.null(self$offset)) m$offset = self$offset$toTson()
         return(m)
-    }, print = function(...) {
-        cat(yaml::as.yaml(self$toTson()))
-        invisible(self)
     }))

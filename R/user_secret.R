@@ -10,11 +10,7 @@
 #' @field hashPassword of type String.
 UserSecret <- R6::R6Class("UserSecret", inherit = PersistentObject, public = list(userId = NULL, 
     salt = NULL, hashPassword = NULL, initialize = function(json = NULL) {
-        if (!is.null(json)) {
-            self$initJson(json)
-        } else {
-            self$init()
-        }
+        super$initialize(json = json)
     }, init = function() {
         super$init()
         self$userId = ""
@@ -32,7 +28,4 @@ UserSecret <- R6::R6Class("UserSecret", inherit = PersistentObject, public = lis
         m$salt = tson.scalar(self$salt)
         m$hashPassword = tson.scalar(self$hashPassword)
         return(m)
-    }, print = function(...) {
-        cat(yaml::as.yaml(self$toTson()))
-        invisible(self)
     }))

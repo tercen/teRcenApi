@@ -12,11 +12,7 @@
 #' @field groupPortPosition object of class \code{\link{Point}}.
 InStep <- R6::R6Class("InStep", inherit = RelationStep, public = list(groupPortPosition = NULL, 
     initialize = function(json = NULL) {
-        if (!is.null(json)) {
-            self$initJson(json)
-        } else {
-            self$init()
-        }
+        super$initialize(json = json)
     }, init = function() {
         super$init()
         self$groupPortPosition = Point$new()
@@ -28,7 +24,4 @@ InStep <- R6::R6Class("InStep", inherit = RelationStep, public = list(groupPortP
         m$kind = tson.scalar("InStep")
         if (!is.null(self$groupPortPosition)) m$groupPortPosition = self$groupPortPosition$toTson()
         return(m)
-    }, print = function(...) {
-        cat(yaml::as.yaml(self$toTson()))
-        invisible(self)
     }))

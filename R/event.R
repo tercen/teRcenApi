@@ -8,11 +8,7 @@
 #' @field date object of class \code{\link{Date}}.
 Event <- R6::R6Class("Event", inherit = PersistentObject, public = list(date = NULL, 
     initialize = function(json = NULL) {
-        if (!is.null(json)) {
-            self$initJson(json)
-        } else {
-            self$init()
-        }
+        super$initialize(json = json)
     }, init = function() {
         super$init()
         self$date = Date$new()
@@ -24,7 +20,4 @@ Event <- R6::R6Class("Event", inherit = PersistentObject, public = list(date = N
         m$kind = tson.scalar("Event")
         if (!is.null(self$date)) m$date = self$date$toTson()
         return(m)
-    }, print = function(...) {
-        cat(yaml::as.yaml(self$toTson()))
-        invisible(self)
     }))

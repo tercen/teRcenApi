@@ -8,11 +8,7 @@
 #' @field values list of type String.
 EnumeratedProperty <- R6::R6Class("EnumeratedProperty", inherit = StringProperty, 
     public = list(values = NULL, initialize = function(json = NULL) {
-        if (!is.null(json)) {
-            self$initJson(json)
-        } else {
-            self$init()
-        }
+        super$initialize(json = json)
     }, init = function() {
         super$init()
         self$values = list()
@@ -24,7 +20,4 @@ EnumeratedProperty <- R6::R6Class("EnumeratedProperty", inherit = StringProperty
         m$kind = tson.scalar("EnumeratedProperty")
         m$values = lapply(self$values, function(each) tson.scalar(each))
         return(m)
-    }, print = function(...) {
-        cat(yaml::as.yaml(self$toTson()))
-        invisible(self)
     }))

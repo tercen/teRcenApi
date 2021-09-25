@@ -12,11 +12,7 @@
 #' @field date object of class \code{\link{Date}} inherited from super class \code{\link{Event}}.
 TaskProgressEvent <- R6::R6Class("TaskProgressEvent", inherit = TaskEvent, public = list(message = NULL, 
     total = NULL, actual = NULL, initialize = function(json = NULL) {
-        if (!is.null(json)) {
-            self$initJson(json)
-        } else {
-            self$init()
-        }
+        super$initialize(json = json)
     }, init = function() {
         super$init()
         self$message = ""
@@ -34,7 +30,4 @@ TaskProgressEvent <- R6::R6Class("TaskProgressEvent", inherit = TaskEvent, publi
         m$total = tson.int(self$total)
         m$actual = tson.int(self$actual)
         return(m)
-    }, print = function(...) {
-        cat(yaml::as.yaml(self$toTson()))
-        invisible(self)
     }))

@@ -7,11 +7,7 @@
 #' @field graphicalFactor object of class \code{\link{GraphicalFactor}}.
 Axis <- R6::R6Class("Axis", inherit = Base, public = list(axisExtent = NULL, axisSettings = NULL, 
     graphicalFactor = NULL, initialize = function(json = NULL) {
-        if (!is.null(json)) {
-            self$initJson(json)
-        } else {
-            self$init()
-        }
+        super$initialize(json = json)
     }, init = function() {
         super$init()
         self$axisExtent = Point$new()
@@ -29,7 +25,4 @@ Axis <- R6::R6Class("Axis", inherit = Base, public = list(axisExtent = NULL, axi
         if (!is.null(self$axisSettings)) m$axisSettings = self$axisSettings$toTson()
         if (!is.null(self$graphicalFactor)) m$graphicalFactor = self$graphicalFactor$toTson()
         return(m)
-    }, print = function(...) {
-        cat(yaml::as.yaml(self$toTson()))
-        invisible(self)
     }))

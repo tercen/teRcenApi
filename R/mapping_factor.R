@@ -11,11 +11,7 @@
 #' @field factors list of class \code{\link{Factor}}.
 MappingFactor <- R6::R6Class("MappingFactor", inherit = Factor, public = list(isSingle = NULL, 
     description = NULL, factorName = NULL, factors = NULL, isRequired = NULL, initialize = function(json = NULL) {
-        if (!is.null(json)) {
-            self$initJson(json)
-        } else {
-            self$init()
-        }
+        super$initialize(json = json)
     }, init = function() {
         super$init()
         self$isSingle = TRUE
@@ -39,7 +35,4 @@ MappingFactor <- R6::R6Class("MappingFactor", inherit = Factor, public = list(is
         m$factors = lapply(self$factors, function(each) each$toTson())
         m$isRequired = tson.scalar(self$isRequired)
         return(m)
-    }, print = function(...) {
-        cat(yaml::as.yaml(self$toTson()))
-        invisible(self)
     }))

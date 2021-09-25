@@ -11,11 +11,7 @@
 #' @field yAxis object of class \code{\link{Axis}}.
 XYAxis <- R6::R6Class("XYAxis", inherit = Base, public = list(chart = NULL, colors = NULL, 
     errors = NULL, labels = NULL, xAxis = NULL, yAxis = NULL, taskId = NULL, initialize = function(json = NULL) {
-        if (!is.null(json)) {
-            self$initJson(json)
-        } else {
-            self$init()
-        }
+        super$initialize(json = json)
     }, init = function() {
         super$init()
         self$taskId = ""
@@ -45,7 +41,4 @@ XYAxis <- R6::R6Class("XYAxis", inherit = Base, public = list(chart = NULL, colo
         if (!is.null(self$yAxis)) m$yAxis = self$yAxis$toTson()
         m$taskId = tson.scalar(self$taskId)
         return(m)
-    }, print = function(...) {
-        cat(yaml::as.yaml(self$toTson()))
-        invisible(self)
     }))

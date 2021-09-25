@@ -12,11 +12,7 @@
 #' @field model object of class \code{\link{WizardStepModel}}.
 WizardStep <- R6::R6Class("WizardStep", inherit = NamespaceStep, public = list(model = NULL, 
     initialize = function(json = NULL) {
-        if (!is.null(json)) {
-            self$initJson(json)
-        } else {
-            self$init()
-        }
+        super$initialize(json = json)
     }, init = function() {
         super$init()
         self$model = WizardStepModel$new()
@@ -28,7 +24,4 @@ WizardStep <- R6::R6Class("WizardStep", inherit = NamespaceStep, public = list(m
         m$kind = tson.scalar("WizardStep")
         if (!is.null(self$model)) m$model = self$model$toTson()
         return(m)
-    }, print = function(...) {
-        cat(yaml::as.yaml(self$toTson()))
-        invisible(self)
     }))

@@ -6,11 +6,7 @@
 #' @field value of type String.
 Pair <- R6::R6Class("Pair", inherit = Base, public = list(key = NULL, value = NULL, 
     initialize = function(json = NULL) {
-        if (!is.null(json)) {
-            self$initJson(json)
-        } else {
-            self$init()
-        }
+        super$initialize(json = json)
     }, init = function() {
         super$init()
         self$key = ""
@@ -25,7 +21,4 @@ Pair <- R6::R6Class("Pair", inherit = Base, public = list(key = NULL, value = NU
         m$key = tson.scalar(self$key)
         m$value = tson.scalar(self$value)
         return(m)
-    }, print = function(...) {
-        cat(yaml::as.yaml(self$toTson()))
-        invisible(self)
     }))

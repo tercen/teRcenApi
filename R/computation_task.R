@@ -25,11 +25,7 @@
 #' @field computedRelation object of class \code{\link{Relation}}.
 ComputationTask <- R6::R6Class("ComputationTask", inherit = CubeQueryTask, public = list(parentTaskId = NULL, 
     fileResultId = NULL, computedRelation = NULL, initialize = function(json = NULL) {
-        if (!is.null(json)) {
-            self$initJson(json)
-        } else {
-            self$init()
-        }
+        super$initialize(json = json)
     }, init = function() {
         super$init()
         self$parentTaskId = ""
@@ -47,7 +43,4 @@ ComputationTask <- R6::R6Class("ComputationTask", inherit = CubeQueryTask, publi
         m$fileResultId = tson.scalar(self$fileResultId)
         if (!is.null(self$computedRelation)) m$computedRelation = self$computedRelation$toTson()
         return(m)
-    }, print = function(...) {
-        cat(yaml::as.yaml(self$toTson()))
-        invisible(self)
     }))

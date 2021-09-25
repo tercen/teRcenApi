@@ -14,11 +14,7 @@
 RDescription <- R6::R6Class("RDescription", inherit = Base, public = list(Package = NULL, 
     Version = NULL, Depends = NULL, Imports = NULL, LinkingTo = NULL, Suggests = NULL, 
     License = NULL, MD5sum = NULL, NeedsCompilation = NULL, initialize = function(json = NULL) {
-        if (!is.null(json)) {
-            self$initJson(json)
-        } else {
-            self$init()
-        }
+        super$initialize(json = json)
     }, init = function() {
         super$init()
         self$Package = ""
@@ -54,7 +50,4 @@ RDescription <- R6::R6Class("RDescription", inherit = Base, public = list(Packag
         m$MD5sum = tson.scalar(self$MD5sum)
         m$NeedsCompilation = tson.scalar(self$NeedsCompilation)
         return(m)
-    }, print = function(...) {
-        cat(yaml::as.yaml(self$toTson()))
-        invisible(self)
     }))

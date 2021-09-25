@@ -8,11 +8,7 @@
 #' @field nc of type int.
 TableSummary <- R6::R6Class("TableSummary", inherit = Base, public = list(n = NULL, 
     size = NULL, nr = NULL, nc = NULL, initialize = function(json = NULL) {
-        if (!is.null(json)) {
-            self$initJson(json)
-        } else {
-            self$init()
-        }
+        super$initialize(json = json)
     }, init = function() {
         super$init()
         self$n = 0
@@ -33,7 +29,4 @@ TableSummary <- R6::R6Class("TableSummary", inherit = Base, public = list(n = NU
         m$nr = tson.int(self$nr)
         m$nc = tson.int(self$nc)
         return(m)
-    }, print = function(...) {
-        cat(yaml::as.yaml(self$toTson()))
-        invisible(self)
     }))

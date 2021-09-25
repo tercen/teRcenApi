@@ -8,11 +8,7 @@
 #' @field relation object of class \code{\link{Relation}}.
 RenameRelation <- R6::R6Class("RenameRelation", inherit = Relation, public = list(relation = NULL, 
     inNames = NULL, outNames = NULL, initialize = function(json = NULL) {
-        if (!is.null(json)) {
-            self$initJson(json)
-        } else {
-            self$init()
-        }
+        super$initialize(json = json)
     }, init = function() {
         super$init()
         self$inNames = list()
@@ -30,7 +26,4 @@ RenameRelation <- R6::R6Class("RenameRelation", inherit = Relation, public = lis
         m$inNames = lapply(self$inNames, function(each) tson.scalar(each))
         m$outNames = lapply(self$outNames, function(each) tson.scalar(each))
         return(m)
-    }, print = function(...) {
-        cat(yaml::as.yaml(self$toTson()))
-        invisible(self)
     }))

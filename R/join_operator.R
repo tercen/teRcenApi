@@ -6,11 +6,7 @@
 #' @field rightRelation object of class \code{\link{Relation}}.
 JoinOperator <- R6::R6Class("JoinOperator", inherit = Base, public = list(leftPair = NULL, 
     rightRelation = NULL, initialize = function(json = NULL) {
-        if (!is.null(json)) {
-            self$initJson(json)
-        } else {
-            self$init()
-        }
+        super$initialize(json = json)
     }, init = function() {
         super$init()
         self$leftPair = ColumnPair$new()
@@ -25,7 +21,4 @@ JoinOperator <- R6::R6Class("JoinOperator", inherit = Base, public = list(leftPa
         if (!is.null(self$leftPair)) m$leftPair = self$leftPair$toTson()
         if (!is.null(self$rightRelation)) m$rightRelation = self$rightRelation$toTson()
         return(m)
-    }, print = function(...) {
-        cat(yaml::as.yaml(self$toTson()))
-        invisible(self)
     }))

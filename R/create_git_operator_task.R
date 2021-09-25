@@ -22,11 +22,7 @@
 #' @field url object of class \code{\link{Url}}.
 CreateGitOperatorTask <- R6::R6Class("CreateGitOperatorTask", inherit = Task, public = list(url = NULL, 
     version = NULL, operatorId = NULL, gitToken = NULL, initialize = function(json = NULL) {
-        if (!is.null(json)) {
-            self$initJson(json)
-        } else {
-            self$init()
-        }
+        super$initialize(json = json)
     }, init = function() {
         super$init()
         self$version = ""
@@ -47,7 +43,4 @@ CreateGitOperatorTask <- R6::R6Class("CreateGitOperatorTask", inherit = Task, pu
         m$operatorId = tson.scalar(self$operatorId)
         m$gitToken = tson.scalar(self$gitToken)
         return(m)
-    }, print = function(...) {
-        cat(yaml::as.yaml(self$toTson()))
-        invisible(self)
     }))

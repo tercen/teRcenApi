@@ -11,11 +11,7 @@
 #' @field features list of type String.
 Version <- R6::R6Class("Version", inherit = Base, public = list(major = NULL, minor = NULL, 
     patch = NULL, tag = NULL, date = NULL, commit = NULL, features = NULL, initialize = function(json = NULL) {
-        if (!is.null(json)) {
-            self$initJson(json)
-        } else {
-            self$init()
-        }
+        super$initialize(json = json)
     }, init = function() {
         super$init()
         self$major = 0
@@ -45,7 +41,4 @@ Version <- R6::R6Class("Version", inherit = Base, public = list(major = NULL, mi
         m$commit = tson.scalar(self$commit)
         m$features = lapply(self$features, function(each) tson.scalar(each))
         return(m)
-    }, print = function(...) {
-        cat(yaml::as.yaml(self$toTson()))
-        invisible(self)
     }))

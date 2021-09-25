@@ -6,11 +6,7 @@
 #' @field propertyValues list of class \code{\link{PropertyValue}}.
 AxisSettings <- R6::R6Class("AxisSettings", inherit = Base, public = list(properties = NULL, 
     propertyValues = NULL, initialize = function(json = NULL) {
-        if (!is.null(json)) {
-            self$initJson(json)
-        } else {
-            self$init()
-        }
+        super$initialize(json = json)
     }, init = function() {
         super$init()
         self$properties = list()
@@ -25,7 +21,4 @@ AxisSettings <- R6::R6Class("AxisSettings", inherit = Base, public = list(proper
         m$properties = lapply(self$properties, function(each) each$toTson())
         m$propertyValues = lapply(self$propertyValues, function(each) each$toTson())
         return(m)
-    }, print = function(...) {
-        cat(yaml::as.yaml(self$toTson()))
-        invisible(self)
     }))

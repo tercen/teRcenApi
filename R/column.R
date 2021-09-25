@@ -11,11 +11,7 @@
 #' @field metaData object of class \code{\link{ColumnSchemaMetaData}} inherited from super class \code{\link{ColumnSchema}}.
 Column <- R6::R6Class("Column", inherit = ColumnSchema, public = list(values = NULL, 
     initialize = function(json = NULL) {
-        if (!is.null(json)) {
-            self$initJson(json)
-        } else {
-            self$init()
-        }
+        super$initialize(json = json)
     }, init = function() {
         super$init()
         self$values = NULL
@@ -27,7 +23,4 @@ Column <- R6::R6Class("Column", inherit = ColumnSchema, public = list(values = N
         m$kind = tson.scalar("Column")
         m$values = self$values
         return(m)
-    }, print = function(...) {
-        cat(yaml::as.yaml(self$toTson()))
-        invisible(self)
     }))

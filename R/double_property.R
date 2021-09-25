@@ -7,11 +7,7 @@
 #' @field defaultValue of type double.
 DoubleProperty <- R6::R6Class("DoubleProperty", inherit = Property, public = list(defaultValue = NULL, 
     initialize = function(json = NULL) {
-        if (!is.null(json)) {
-            self$initJson(json)
-        } else {
-            self$init()
-        }
+        super$initialize(json = json)
     }, init = function() {
         super$init()
         self$defaultValue = 0
@@ -23,7 +19,4 @@ DoubleProperty <- R6::R6Class("DoubleProperty", inherit = Property, public = lis
         m$kind = tson.scalar("DoubleProperty")
         m$defaultValue = tson.scalar(self$defaultValue)
         return(m)
-    }, print = function(...) {
-        cat(yaml::as.yaml(self$toTson()))
-        invisible(self)
     }))

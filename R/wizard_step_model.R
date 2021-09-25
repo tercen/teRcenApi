@@ -12,11 +12,7 @@
 WizardStepModel <- R6::R6Class("WizardStepModel", inherit = StepModel, public = list(namespace = NULL, 
     description = NULL, factors = NULL, filters = NULL, steps = NULL, defaultFactors = NULL, 
     defaultFilters = NULL, initialize = function(json = NULL) {
-        if (!is.null(json)) {
-            self$initJson(json)
-        } else {
-            self$init()
-        }
+        super$initialize(json = json)
     }, init = function() {
         super$init()
         self$namespace = ""
@@ -46,7 +42,4 @@ WizardStepModel <- R6::R6Class("WizardStepModel", inherit = StepModel, public = 
         m$defaultFactors = lapply(self$defaultFactors, function(each) each$toTson())
         m$defaultFilters = lapply(self$defaultFilters, function(each) each$toTson())
         return(m)
-    }, print = function(...) {
-        cat(yaml::as.yaml(self$toTson()))
-        invisible(self)
     }))

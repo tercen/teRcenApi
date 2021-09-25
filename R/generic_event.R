@@ -10,11 +10,7 @@
 #' @field date object of class \code{\link{Date}} inherited from super class \code{\link{Event}}.
 GenericEvent <- R6::R6Class("GenericEvent", inherit = Event, public = list(type = NULL, 
     content = NULL, initialize = function(json = NULL) {
-        if (!is.null(json)) {
-            self$initJson(json)
-        } else {
-            self$init()
-        }
+        super$initialize(json = json)
     }, init = function() {
         super$init()
         self$type = ""
@@ -29,7 +25,4 @@ GenericEvent <- R6::R6Class("GenericEvent", inherit = Event, public = list(type 
         m$type = tson.scalar(self$type)
         m$content = tson.scalar(self$content)
         return(m)
-    }, print = function(...) {
-        cat(yaml::as.yaml(self$toTson()))
-        invisible(self)
     }))

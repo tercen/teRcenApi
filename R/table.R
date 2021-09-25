@@ -7,11 +7,7 @@
 #' @field columns list of class \code{\link{Column}}.
 Table <- R6::R6Class("Table", inherit = Base, public = list(nRows = NULL, properties = NULL, 
     columns = NULL, initialize = function(json = NULL) {
-        if (!is.null(json)) {
-            self$initJson(json)
-        } else {
-            self$init()
-        }
+        super$initialize(json = json)
     }, init = function() {
         super$init()
         self$nRows = 0
@@ -29,7 +25,4 @@ Table <- R6::R6Class("Table", inherit = Base, public = list(nRows = NULL, proper
         if (!is.null(self$properties)) m$properties = self$properties$toTson()
         m$columns = lapply(self$columns, function(each) each$toTson())
         return(m)
-    }, print = function(...) {
-        cat(yaml::as.yaml(self$toTson()))
-        invisible(self)
     }))

@@ -14,11 +14,7 @@
 RunProfile <- R6::R6Class("RunProfile", inherit = Profile, public = list(memory = NULL, 
     kernelMemory = NULL, blkioWeight = NULL, pidsLimit = NULL, ulimits_nofile = NULL, 
     timeout = NULL, storageSize = NULL, cpusetCpus = NULL, initialize = function(json = NULL) {
-        if (!is.null(json)) {
-            self$initJson(json)
-        } else {
-            self$init()
-        }
+        super$initialize(json = json)
     }, init = function() {
         super$init()
         self$memory = 0
@@ -51,7 +47,4 @@ RunProfile <- R6::R6Class("RunProfile", inherit = Profile, public = list(memory 
         m$storageSize = tson.scalar(self$storageSize)
         m$cpusetCpus = tson.scalar(self$cpusetCpus)
         return(m)
-    }, print = function(...) {
-        cat(yaml::as.yaml(self$toTson()))
-        invisible(self)
     }))

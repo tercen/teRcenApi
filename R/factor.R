@@ -6,11 +6,7 @@
 #' @field type of type String.
 Factor <- R6::R6Class("Factor", inherit = Base, public = list(name = NULL, type = NULL, 
     initialize = function(json = NULL) {
-        if (!is.null(json)) {
-            self$initJson(json)
-        } else {
-            self$init()
-        }
+        super$initialize(json = json)
     }, init = function() {
         super$init()
         self$name = ""
@@ -25,7 +21,4 @@ Factor <- R6::R6Class("Factor", inherit = Base, public = list(name = NULL, type 
         m$name = tson.scalar(self$name)
         m$type = tson.scalar(self$type)
         return(m)
-    }, print = function(...) {
-        cat(yaml::as.yaml(self$toTson()))
-        invisible(self)
     }))

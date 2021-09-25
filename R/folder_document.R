@@ -21,11 +21,7 @@
 #' @field meta list of class \code{\link{Pair}} inherited from super class \code{\link{Document}}.
 #' @field url object of class \code{\link{Url}} inherited from super class \code{\link{Document}}.
 FolderDocument <- R6::R6Class("FolderDocument", inherit = ProjectDocument, public = list(initialize = function(json = NULL) {
-    if (!is.null(json)) {
-        self$initJson(json)
-    } else {
-        self$init()
-    }
+    super$initialize(json = json)
 }, init = function() {
     super$init()
 }, initJson = function(json) {
@@ -34,7 +30,4 @@ FolderDocument <- R6::R6Class("FolderDocument", inherit = ProjectDocument, publi
     m = super$toTson()
     m$kind = tson.scalar("FolderDocument")
     return(m)
-}, print = function(...) {
-    cat(yaml::as.yaml(self$toTson()))
-    invisible(self)
 }))

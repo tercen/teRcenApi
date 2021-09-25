@@ -23,11 +23,7 @@
 #' @field meta list of class \code{\link{Pair}} inherited from super class \code{\link{Document}}.
 #' @field url object of class \code{\link{Url}} inherited from super class \code{\link{Document}}.
 ShinyOperator <- R6::R6Class("ShinyOperator", inherit = WebAppOperator, public = list(initialize = function(json = NULL) {
-    if (!is.null(json)) {
-        self$initJson(json)
-    } else {
-        self$init()
-    }
+    super$initialize(json = json)
 }, init = function() {
     super$init()
 }, initJson = function(json) {
@@ -36,7 +32,4 @@ ShinyOperator <- R6::R6Class("ShinyOperator", inherit = WebAppOperator, public =
     m = super$toTson()
     m$kind = tson.scalar("ShinyOperator")
     return(m)
-}, print = function(...) {
-    cat(yaml::as.yaml(self$toTson()))
-    invisible(self)
 }))

@@ -30,11 +30,7 @@
 User <- R6::R6Class("User", inherit = Document, public = list(email = NULL, isValidated = NULL, 
     domain = NULL, roles = NULL, teamAcl = NULL, invitedByUsername = NULL, invitationCounts = NULL, 
     maxInvitation = NULL, billingInfo = NULL, initialize = function(json = NULL) {
-        if (!is.null(json)) {
-            self$initJson(json)
-        } else {
-            self$init()
-        }
+        super$initialize(json = json)
     }, init = function() {
         super$init()
         self$email = ""
@@ -70,7 +66,4 @@ User <- R6::R6Class("User", inherit = Document, public = list(email = NULL, isVa
         m$maxInvitation = tson.int(self$maxInvitation)
         if (!is.null(self$billingInfo)) m$billingInfo = self$billingInfo$toTson()
         return(m)
-    }, print = function(...) {
-        cat(yaml::as.yaml(self$toTson()))
-        invisible(self)
     }))

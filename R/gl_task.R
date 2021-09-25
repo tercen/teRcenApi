@@ -18,11 +18,7 @@
 #' @field completedDate object of class \code{\link{Date}} inherited from super class \code{\link{Task}}.
 #' @field aclContext object of class \code{\link{AclContext}} inherited from super class \code{\link{Task}}.
 GlTask <- R6::R6Class("GlTask", inherit = Task, public = list(glQuery = NULL, initialize = function(json = NULL) {
-    if (!is.null(json)) {
-        self$initJson(json)
-    } else {
-        self$init()
-    }
+    super$initialize(json = json)
 }, init = function() {
     super$init()
     self$glQuery = ""
@@ -34,7 +30,4 @@ GlTask <- R6::R6Class("GlTask", inherit = Task, public = list(glQuery = NULL, in
     m$kind = tson.scalar("GlTask")
     m$glQuery = tson.scalar(self$glQuery)
     return(m)
-}, print = function(...) {
-    cat(yaml::as.yaml(self$toTson()))
-    invisible(self)
 }))

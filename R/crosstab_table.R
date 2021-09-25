@@ -8,11 +8,7 @@
 #' @field rectangleSelections list of class \code{\link{Rectangle}}.
 CrosstabTable <- R6::R6Class("CrosstabTable", inherit = Base, public = list(cellSize = NULL, 
     offset = NULL, graphicalFactors = NULL, rectangleSelections = NULL, initialize = function(json = NULL) {
-        if (!is.null(json)) {
-            self$initJson(json)
-        } else {
-            self$init()
-        }
+        super$initialize(json = json)
     }, init = function() {
         super$init()
         self$cellSize = 0
@@ -33,7 +29,4 @@ CrosstabTable <- R6::R6Class("CrosstabTable", inherit = Base, public = list(cell
         m$graphicalFactors = lapply(self$graphicalFactors, function(each) each$toTson())
         m$rectangleSelections = lapply(self$rectangleSelections, function(each) each$toTson())
         return(m)
-    }, print = function(...) {
-        cat(yaml::as.yaml(self$toTson()))
-        invisible(self)
     }))

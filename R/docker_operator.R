@@ -24,11 +24,7 @@
 #' @field url object of class \code{\link{Url}} inherited from super class \code{\link{Document}}.
 DockerOperator <- R6::R6Class("DockerOperator", inherit = GitOperator, public = list(container = NULL, 
     initialize = function(json = NULL) {
-        if (!is.null(json)) {
-            self$initJson(json)
-        } else {
-            self$init()
-        }
+        super$initialize(json = json)
     }, init = function() {
         super$init()
         self$container = ""
@@ -40,7 +36,4 @@ DockerOperator <- R6::R6Class("DockerOperator", inherit = GitOperator, public = 
         m$kind = tson.scalar("DockerOperator")
         m$container = tson.scalar(self$container)
         return(m)
-    }, print = function(...) {
-        cat(yaml::as.yaml(self$toTson()))
-        invisible(self)
     }))

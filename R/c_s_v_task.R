@@ -27,11 +27,7 @@
 CSVTask <- R6::R6Class("CSVTask", inherit = ProjectTask, public = list(fileDocumentId = NULL, 
     schemaId = NULL, valueName = NULL, variableName = NULL, gatherNames = NULL, schema = NULL, 
     params = NULL, initialize = function(json = NULL) {
-        if (!is.null(json)) {
-            self$initJson(json)
-        } else {
-            self$init()
-        }
+        super$initialize(json = json)
     }, init = function() {
         super$init()
         self$fileDocumentId = ""
@@ -61,7 +57,4 @@ CSVTask <- R6::R6Class("CSVTask", inherit = ProjectTask, public = list(fileDocum
         if (!is.null(self$schema)) m$schema = self$schema$toTson()
         if (!is.null(self$params)) m$params = self$params$toTson()
         return(m)
-    }, print = function(...) {
-        cat(yaml::as.yaml(self$toTson()))
-        invisible(self)
     }))

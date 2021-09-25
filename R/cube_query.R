@@ -14,11 +14,7 @@
 CubeQuery <- R6::R6Class("CubeQuery", inherit = Base, public = list(relation = NULL, 
     colColumns = NULL, rowColumns = NULL, axisQueries = NULL, filters = NULL, operatorSettings = NULL, 
     qtHash = NULL, columnHash = NULL, rowHash = NULL, initialize = function(json = NULL) {
-        if (!is.null(json)) {
-            self$initJson(json)
-        } else {
-            self$init()
-        }
+        super$initialize(json = json)
     }, init = function() {
         super$init()
         self$qtHash = ""
@@ -54,7 +50,4 @@ CubeQuery <- R6::R6Class("CubeQuery", inherit = Base, public = list(relation = N
         m$columnHash = tson.scalar(self$columnHash)
         m$rowHash = tson.scalar(self$rowHash)
         return(m)
-    }, print = function(...) {
-        cat(yaml::as.yaml(self$toTson()))
-        invisible(self)
     }))

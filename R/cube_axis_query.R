@@ -14,11 +14,7 @@
 CubeAxisQuery <- R6::R6Class("CubeAxisQuery", inherit = Base, public = list(pointSize = NULL, 
     chartType = NULL, yAxis = NULL, yAxisSettings = NULL, xAxis = NULL, xAxisSettings = NULL, 
     errors = NULL, labels = NULL, colors = NULL, initialize = function(json = NULL) {
-        if (!is.null(json)) {
-            self$initJson(json)
-        } else {
-            self$init()
-        }
+        super$initialize(json = json)
     }, init = function() {
         super$init()
         self$pointSize = 0
@@ -54,7 +50,4 @@ CubeAxisQuery <- R6::R6Class("CubeAxisQuery", inherit = Base, public = list(poin
         m$labels = lapply(self$labels, function(each) each$toTson())
         m$colors = lapply(self$colors, function(each) each$toTson())
         return(m)
-    }, print = function(...) {
-        cat(yaml::as.yaml(self$toTson()))
-        invisible(self)
     }))

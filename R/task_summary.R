@@ -6,11 +6,7 @@
 #' @field duration of type double.
 TaskSummary <- R6::R6Class("TaskSummary", inherit = Base, public = list(n = NULL, 
     duration = NULL, initialize = function(json = NULL) {
-        if (!is.null(json)) {
-            self$initJson(json)
-        } else {
-            self$init()
-        }
+        super$initialize(json = json)
     }, init = function() {
         super$init()
         self$n = 0
@@ -25,7 +21,4 @@ TaskSummary <- R6::R6Class("TaskSummary", inherit = Base, public = list(n = NULL
         m$n = tson.int(self$n)
         m$duration = tson.scalar(self$duration)
         return(m)
-    }, print = function(...) {
-        cat(yaml::as.yaml(self$toTson()))
-        invisible(self)
     }))

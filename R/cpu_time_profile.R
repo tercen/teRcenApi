@@ -6,11 +6,7 @@
 #' @field cpuTime of type double.
 CpuTimeProfile <- R6::R6Class("CpuTimeProfile", inherit = Profile, public = list(cpuTime = NULL, 
     initialize = function(json = NULL) {
-        if (!is.null(json)) {
-            self$initJson(json)
-        } else {
-            self$init()
-        }
+        super$initialize(json = json)
     }, init = function() {
         super$init()
         self$cpuTime = 0
@@ -22,7 +18,4 @@ CpuTimeProfile <- R6::R6Class("CpuTimeProfile", inherit = Profile, public = list
         m$kind = tson.scalar("CpuTimeProfile")
         m$cpuTime = tson.scalar(self$cpuTime)
         return(m)
-    }, print = function(...) {
-        cat(yaml::as.yaml(self$toTson()))
-        invisible(self)
     }))

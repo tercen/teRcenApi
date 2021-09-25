@@ -22,11 +22,7 @@
 #' @field url object of class \code{\link{Url}} inherited from super class \code{\link{Document}}.
 ProjectDocument <- R6::R6Class("ProjectDocument", inherit = Document, public = list(projectId = NULL, 
     folderId = NULL, initialize = function(json = NULL) {
-        if (!is.null(json)) {
-            self$initJson(json)
-        } else {
-            self$init()
-        }
+        super$initialize(json = json)
     }, init = function() {
         super$init()
         self$projectId = ""
@@ -41,7 +37,4 @@ ProjectDocument <- R6::R6Class("ProjectDocument", inherit = Document, public = l
         m$projectId = tson.scalar(self$projectId)
         m$folderId = tson.scalar(self$folderId)
         return(m)
-    }, print = function(...) {
-        cat(yaml::as.yaml(self$toTson()))
-        invisible(self)
     }))

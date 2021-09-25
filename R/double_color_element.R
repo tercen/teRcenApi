@@ -6,11 +6,7 @@
 #' @field stringValue of type String.
 DoubleColorElement <- R6::R6Class("DoubleColorElement", inherit = ColorElement, public = list(stringValue = NULL, 
     initialize = function(json = NULL) {
-        if (!is.null(json)) {
-            self$initJson(json)
-        } else {
-            self$init()
-        }
+        super$initialize(json = json)
     }, init = function() {
         super$init()
         self$stringValue = ""
@@ -22,7 +18,4 @@ DoubleColorElement <- R6::R6Class("DoubleColorElement", inherit = ColorElement, 
         m$kind = tson.scalar("DoubleColorElement")
         m$stringValue = tson.scalar(self$stringValue)
         return(m)
-    }, print = function(...) {
-        cat(yaml::as.yaml(self$toTson()))
-        invisible(self)
     }))

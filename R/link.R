@@ -7,11 +7,7 @@
 #' @field outputId of type String.
 Link <- R6::R6Class("Link", inherit = IdObject, public = list(inputId = NULL, outputId = NULL, 
     initialize = function(json = NULL) {
-        if (!is.null(json)) {
-            self$initJson(json)
-        } else {
-            self$init()
-        }
+        super$initialize(json = json)
     }, init = function() {
         super$init()
         self$inputId = ""
@@ -26,7 +22,4 @@ Link <- R6::R6Class("Link", inherit = IdObject, public = list(inputId = NULL, ou
         m$inputId = tson.scalar(self$inputId)
         m$outputId = tson.scalar(self$outputId)
         return(m)
-    }, print = function(...) {
-        cat(yaml::as.yaml(self$toTson()))
-        invisible(self)
     }))

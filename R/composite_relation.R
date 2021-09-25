@@ -7,11 +7,7 @@
 #' @field mainRelation object of class \code{\link{Relation}}.
 CompositeRelation <- R6::R6Class("CompositeRelation", inherit = Relation, public = list(joinOperators = NULL, 
     mainRelation = NULL, initialize = function(json = NULL) {
-        if (!is.null(json)) {
-            self$initJson(json)
-        } else {
-            self$init()
-        }
+        super$initialize(json = json)
     }, init = function() {
         super$init()
         self$joinOperators = list()
@@ -26,7 +22,4 @@ CompositeRelation <- R6::R6Class("CompositeRelation", inherit = Relation, public
         m$joinOperators = lapply(self$joinOperators, function(each) each$toTson())
         if (!is.null(self$mainRelation)) m$mainRelation = self$mainRelation$toTson()
         return(m)
-    }, print = function(...) {
-        cat(yaml::as.yaml(self$toTson()))
-        invisible(self)
     }))

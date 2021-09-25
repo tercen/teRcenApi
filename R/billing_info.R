@@ -9,11 +9,7 @@
 #' @field address object of class \code{\link{Address}}.
 BillingInfo <- R6::R6Class("BillingInfo", inherit = Base, public = list(firstName = NULL, 
     lastName = NULL, companyName = NULL, taxId = NULL, address = NULL, initialize = function(json = NULL) {
-        if (!is.null(json)) {
-            self$initJson(json)
-        } else {
-            self$init()
-        }
+        super$initialize(json = json)
     }, init = function() {
         super$init()
         self$firstName = ""
@@ -37,7 +33,4 @@ BillingInfo <- R6::R6Class("BillingInfo", inherit = Base, public = list(firstNam
         if (!is.null(self$taxId)) m$taxId = self$taxId$toTson()
         if (!is.null(self$address)) m$address = self$address$toTson()
         return(m)
-    }, print = function(...) {
-        cat(yaml::as.yaml(self$toTson()))
-        invisible(self)
     }))

@@ -21,11 +21,7 @@
 #' @field meta list of class \code{\link{Pair}} inherited from super class \code{\link{Document}}.
 #' @field url object of class \code{\link{Url}} inherited from super class \code{\link{Document}}.
 Issue <- R6::R6Class("Issue", inherit = ProjectDocument, public = list(initialize = function(json = NULL) {
-    if (!is.null(json)) {
-        self$initJson(json)
-    } else {
-        self$init()
-    }
+    super$initialize(json = json)
 }, init = function() {
     super$init()
 }, initJson = function(json) {
@@ -34,7 +30,4 @@ Issue <- R6::R6Class("Issue", inherit = ProjectDocument, public = list(initializ
     m = super$toTson()
     m$kind = tson.scalar("Issue")
     return(m)
-}, print = function(...) {
-    cat(yaml::as.yaml(self$toTson()))
-    invisible(self)
 }))

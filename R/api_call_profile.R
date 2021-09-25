@@ -6,11 +6,7 @@
 #' @field nCalls of type int.
 ApiCallProfile <- R6::R6Class("ApiCallProfile", inherit = Profile, public = list(nCalls = NULL, 
     initialize = function(json = NULL) {
-        if (!is.null(json)) {
-            self$initJson(json)
-        } else {
-            self$init()
-        }
+        super$initialize(json = json)
     }, init = function() {
         super$init()
         self$nCalls = 0
@@ -22,7 +18,4 @@ ApiCallProfile <- R6::R6Class("ApiCallProfile", inherit = Profile, public = list
         m$kind = tson.scalar("ApiCallProfile")
         m$nCalls = tson.int(self$nCalls)
         return(m)
-    }, print = function(...) {
-        cat(yaml::as.yaml(self$toTson()))
-        invisible(self)
     }))

@@ -26,11 +26,7 @@
 #' @field relation object of class \code{\link{Relation}}.
 Schema <- R6::R6Class("Schema", inherit = ProjectDocument, public = list(nRows = NULL, 
     columns = NULL, dataDirectory = NULL, relation = NULL, initialize = function(json = NULL) {
-        if (!is.null(json)) {
-            self$initJson(json)
-        } else {
-            self$init()
-        }
+        super$initialize(json = json)
     }, init = function() {
         super$init()
         self$nRows = 0
@@ -51,7 +47,4 @@ Schema <- R6::R6Class("Schema", inherit = ProjectDocument, public = list(nRows =
         m$dataDirectory = tson.scalar(self$dataDirectory)
         if (!is.null(self$relation)) m$relation = self$relation$toTson()
         return(m)
-    }, print = function(...) {
-        cat(yaml::as.yaml(self$toTson()))
-        invisible(self)
     }))

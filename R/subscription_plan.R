@@ -28,11 +28,7 @@
 SubscriptionPlan <- R6::R6Class("SubscriptionPlan", inherit = Document, public = list(providerKey = NULL, 
     paymentProviderPlanId = NULL, checkoutSessionId = NULL, subscriptionId = NULL, 
     status = NULL, paymentMethodStatus = NULL, ip = NULL, initialize = function(json = NULL) {
-        if (!is.null(json)) {
-            self$initJson(json)
-        } else {
-            self$init()
-        }
+        super$initialize(json = json)
     }, init = function() {
         super$init()
         self$providerKey = ""
@@ -62,7 +58,4 @@ SubscriptionPlan <- R6::R6Class("SubscriptionPlan", inherit = Document, public =
         m$paymentMethodStatus = tson.scalar(self$paymentMethodStatus)
         m$ip = tson.scalar(self$ip)
         return(m)
-    }, print = function(...) {
-        cat(yaml::as.yaml(self$toTson()))
-        invisible(self)
     }))

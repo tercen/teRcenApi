@@ -5,11 +5,7 @@
 #' @field principalId of type String.
 Principal <- R6::R6Class("Principal", inherit = Base, public = list(principalId = NULL, 
     initialize = function(json = NULL) {
-        if (!is.null(json)) {
-            self$initJson(json)
-        } else {
-            self$init()
-        }
+        super$initialize(json = json)
     }, init = function() {
         super$init()
         self$principalId = ""
@@ -21,7 +17,4 @@ Principal <- R6::R6Class("Principal", inherit = Base, public = list(principalId 
         m$kind = tson.scalar("Principal")
         m$principalId = tson.scalar(self$principalId)
         return(m)
-    }, print = function(...) {
-        cat(yaml::as.yaml(self$toTson()))
-        invisible(self)
     }))

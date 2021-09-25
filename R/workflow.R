@@ -25,11 +25,7 @@
 #' @field offset object of class \code{\link{Point}}.
 Workflow <- R6::R6Class("Workflow", inherit = ProjectDocument, public = list(links = NULL, 
     steps = NULL, offset = NULL, initialize = function(json = NULL) {
-        if (!is.null(json)) {
-            self$initJson(json)
-        } else {
-            self$init()
-        }
+        super$initialize(json = json)
     }, init = function() {
         super$init()
         self$links = list()
@@ -47,7 +43,4 @@ Workflow <- R6::R6Class("Workflow", inherit = ProjectDocument, public = list(lin
         m$steps = lapply(self$steps, function(each) each$toTson())
         if (!is.null(self$offset)) m$offset = self$offset$toTson()
         return(m)
-    }, print = function(...) {
-        cat(yaml::as.yaml(self$toTson()))
-        invisible(self)
     }))

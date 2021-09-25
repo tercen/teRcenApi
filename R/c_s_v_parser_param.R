@@ -11,11 +11,7 @@
 CSVParserParam <- R6::R6Class("CSVParserParam", inherit = Base, public = list(separator = NULL, 
     encoding = NULL, quote = NULL, hasHeaders = NULL, allowMalformed = NULL, comment = NULL, 
     initialize = function(json = NULL) {
-        if (!is.null(json)) {
-            self$initJson(json)
-        } else {
-            self$init()
-        }
+        super$initialize(json = json)
     }, init = function() {
         super$init()
         self$separator = ""
@@ -42,7 +38,4 @@ CSVParserParam <- R6::R6Class("CSVParserParam", inherit = Base, public = list(se
         m$allowMalformed = tson.scalar(self$allowMalformed)
         m$comment = tson.scalar(self$comment)
         return(m)
-    }, print = function(...) {
-        cat(yaml::as.yaml(self$toTson()))
-        invisible(self)
     }))

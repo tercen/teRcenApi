@@ -7,11 +7,7 @@
 #' @field rev of type String.
 PersistentObject <- R6::R6Class("PersistentObject", inherit = IdObject, public = list(isDeleted = NULL, 
     rev = NULL, initialize = function(json = NULL) {
-        if (!is.null(json)) {
-            self$initJson(json)
-        } else {
-            self$init()
-        }
+        super$initialize(json = json)
     }, init = function() {
         super$init()
         self$isDeleted = TRUE
@@ -26,7 +22,4 @@ PersistentObject <- R6::R6Class("PersistentObject", inherit = IdObject, public =
         m$isDeleted = tson.scalar(self$isDeleted)
         m$rev = tson.scalar(self$rev)
         return(m)
-    }, print = function(...) {
-        cat(yaml::as.yaml(self$toTson()))
-        invisible(self)
     }))

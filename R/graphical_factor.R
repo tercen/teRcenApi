@@ -6,11 +6,7 @@
 #' @field rectangle object of class \code{\link{Rectangle}}.
 GraphicalFactor <- R6::R6Class("GraphicalFactor", inherit = Base, public = list(factor = NULL, 
     rectangle = NULL, initialize = function(json = NULL) {
-        if (!is.null(json)) {
-            self$initJson(json)
-        } else {
-            self$init()
-        }
+        super$initialize(json = json)
     }, init = function() {
         super$init()
         self$factor = Factor$new()
@@ -25,7 +21,4 @@ GraphicalFactor <- R6::R6Class("GraphicalFactor", inherit = Base, public = list(
         if (!is.null(self$factor)) m$factor = self$factor$toTson()
         if (!is.null(self$rectangle)) m$rectangle = self$rectangle$toTson()
         return(m)
-    }, print = function(...) {
-        cat(yaml::as.yaml(self$toTson()))
-        invisible(self)
     }))

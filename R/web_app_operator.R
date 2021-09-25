@@ -24,11 +24,7 @@
 #' @field url object of class \code{\link{Url}} inherited from super class \code{\link{Document}}.
 WebAppOperator <- R6::R6Class("WebAppOperator", inherit = GitOperator, public = list(isViewOnly = NULL, 
     initialize = function(json = NULL) {
-        if (!is.null(json)) {
-            self$initJson(json)
-        } else {
-            self$init()
-        }
+        super$initialize(json = json)
     }, init = function() {
         super$init()
         self$isViewOnly = TRUE
@@ -40,7 +36,4 @@ WebAppOperator <- R6::R6Class("WebAppOperator", inherit = GitOperator, public = 
         m$kind = tson.scalar("WebAppOperator")
         m$isViewOnly = tson.scalar(self$isViewOnly)
         return(m)
-    }, print = function(...) {
-        cat(yaml::as.yaml(self$toTson()))
-        invisible(self)
     }))

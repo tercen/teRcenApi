@@ -5,11 +5,7 @@
 #' @field color of type int.
 ColorElement <- R6::R6Class("ColorElement", inherit = Base, public = list(color = NULL, 
     initialize = function(json = NULL) {
-        if (!is.null(json)) {
-            self$initJson(json)
-        } else {
-            self$init()
-        }
+        super$initialize(json = json)
     }, init = function() {
         super$init()
         self$color = 0
@@ -21,7 +17,4 @@ ColorElement <- R6::R6Class("ColorElement", inherit = Base, public = list(color 
         m$kind = tson.scalar("ColorElement")
         m$color = tson.int(self$color)
         return(m)
-    }, print = function(...) {
-        cat(yaml::as.yaml(self$toTson()))
-        invisible(self)
     }))

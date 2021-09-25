@@ -6,11 +6,7 @@
 #' @field rColumns list of type String.
 ColumnPair <- R6::R6Class("ColumnPair", inherit = Base, public = list(lColumns = NULL, 
     rColumns = NULL, initialize = function(json = NULL) {
-        if (!is.null(json)) {
-            self$initJson(json)
-        } else {
-            self$init()
-        }
+        super$initialize(json = json)
     }, init = function() {
         super$init()
         self$lColumns = list()
@@ -25,7 +21,4 @@ ColumnPair <- R6::R6Class("ColumnPair", inherit = Base, public = list(lColumns =
         m$lColumns = lapply(self$lColumns, function(each) tson.scalar(each))
         m$rColumns = lapply(self$rColumns, function(each) tson.scalar(each))
         return(m)
-    }, print = function(...) {
-        cat(yaml::as.yaml(self$toTson()))
-        invisible(self)
     }))

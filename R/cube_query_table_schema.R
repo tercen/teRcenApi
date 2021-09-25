@@ -29,11 +29,7 @@
 #' @field query object of class \code{\link{CubeQuery}}.
 CubeQueryTableSchema <- R6::R6Class("CubeQueryTableSchema", inherit = Schema, public = list(queryHash = NULL, 
     queryTableType = NULL, query = NULL, initialize = function(json = NULL) {
-        if (!is.null(json)) {
-            self$initJson(json)
-        } else {
-            self$init()
-        }
+        super$initialize(json = json)
     }, init = function() {
         super$init()
         self$queryHash = ""
@@ -51,7 +47,4 @@ CubeQueryTableSchema <- R6::R6Class("CubeQueryTableSchema", inherit = Schema, pu
         m$queryTableType = tson.scalar(self$queryTableType)
         if (!is.null(self$query)) m$query = self$query$toTson()
         return(m)
-    }, print = function(...) {
-        cat(yaml::as.yaml(self$toTson()))
-        invisible(self)
     }))

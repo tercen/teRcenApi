@@ -5,11 +5,7 @@
 #' @field x of type double.
 #' @field y of type double.
 Point <- R6::R6Class("Point", inherit = Base, public = list(x = NULL, y = NULL, initialize = function(json = NULL) {
-    if (!is.null(json)) {
-        self$initJson(json)
-    } else {
-        self$init()
-    }
+    super$initialize(json = json)
 }, init = function() {
     super$init()
     self$x = 0
@@ -24,7 +20,4 @@ Point <- R6::R6Class("Point", inherit = Base, public = list(x = NULL, y = NULL, 
     m$x = tson.scalar(self$x)
     m$y = tson.scalar(self$y)
     return(m)
-}, print = function(...) {
-    cat(yaml::as.yaml(self$toTson()))
-    invisible(self)
 }))

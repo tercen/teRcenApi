@@ -6,11 +6,7 @@
 #' @field topLeft object of class \code{\link{Point}}.
 Rectangle <- R6::R6Class("Rectangle", inherit = Base, public = list(extent = NULL, 
     topLeft = NULL, initialize = function(json = NULL) {
-        if (!is.null(json)) {
-            self$initJson(json)
-        } else {
-            self$init()
-        }
+        super$initialize(json = json)
     }, init = function() {
         super$init()
         self$extent = Point$new()
@@ -25,7 +21,4 @@ Rectangle <- R6::R6Class("Rectangle", inherit = Base, public = list(extent = NUL
         if (!is.null(self$extent)) m$extent = self$extent$toTson()
         if (!is.null(self$topLeft)) m$topLeft = self$topLeft$toTson()
         return(m)
-    }, print = function(...) {
-        cat(yaml::as.yaml(self$toTson()))
-        invisible(self)
     }))

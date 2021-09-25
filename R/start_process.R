@@ -12,11 +12,7 @@
 StartProcess <- R6::R6Class("StartProcess", inherit = IdObject, public = list(executable = NULL, 
     arguments = NULL, ulimits = NULL, timeout = NULL, pid = NULL, script = NULL, 
     initialize = function(json = NULL) {
-        if (!is.null(json)) {
-            self$initJson(json)
-        } else {
-            self$init()
-        }
+        super$initialize(json = json)
     }, init = function() {
         super$init()
         self$executable = ""
@@ -43,7 +39,4 @@ StartProcess <- R6::R6Class("StartProcess", inherit = IdObject, public = list(ex
         m$pid = tson.int(self$pid)
         m$script = tson.scalar(self$script)
         return(m)
-    }, print = function(...) {
-        cat(yaml::as.yaml(self$toTson()))
-        invisible(self)
     }))

@@ -11,11 +11,7 @@
 Crosstab <- R6::R6Class("Crosstab", inherit = StepModel, public = list(axis = NULL, 
     columnTable = NULL, filters = NULL, operatorSettings = NULL, rowTable = NULL, 
     taskId = NULL, initialize = function(json = NULL) {
-        if (!is.null(json)) {
-            self$initJson(json)
-        } else {
-            self$init()
-        }
+        super$initialize(json = json)
     }, init = function() {
         super$init()
         self$taskId = ""
@@ -42,7 +38,4 @@ Crosstab <- R6::R6Class("Crosstab", inherit = StepModel, public = list(axis = NU
         if (!is.null(self$rowTable)) m$rowTable = self$rowTable$toTson()
         m$taskId = tson.scalar(self$taskId)
         return(m)
-    }, print = function(...) {
-        cat(yaml::as.yaml(self$toTson()))
-        invisible(self)
     }))

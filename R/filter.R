@@ -7,11 +7,7 @@
 #' @field filterExprs list of class \code{\link{FilterTopExpr}}.
 Filter <- R6::R6Class("Filter", inherit = FilterTopExpr, public = list(logical = NULL, 
     not = NULL, filterExprs = NULL, initialize = function(json = NULL) {
-        if (!is.null(json)) {
-            self$initJson(json)
-        } else {
-            self$init()
-        }
+        super$initialize(json = json)
     }, init = function() {
         super$init()
         self$logical = ""
@@ -29,7 +25,4 @@ Filter <- R6::R6Class("Filter", inherit = FilterTopExpr, public = list(logical =
         m$not = tson.scalar(self$not)
         m$filterExprs = lapply(self$filterExprs, function(each) each$toTson())
         return(m)
-    }, print = function(...) {
-        cat(yaml::as.yaml(self$toTson()))
-        invisible(self)
     }))

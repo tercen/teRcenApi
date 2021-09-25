@@ -10,11 +10,7 @@
 Profiles <- R6::R6Class("Profiles", inherit = Base, public = list(apiProfile = NULL, 
     tableProfile = NULL, cpuTimeProfile = NULL, storageProfile = NULL, runProfile = NULL, 
     initialize = function(json = NULL) {
-        if (!is.null(json)) {
-            self$initJson(json)
-        } else {
-            self$init()
-        }
+        super$initialize(json = json)
     }, init = function() {
         super$init()
         self$apiProfile = ApiCallProfile$new()
@@ -38,7 +34,4 @@ Profiles <- R6::R6Class("Profiles", inherit = Base, public = list(apiProfile = N
         if (!is.null(self$storageProfile)) m$storageProfile = self$storageProfile$toTson()
         if (!is.null(self$runProfile)) m$runProfile = self$runProfile$toTson()
         return(m)
-    }, print = function(...) {
-        cat(yaml::as.yaml(self$toTson()))
-        invisible(self)
     }))

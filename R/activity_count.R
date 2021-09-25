@@ -6,11 +6,7 @@
 #' @field count of type int.
 ActivityCount <- R6::R6Class("ActivityCount", inherit = Base, public = list(objectId = NULL, 
     count = NULL, initialize = function(json = NULL) {
-        if (!is.null(json)) {
-            self$initJson(json)
-        } else {
-            self$init()
-        }
+        super$initialize(json = json)
     }, init = function() {
         super$init()
         self$objectId = ""
@@ -25,7 +21,4 @@ ActivityCount <- R6::R6Class("ActivityCount", inherit = Base, public = list(obje
         m$objectId = tson.scalar(self$objectId)
         m$count = tson.int(self$count)
         return(m)
-    }, print = function(...) {
-        cat(yaml::as.yaml(self$toTson()))
-        invisible(self)
     }))

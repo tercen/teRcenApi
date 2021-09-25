@@ -8,11 +8,7 @@
 #' @field stringColorElements list of class \code{\link{StringColorElement}}.
 CategoryPalette <- R6::R6Class("CategoryPalette", inherit = Palette, public = list(colorList = NULL, 
     stringColorElements = NULL, initialize = function(json = NULL) {
-        if (!is.null(json)) {
-            self$initJson(json)
-        } else {
-            self$init()
-        }
+        super$initialize(json = json)
     }, init = function() {
         super$init()
         self$colorList = ColorList$new()
@@ -27,7 +23,4 @@ CategoryPalette <- R6::R6Class("CategoryPalette", inherit = Palette, public = li
         if (!is.null(self$colorList)) m$colorList = self$colorList$toTson()
         m$stringColorElements = lapply(self$stringColorElements, function(each) each$toTson())
         return(m)
-    }, print = function(...) {
-        cat(yaml::as.yaml(self$toTson()))
-        invisible(self)
     }))

@@ -7,11 +7,7 @@
 #' @field name of type String.
 Port <- R6::R6Class("Port", inherit = IdObject, public = list(linkType = NULL, name = NULL, 
     initialize = function(json = NULL) {
-        if (!is.null(json)) {
-            self$initJson(json)
-        } else {
-            self$init()
-        }
+        super$initialize(json = json)
     }, init = function() {
         super$init()
         self$linkType = ""
@@ -26,7 +22,4 @@ Port <- R6::R6Class("Port", inherit = IdObject, public = list(linkType = NULL, n
         m$linkType = tson.scalar(self$linkType)
         m$name = tson.scalar(self$name)
         return(m)
-    }, print = function(...) {
-        cat(yaml::as.yaml(self$toTson()))
-        invisible(self)
     }))

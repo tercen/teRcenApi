@@ -7,11 +7,7 @@
 #' @field relation object of class \code{\link{Relation}}.
 DistinctRelation <- R6::R6Class("DistinctRelation", inherit = Relation, public = list(relation = NULL, 
     group = NULL, initialize = function(json = NULL) {
-        if (!is.null(json)) {
-            self$initJson(json)
-        } else {
-            self$init()
-        }
+        super$initialize(json = json)
     }, init = function() {
         super$init()
         self$group = list()
@@ -26,7 +22,4 @@ DistinctRelation <- R6::R6Class("DistinctRelation", inherit = Relation, public =
         if (!is.null(self$relation)) m$relation = self$relation$toTson()
         m$group = lapply(self$group, function(each) tson.scalar(each))
         return(m)
-    }, print = function(...) {
-        cat(yaml::as.yaml(self$toTson()))
-        invisible(self)
     }))

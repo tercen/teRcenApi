@@ -7,11 +7,7 @@
 #' @field rightFactors list of class \code{\link{Factor}}.
 JoinStepModel <- R6::R6Class("JoinStepModel", inherit = StepModel, public = list(leftFactors = NULL, 
     rightFactors = NULL, rightPrefix = NULL, initialize = function(json = NULL) {
-        if (!is.null(json)) {
-            self$initJson(json)
-        } else {
-            self$init()
-        }
+        super$initialize(json = json)
     }, init = function() {
         super$init()
         self$rightPrefix = ""
@@ -29,7 +25,4 @@ JoinStepModel <- R6::R6Class("JoinStepModel", inherit = StepModel, public = list
         m$rightFactors = lapply(self$rightFactors, function(each) each$toTson())
         m$rightPrefix = tson.scalar(self$rightPrefix)
         return(m)
-    }, print = function(...) {
-        cat(yaml::as.yaml(self$toTson()))
-        invisible(self)
     }))

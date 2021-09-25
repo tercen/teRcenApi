@@ -7,11 +7,7 @@
 #' @field filters object of class \code{\link{Filters}}.
 WhereRelation <- R6::R6Class("WhereRelation", inherit = Relation, public = list(relation = NULL, 
     filters = NULL, initialize = function(json = NULL) {
-        if (!is.null(json)) {
-            self$initJson(json)
-        } else {
-            self$init()
-        }
+        super$initialize(json = json)
     }, init = function() {
         super$init()
         self$relation = Relation$new()
@@ -26,7 +22,4 @@ WhereRelation <- R6::R6Class("WhereRelation", inherit = Relation, public = list(
         if (!is.null(self$relation)) m$relation = self$relation$toTson()
         if (!is.null(self$filters)) m$filters = self$filters$toTson()
         return(m)
-    }, print = function(...) {
-        cat(yaml::as.yaml(self$toTson()))
-        invisible(self)
     }))

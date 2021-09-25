@@ -7,11 +7,7 @@
 #' @field relationId of type String.
 Attribute <- R6::R6Class("Attribute", inherit = Factor, public = list(relationId = NULL, 
     initialize = function(json = NULL) {
-        if (!is.null(json)) {
-            self$initJson(json)
-        } else {
-            self$init()
-        }
+        super$initialize(json = json)
     }, init = function() {
         super$init()
         self$relationId = ""
@@ -23,7 +19,4 @@ Attribute <- R6::R6Class("Attribute", inherit = Factor, public = list(relationId
         m$kind = tson.scalar("Attribute")
         m$relationId = tson.scalar(self$relationId)
         return(m)
-    }, print = function(...) {
-        cat(yaml::as.yaml(self$toTson()))
-        invisible(self)
     }))

@@ -22,11 +22,7 @@ Document <- R6::R6Class("Document", inherit = PersistentObject, public = list(de
     name = NULL, createdBy = NULL, acl = NULL, createdDate = NULL, lastModifiedDate = NULL, 
     urls = NULL, tags = NULL, meta = NULL, url = NULL, version = NULL, authors = NULL, 
     isPublic = NULL, initialize = function(json = NULL) {
-        if (!is.null(json)) {
-            self$initJson(json)
-        } else {
-            self$init()
-        }
+        super$initialize(json = json)
     }, init = function() {
         super$init()
         self$description = ""
@@ -74,7 +70,4 @@ Document <- R6::R6Class("Document", inherit = PersistentObject, public = list(de
         m$authors = lapply(self$authors, function(each) tson.scalar(each))
         m$isPublic = tson.scalar(self$isPublic)
         return(m)
-    }, print = function(...) {
-        cat(yaml::as.yaml(self$toTson()))
-        invisible(self)
     }))

@@ -8,11 +8,7 @@
 #' @field properties list of class \code{\link{Pair}}.
 ColumnSchemaMetaData <- R6::R6Class("ColumnSchemaMetaData", inherit = Base, public = list(sort = NULL, 
     ascending = NULL, quartiles = NULL, properties = NULL, initialize = function(json = NULL) {
-        if (!is.null(json)) {
-            self$initJson(json)
-        } else {
-            self$init()
-        }
+        super$initialize(json = json)
     }, init = function() {
         super$init()
         self$sort = list()
@@ -33,7 +29,4 @@ ColumnSchemaMetaData <- R6::R6Class("ColumnSchemaMetaData", inherit = Base, publ
         m$quartiles = lapply(self$quartiles, function(each) tson.scalar(each))
         m$properties = lapply(self$properties, function(each) each$toTson())
         return(m)
-    }, print = function(...) {
-        cat(yaml::as.yaml(self$toTson()))
-        invisible(self)
     }))

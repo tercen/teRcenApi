@@ -6,11 +6,7 @@
 #' @field index of type int.
 SimpleRelation <- R6::R6Class("SimpleRelation", inherit = Relation, public = list(index = NULL, 
     initialize = function(json = NULL) {
-        if (!is.null(json)) {
-            self$initJson(json)
-        } else {
-            self$init()
-        }
+        super$initialize(json = json)
     }, init = function() {
         super$init()
         self$index = 0
@@ -22,7 +18,4 @@ SimpleRelation <- R6::R6Class("SimpleRelation", inherit = Relation, public = lis
         m$kind = tson.scalar("SimpleRelation")
         m$index = tson.int(self$index)
         return(m)
-    }, print = function(...) {
-        cat(yaml::as.yaml(self$toTson()))
-        invisible(self)
     }))

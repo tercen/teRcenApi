@@ -13,11 +13,7 @@
 #' @field meltedAttributes list of class \code{\link{Attribute}}.
 MeltStep <- R6::R6Class("MeltStep", inherit = NamespaceStep, public = list(model = NULL, 
     meltedAttributes = NULL, initialize = function(json = NULL) {
-        if (!is.null(json)) {
-            self$initJson(json)
-        } else {
-            self$init()
-        }
+        super$initialize(json = json)
     }, init = function() {
         super$init()
         self$model = MeltStepModel$new()
@@ -32,7 +28,4 @@ MeltStep <- R6::R6Class("MeltStep", inherit = NamespaceStep, public = list(model
         if (!is.null(self$model)) m$model = self$model$toTson()
         m$meltedAttributes = lapply(self$meltedAttributes, function(each) each$toTson())
         return(m)
-    }, print = function(...) {
-        cat(yaml::as.yaml(self$toTson()))
-        invisible(self)
     }))

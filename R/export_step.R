@@ -12,11 +12,7 @@
 #' @field model object of class \code{\link{ExportModel}}.
 ExportStep <- R6::R6Class("ExportStep", inherit = ModelStep, public = list(model = NULL, 
     initialize = function(json = NULL) {
-        if (!is.null(json)) {
-            self$initJson(json)
-        } else {
-            self$init()
-        }
+        super$initialize(json = json)
     }, init = function() {
         super$init()
         self$model = ExportModel$new()
@@ -28,7 +24,4 @@ ExportStep <- R6::R6Class("ExportStep", inherit = ModelStep, public = list(model
         m$kind = tson.scalar("ExportStep")
         if (!is.null(self$model)) m$model = self$model$toTson()
         return(m)
-    }, print = function(...) {
-        cat(yaml::as.yaml(self$toTson()))
-        invisible(self)
     }))

@@ -8,11 +8,7 @@
 #' @field filterExprs list of class \code{\link{FilterTopExpr}} inherited from super class \code{\link{Filter}}.
 NamedFilter <- R6::R6Class("NamedFilter", inherit = Filter, public = list(name = NULL, 
     initialize = function(json = NULL) {
-        if (!is.null(json)) {
-            self$initJson(json)
-        } else {
-            self$init()
-        }
+        super$initialize(json = json)
     }, init = function() {
         super$init()
         self$name = ""
@@ -24,7 +20,4 @@ NamedFilter <- R6::R6Class("NamedFilter", inherit = Filter, public = list(name =
         m$kind = tson.scalar("NamedFilter")
         m$name = tson.scalar(self$name)
         return(m)
-    }, print = function(...) {
-        cat(yaml::as.yaml(self$toTson()))
-        invisible(self)
     }))

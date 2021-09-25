@@ -10,11 +10,7 @@
 #' @field relation object of class \code{\link{Relation}}.
 GatherRelation <- R6::R6Class("GatherRelation", inherit = Relation, public = list(relation = NULL, 
     names = NULL, valueName = NULL, variableName = NULL, valueType = NULL, initialize = function(json = NULL) {
-        if (!is.null(json)) {
-            self$initJson(json)
-        } else {
-            self$init()
-        }
+        super$initialize(json = json)
     }, init = function() {
         super$init()
         self$names = list()
@@ -38,7 +34,4 @@ GatherRelation <- R6::R6Class("GatherRelation", inherit = Relation, public = lis
         m$variableName = tson.scalar(self$variableName)
         m$valueType = tson.scalar(self$valueType)
         return(m)
-    }, print = function(...) {
-        cat(yaml::as.yaml(self$toTson()))
-        invisible(self)
     }))

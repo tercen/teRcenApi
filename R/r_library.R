@@ -21,11 +21,7 @@
 #' @field rDescription object of class \code{\link{RDescription}}.
 RLibrary <- R6::R6Class("RLibrary", inherit = Document, public = list(rDescription = NULL, 
     initialize = function(json = NULL) {
-        if (!is.null(json)) {
-            self$initJson(json)
-        } else {
-            self$init()
-        }
+        super$initialize(json = json)
     }, init = function() {
         super$init()
         self$rDescription = RDescription$new()
@@ -37,7 +33,4 @@ RLibrary <- R6::R6Class("RLibrary", inherit = Document, public = list(rDescripti
         m$kind = tson.scalar("RLibrary")
         if (!is.null(self$rDescription)) m$rDescription = self$rDescription$toTson()
         return(m)
-    }, print = function(...) {
-        cat(yaml::as.yaml(self$toTson()))
-        invisible(self)
     }))

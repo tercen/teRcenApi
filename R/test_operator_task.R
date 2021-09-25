@@ -20,11 +20,7 @@
 #' @field aclContext object of class \code{\link{AclContext}} inherited from super class \code{\link{Task}}.
 TestOperatorTask <- R6::R6Class("TestOperatorTask", inherit = ProjectTask, public = list(operatorId = NULL, 
     initialize = function(json = NULL) {
-        if (!is.null(json)) {
-            self$initJson(json)
-        } else {
-            self$init()
-        }
+        super$initialize(json = json)
     }, init = function() {
         super$init()
         self$operatorId = ""
@@ -36,7 +32,4 @@ TestOperatorTask <- R6::R6Class("TestOperatorTask", inherit = ProjectTask, publi
         m$kind = tson.scalar("TestOperatorTask")
         m$operatorId = tson.scalar(self$operatorId)
         return(m)
-    }, print = function(...) {
-        cat(yaml::as.yaml(self$toTson()))
-        invisible(self)
     }))

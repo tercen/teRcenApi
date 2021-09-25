@@ -13,11 +13,7 @@
 #' @field computedRelation object of class \code{\link{Relation}}.
 DataStep <- R6::R6Class("DataStep", inherit = CrossTabStep, public = list(computedRelation = NULL, 
     initialize = function(json = NULL) {
-        if (!is.null(json)) {
-            self$initJson(json)
-        } else {
-            self$init()
-        }
+        super$initialize(json = json)
     }, init = function() {
         super$init()
         self$computedRelation = Relation$new()
@@ -29,7 +25,4 @@ DataStep <- R6::R6Class("DataStep", inherit = CrossTabStep, public = list(comput
         m$kind = tson.scalar("DataStep")
         if (!is.null(self$computedRelation)) m$computedRelation = self$computedRelation$toTson()
         return(m)
-    }, print = function(...) {
-        cat(yaml::as.yaml(self$toTson()))
-        invisible(self)
     }))

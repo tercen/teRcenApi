@@ -3,11 +3,7 @@
 #' @export
 #' @format \code{\link{R6Class}} object, super class \code{\link{StepModel}}.
 ExportModel <- R6::R6Class("ExportModel", inherit = StepModel, public = list(initialize = function(json = NULL) {
-    if (!is.null(json)) {
-        self$initJson(json)
-    } else {
-        self$init()
-    }
+    super$initialize(json = json)
 }, init = function() {
     super$init()
 }, initJson = function(json) {
@@ -16,7 +12,4 @@ ExportModel <- R6::R6Class("ExportModel", inherit = StepModel, public = list(ini
     m = super$toTson()
     m$kind = tson.scalar("ExportModel")
     return(m)
-}, print = function(...) {
-    cat(yaml::as.yaml(self$toTson()))
-    invisible(self)
 }))

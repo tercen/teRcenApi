@@ -23,11 +23,7 @@ Ulimits <- R6::R6Class("Ulimits", inherit = Base, public = list(core_file_size =
     max_locked_memory = NULL, max_memory_size = NULL, open_files = NULL, pipe_size = NULL, 
     message_queues = NULL, real_time_priority = NULL, stack_size = NULL, cpu_time = NULL, 
     max_user_processes = NULL, virtual_memory = NULL, file_locks = NULL, initialize = function(json = NULL) {
-        if (!is.null(json)) {
-            self$initJson(json)
-        } else {
-            self$init()
-        }
+        super$initialize(json = json)
     }, init = function() {
         super$init()
         self$core_file_size = 0
@@ -84,7 +80,4 @@ Ulimits <- R6::R6Class("Ulimits", inherit = Base, public = list(core_file_size =
         m$virtual_memory = tson.int(self$virtual_memory)
         m$file_locks = tson.int(self$file_locks)
         return(m)
-    }, print = function(...) {
-        cat(yaml::as.yaml(self$toTson()))
-        invisible(self)
     }))

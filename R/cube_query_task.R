@@ -22,11 +22,7 @@
 #' @field query object of class \code{\link{CubeQuery}}.
 CubeQueryTask <- R6::R6Class("CubeQueryTask", inherit = ProjectTask, public = list(query = NULL, 
     removeOnGC = NULL, schemaIds = NULL, initialize = function(json = NULL) {
-        if (!is.null(json)) {
-            self$initJson(json)
-        } else {
-            self$init()
-        }
+        super$initialize(json = json)
     }, init = function() {
         super$init()
         self$removeOnGC = TRUE
@@ -44,7 +40,4 @@ CubeQueryTask <- R6::R6Class("CubeQueryTask", inherit = ProjectTask, public = li
         m$removeOnGC = tson.scalar(self$removeOnGC)
         m$schemaIds = lapply(self$schemaIds, function(each) tson.scalar(each))
         return(m)
-    }, print = function(...) {
-        cat(yaml::as.yaml(self$toTson()))
-        invisible(self)
     }))

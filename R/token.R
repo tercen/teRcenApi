@@ -7,11 +7,7 @@
 #' @field expiry object of class \code{\link{Date}}.
 Token <- R6::R6Class("Token", inherit = Base, public = list(userId = NULL, expiry = NULL, 
     token = NULL, initialize = function(json = NULL) {
-        if (!is.null(json)) {
-            self$initJson(json)
-        } else {
-            self$init()
-        }
+        super$initialize(json = json)
     }, init = function() {
         super$init()
         self$userId = ""
@@ -29,7 +25,4 @@ Token <- R6::R6Class("Token", inherit = Base, public = list(userId = NULL, expir
         if (!is.null(self$expiry)) m$expiry = self$expiry$toTson()
         m$token = tson.scalar(self$token)
         return(m)
-    }, print = function(...) {
-        cat(yaml::as.yaml(self$toTson()))
-        invisible(self)
     }))

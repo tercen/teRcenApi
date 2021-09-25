@@ -7,11 +7,7 @@
 #' @field rows list of class \code{\link{PersistentObject}}.
 SearchResult <- R6::R6Class("SearchResult", inherit = Base, public = list(total_rows = NULL, 
     bookmark = NULL, rows = NULL, initialize = function(json = NULL) {
-        if (!is.null(json)) {
-            self$initJson(json)
-        } else {
-            self$init()
-        }
+        super$initialize(json = json)
     }, init = function() {
         super$init()
         self$total_rows = 0
@@ -29,7 +25,4 @@ SearchResult <- R6::R6Class("SearchResult", inherit = Base, public = list(total_
         m$bookmark = tson.scalar(self$bookmark)
         m$rows = lapply(self$rows, function(each) each$toTson())
         return(m)
-    }, print = function(...) {
-        cat(yaml::as.yaml(self$toTson()))
-        invisible(self)
     }))

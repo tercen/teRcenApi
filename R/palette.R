@@ -6,11 +6,7 @@
 #' @field properties list of class \code{\link{PropertyValue}}.
 Palette <- R6::R6Class("Palette", inherit = Base, public = list(backcolor = NULL, 
     properties = NULL, initialize = function(json = NULL) {
-        if (!is.null(json)) {
-            self$initJson(json)
-        } else {
-            self$init()
-        }
+        super$initialize(json = json)
     }, init = function() {
         super$init()
         self$backcolor = 0
@@ -25,7 +21,4 @@ Palette <- R6::R6Class("Palette", inherit = Base, public = list(backcolor = NULL
         m$backcolor = tson.int(self$backcolor)
         m$properties = lapply(self$properties, function(each) each$toTson())
         return(m)
-    }, print = function(...) {
-        cat(yaml::as.yaml(self$toTson()))
-        invisible(self)
     }))

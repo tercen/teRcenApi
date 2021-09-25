@@ -21,11 +21,7 @@
 #' @field url object of class \code{\link{Url}} inherited from super class \code{\link{Document}}.
 WorkerEndpoint <- R6::R6Class("WorkerEndpoint", inherit = Document, public = list(uri = NULL, 
     initialize = function(json = NULL) {
-        if (!is.null(json)) {
-            self$initJson(json)
-        } else {
-            self$init()
-        }
+        super$initialize(json = json)
     }, init = function() {
         super$init()
         self$uri = ""
@@ -37,7 +33,4 @@ WorkerEndpoint <- R6::R6Class("WorkerEndpoint", inherit = Document, public = lis
         m$kind = tson.scalar("WorkerEndpoint")
         m$uri = tson.scalar(self$uri)
         return(m)
-    }, print = function(...) {
-        cat(yaml::as.yaml(self$toTson()))
-        invisible(self)
     }))

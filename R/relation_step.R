@@ -10,11 +10,7 @@
 #' @field rectangle object of class \code{\link{Rectangle}} inherited from super class \code{\link{Step}}.
 #' @field state object of class \code{\link{StepState}} inherited from super class \code{\link{Step}}.
 RelationStep <- R6::R6Class("RelationStep", inherit = ModelStep, public = list(initialize = function(json = NULL) {
-    if (!is.null(json)) {
-        self$initJson(json)
-    } else {
-        self$init()
-    }
+    super$initialize(json = json)
 }, init = function() {
     super$init()
 }, initJson = function(json) {
@@ -23,7 +19,4 @@ RelationStep <- R6::R6Class("RelationStep", inherit = ModelStep, public = list(i
     m = super$toTson()
     m$kind = tson.scalar("RelationStep")
     return(m)
-}, print = function(...) {
-    cat(yaml::as.yaml(self$toTson()))
-    invisible(self)
 }))

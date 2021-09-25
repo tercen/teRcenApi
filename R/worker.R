@@ -18,11 +18,7 @@ Worker <- R6::R6Class("Worker", inherit = Base, public = list(status = NULL, nam
     uri = NULL, priority = NULL, nCPU = NULL, nThread = NULL, memory = NULL, nAvailableThread = NULL, 
     availableMemory = NULL, availableTaskTypes = NULL, lastDateActivity = NULL, heartBeat = NULL, 
     initialize = function(json = NULL) {
-        if (!is.null(json)) {
-            self$initJson(json)
-        } else {
-            self$init()
-        }
+        super$initialize(json = json)
     }, init = function() {
         super$init()
         self$status = ""
@@ -67,7 +63,4 @@ Worker <- R6::R6Class("Worker", inherit = Base, public = list(status = NULL, nam
         m$lastDateActivity = tson.scalar(self$lastDateActivity)
         m$heartBeat = tson.int(self$heartBeat)
         return(m)
-    }, print = function(...) {
-        cat(yaml::as.yaml(self$toTson()))
-        invisible(self)
     }))

@@ -7,11 +7,7 @@
 #' @field ascending of type bool.
 TableProperties <- R6::R6Class("TableProperties", inherit = Base, public = list(name = NULL, 
     sortOrder = NULL, ascending = NULL, initialize = function(json = NULL) {
-        if (!is.null(json)) {
-            self$initJson(json)
-        } else {
-            self$init()
-        }
+        super$initialize(json = json)
     }, init = function() {
         super$init()
         self$name = ""
@@ -29,7 +25,4 @@ TableProperties <- R6::R6Class("TableProperties", inherit = Base, public = list(
         m$sortOrder = lapply(self$sortOrder, function(each) tson.scalar(each))
         m$ascending = tson.scalar(self$ascending)
         return(m)
-    }, print = function(...) {
-        cat(yaml::as.yaml(self$toTson()))
-        invisible(self)
     }))

@@ -22,11 +22,7 @@
 #' @field url object of class \code{\link{Url}} inherited from super class \code{\link{Document}}.
 RSourceLibrary <- R6::R6Class("RSourceLibrary", inherit = RLibrary, public = list(fileId = NULL, 
     initialize = function(json = NULL) {
-        if (!is.null(json)) {
-            self$initJson(json)
-        } else {
-            self$init()
-        }
+        super$initialize(json = json)
     }, init = function() {
         super$init()
         self$fileId = ""
@@ -38,7 +34,4 @@ RSourceLibrary <- R6::R6Class("RSourceLibrary", inherit = RLibrary, public = lis
         m$kind = tson.scalar("RSourceLibrary")
         m$fileId = tson.scalar(self$fileId)
         return(m)
-    }, print = function(...) {
-        cat(yaml::as.yaml(self$toTson()))
-        invisible(self)
     }))

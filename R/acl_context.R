@@ -5,11 +5,7 @@
 #' @field username of type String.
 AclContext <- R6::R6Class("AclContext", inherit = Base, public = list(username = NULL, 
     initialize = function(json = NULL) {
-        if (!is.null(json)) {
-            self$initJson(json)
-        } else {
-            self$init()
-        }
+        super$initialize(json = json)
     }, init = function() {
         super$init()
         self$username = ""
@@ -21,7 +17,4 @@ AclContext <- R6::R6Class("AclContext", inherit = Base, public = list(username =
         m$kind = tson.scalar("AclContext")
         m$username = tson.scalar(self$username)
         return(m)
-    }, print = function(...) {
-        cat(yaml::as.yaml(self$toTson()))
-        invisible(self)
     }))

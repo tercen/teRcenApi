@@ -12,11 +12,7 @@
 #' @field model object of class \code{\link{Crosstab}}.
 CrossTabStep <- R6::R6Class("CrossTabStep", inherit = NamespaceStep, public = list(model = NULL, 
     initialize = function(json = NULL) {
-        if (!is.null(json)) {
-            self$initJson(json)
-        } else {
-            self$init()
-        }
+        super$initialize(json = json)
     }, init = function() {
         super$init()
         self$model = Crosstab$new()
@@ -28,7 +24,4 @@ CrossTabStep <- R6::R6Class("CrossTabStep", inherit = NamespaceStep, public = li
         m$kind = tson.scalar("CrossTabStep")
         if (!is.null(self$model)) m$model = self$model$toTson()
         return(m)
-    }, print = function(...) {
-        cat(yaml::as.yaml(self$toTson()))
-        invisible(self)
     }))

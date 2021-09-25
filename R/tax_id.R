@@ -7,11 +7,7 @@
 #' @field isValid of type bool.
 TaxId <- R6::R6Class("TaxId", inherit = Base, public = list(type = NULL, value = NULL, 
     isValid = NULL, initialize = function(json = NULL) {
-        if (!is.null(json)) {
-            self$initJson(json)
-        } else {
-            self$init()
-        }
+        super$initialize(json = json)
     }, init = function() {
         super$init()
         self$type = ""
@@ -29,7 +25,4 @@ TaxId <- R6::R6Class("TaxId", inherit = Base, public = list(type = NULL, value =
         m$value = tson.scalar(self$value)
         m$isValid = tson.scalar(self$isValid)
         return(m)
-    }, print = function(...) {
-        cat(yaml::as.yaml(self$toTson()))
-        invisible(self)
     }))

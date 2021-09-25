@@ -6,11 +6,7 @@
 #' @field properties object of class \code{\link{Properties}}.
 Chart <- R6::R6Class("Chart", inherit = Base, public = list(name = NULL, properties = NULL, 
     initialize = function(json = NULL) {
-        if (!is.null(json)) {
-            self$initJson(json)
-        } else {
-            self$init()
-        }
+        super$initialize(json = json)
     }, init = function() {
         super$init()
         self$name = ""
@@ -25,7 +21,4 @@ Chart <- R6::R6Class("Chart", inherit = Base, public = list(name = NULL, propert
         m$name = tson.scalar(self$name)
         if (!is.null(self$properties)) m$properties = self$properties$toTson()
         return(m)
-    }, print = function(...) {
-        cat(yaml::as.yaml(self$toTson()))
-        invisible(self)
     }))

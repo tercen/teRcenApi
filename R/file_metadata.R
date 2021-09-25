@@ -10,11 +10,7 @@
 FileMetadata <- R6::R6Class("FileMetadata", inherit = Base, public = list(contentType = NULL, 
     cacheControl = NULL, contentEncoding = NULL, contentLanguage = NULL, md5Hash = NULL, 
     initialize = function(json = NULL) {
-        if (!is.null(json)) {
-            self$initJson(json)
-        } else {
-            self$init()
-        }
+        super$initialize(json = json)
     }, init = function() {
         super$init()
         self$contentType = ""
@@ -38,7 +34,4 @@ FileMetadata <- R6::R6Class("FileMetadata", inherit = Base, public = list(conten
         m$contentLanguage = tson.scalar(self$contentLanguage)
         m$md5Hash = tson.scalar(self$md5Hash)
         return(m)
-    }, print = function(...) {
-        cat(yaml::as.yaml(self$toTson()))
-        invisible(self)
     }))

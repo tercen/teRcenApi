@@ -7,11 +7,7 @@
 #' @field defaultValue of type String.
 StringProperty <- R6::R6Class("StringProperty", inherit = Property, public = list(defaultValue = NULL, 
     initialize = function(json = NULL) {
-        if (!is.null(json)) {
-            self$initJson(json)
-        } else {
-            self$init()
-        }
+        super$initialize(json = json)
     }, init = function() {
         super$init()
         self$defaultValue = ""
@@ -23,7 +19,4 @@ StringProperty <- R6::R6Class("StringProperty", inherit = Property, public = lis
         m$kind = tson.scalar("StringProperty")
         m$defaultValue = tson.scalar(self$defaultValue)
         return(m)
-    }, print = function(...) {
-        cat(yaml::as.yaml(self$toTson()))
-        invisible(self)
     }))

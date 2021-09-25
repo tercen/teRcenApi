@@ -3,11 +3,7 @@
 #' @export
 #' @format \code{\link{R6Class}} object, super class \code{\link{State}}.
 RunningDependentState <- R6::R6Class("RunningDependentState", inherit = State, public = list(initialize = function(json = NULL) {
-    if (!is.null(json)) {
-        self$initJson(json)
-    } else {
-        self$init()
-    }
+    super$initialize(json = json)
 }, init = function() {
     super$init()
 }, initJson = function(json) {
@@ -16,7 +12,4 @@ RunningDependentState <- R6::R6Class("RunningDependentState", inherit = State, p
     m = super$toTson()
     m$kind = tson.scalar("RunningDependentState")
     return(m)
-}, print = function(...) {
-    cat(yaml::as.yaml(self$toTson()))
-    invisible(self)
 }))

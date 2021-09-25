@@ -12,11 +12,7 @@
 #' @field headers of type bool.
 CSVFileMetadata <- R6::R6Class("CSVFileMetadata", inherit = FileMetadata, public = list(separator = NULL, 
     quote = NULL, headers = NULL, initialize = function(json = NULL) {
-        if (!is.null(json)) {
-            self$initJson(json)
-        } else {
-            self$init()
-        }
+        super$initialize(json = json)
     }, init = function() {
         super$init()
         self$separator = ""
@@ -34,7 +30,4 @@ CSVFileMetadata <- R6::R6Class("CSVFileMetadata", inherit = FileMetadata, public
         m$quote = tson.scalar(self$quote)
         m$headers = tson.scalar(self$headers)
         return(m)
-    }, print = function(...) {
-        cat(yaml::as.yaml(self$toTson()))
-        invisible(self)
     }))

@@ -6,11 +6,7 @@
 #' @field namedFilters list of class \code{\link{NamedFilter}}.
 Filters <- R6::R6Class("Filters", inherit = Base, public = list(removeNaN = NULL, 
     namedFilters = NULL, initialize = function(json = NULL) {
-        if (!is.null(json)) {
-            self$initJson(json)
-        } else {
-            self$init()
-        }
+        super$initialize(json = json)
     }, init = function() {
         super$init()
         self$removeNaN = TRUE
@@ -25,7 +21,4 @@ Filters <- R6::R6Class("Filters", inherit = Base, public = list(removeNaN = NULL
         m$removeNaN = tson.scalar(self$removeNaN)
         m$namedFilters = lapply(self$namedFilters, function(each) each$toTson())
         return(m)
-    }, print = function(...) {
-        cat(yaml::as.yaml(self$toTson()))
-        invisible(self)
     }))

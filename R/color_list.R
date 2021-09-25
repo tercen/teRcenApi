@@ -5,11 +5,7 @@
 #' @field name of type String.
 ColorList <- R6::R6Class("ColorList", inherit = Base, public = list(name = NULL, 
     initialize = function(json = NULL) {
-        if (!is.null(json)) {
-            self$initJson(json)
-        } else {
-            self$init()
-        }
+        super$initialize(json = json)
     }, init = function() {
         super$init()
         self$name = ""
@@ -21,7 +17,4 @@ ColorList <- R6::R6Class("ColorList", inherit = Base, public = list(name = NULL,
         m$kind = tson.scalar("ColorList")
         m$name = tson.scalar(self$name)
         return(m)
-    }, print = function(...) {
-        cat(yaml::as.yaml(self$toTson()))
-        invisible(self)
     }))

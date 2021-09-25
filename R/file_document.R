@@ -25,11 +25,7 @@
 #' @field metadata object of class \code{\link{FileMetadata}}.
 FileDocument <- R6::R6Class("FileDocument", inherit = ProjectDocument, public = list(dataUri = NULL, 
     metadata = NULL, size = NULL, initialize = function(json = NULL) {
-        if (!is.null(json)) {
-            self$initJson(json)
-        } else {
-            self$init()
-        }
+        super$initialize(json = json)
     }, init = function() {
         super$init()
         self$dataUri = ""
@@ -47,7 +43,4 @@ FileDocument <- R6::R6Class("FileDocument", inherit = ProjectDocument, public = 
         if (!is.null(self$metadata)) m$metadata = self$metadata$toTson()
         m$size = tson.int(self$size)
         return(m)
-    }, print = function(...) {
-        cat(yaml::as.yaml(self$toTson()))
-        invisible(self)
     }))

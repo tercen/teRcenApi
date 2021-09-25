@@ -12,11 +12,7 @@
 Address <- R6::R6Class("Address", inherit = Base, public = list(country = NULL, state = NULL, 
     city = NULL, zipCode = NULL, address1 = NULL, address2 = NULL, phone = NULL, 
     initialize = function(json = NULL) {
-        if (!is.null(json)) {
-            self$initJson(json)
-        } else {
-            self$init()
-        }
+        super$initialize(json = json)
     }, init = function() {
         super$init()
         self$country = ""
@@ -46,7 +42,4 @@ Address <- R6::R6Class("Address", inherit = Base, public = list(country = NULL, 
         m$address2 = tson.scalar(self$address2)
         m$phone = tson.scalar(self$phone)
         return(m)
-    }, print = function(...) {
-        cat(yaml::as.yaml(self$toTson()))
-        invisible(self)
     }))

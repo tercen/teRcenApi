@@ -17,11 +17,7 @@
 Activity <- R6::R6Class("Activity", inherit = PersistentObject, public = list(type = NULL, 
     objectKind = NULL, date = NULL, teamId = NULL, projectId = NULL, userId = NULL, 
     projectName = NULL, isPublic = NULL, properties = NULL, initialize = function(json = NULL) {
-        if (!is.null(json)) {
-            self$initJson(json)
-        } else {
-            self$init()
-        }
+        super$initialize(json = json)
     }, init = function() {
         super$init()
         self$type = ""
@@ -57,7 +53,4 @@ Activity <- R6::R6Class("Activity", inherit = PersistentObject, public = list(ty
         m$isPublic = tson.scalar(self$isPublic)
         m$properties = lapply(self$properties, function(each) each$toTson())
         return(m)
-    }, print = function(...) {
-        cat(yaml::as.yaml(self$toTson()))
-        invisible(self)
     }))

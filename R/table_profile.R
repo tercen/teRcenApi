@@ -7,11 +7,7 @@
 #' @field nCols of type int.
 TableProfile <- R6::R6Class("TableProfile", inherit = Profile, public = list(nRows = NULL, 
     nCols = NULL, initialize = function(json = NULL) {
-        if (!is.null(json)) {
-            self$initJson(json)
-        } else {
-            self$init()
-        }
+        super$initialize(json = json)
     }, init = function() {
         super$init()
         self$nRows = 0
@@ -26,7 +22,4 @@ TableProfile <- R6::R6Class("TableProfile", inherit = Profile, public = list(nRo
         m$nRows = tson.int(self$nRows)
         m$nCols = tson.int(self$nCols)
         return(m)
-    }, print = function(...) {
-        cat(yaml::as.yaml(self$toTson()))
-        invisible(self)
     }))

@@ -11,11 +11,7 @@
 ViesInfo <- R6::R6Class("ViesInfo", inherit = Base, public = list(countryCode = NULL, 
     vatNumber = NULL, requestDate = NULL, valid = NULL, name = NULL, address = NULL, 
     initialize = function(json = NULL) {
-        if (!is.null(json)) {
-            self$initJson(json)
-        } else {
-            self$init()
-        }
+        super$initialize(json = json)
     }, init = function() {
         super$init()
         self$countryCode = ""
@@ -42,7 +38,4 @@ ViesInfo <- R6::R6Class("ViesInfo", inherit = Base, public = list(countryCode = 
         m$name = tson.scalar(self$name)
         m$address = tson.scalar(self$address)
         return(m)
-    }, print = function(...) {
-        cat(yaml::as.yaml(self$toTson()))
-        invisible(self)
     }))

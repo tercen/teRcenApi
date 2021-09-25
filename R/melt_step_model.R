@@ -8,11 +8,7 @@
 #' @field factors list of class \code{\link{Factor}}.
 MeltStepModel <- R6::R6Class("MeltStepModel", inherit = StepModel, public = list(factors = NULL, 
     namespace = NULL, selectionPattern = NULL, factorType = NULL, initialize = function(json = NULL) {
-        if (!is.null(json)) {
-            self$initJson(json)
-        } else {
-            self$init()
-        }
+        super$initialize(json = json)
     }, init = function() {
         super$init()
         self$namespace = ""
@@ -33,7 +29,4 @@ MeltStepModel <- R6::R6Class("MeltStepModel", inherit = StepModel, public = list
         m$selectionPattern = tson.scalar(self$selectionPattern)
         m$factorType = tson.scalar(self$factorType)
         return(m)
-    }, print = function(...) {
-        cat(yaml::as.yaml(self$toTson()))
-        invisible(self)
     }))

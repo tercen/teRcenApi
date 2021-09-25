@@ -6,11 +6,7 @@
 #' @field value of type String.
 PropertyValue <- R6::R6Class("PropertyValue", inherit = Base, public = list(name = NULL, 
     value = NULL, initialize = function(json = NULL) {
-        if (!is.null(json)) {
-            self$initJson(json)
-        } else {
-            self$init()
-        }
+        super$initialize(json = json)
     }, init = function() {
         super$init()
         self$name = ""
@@ -25,7 +21,4 @@ PropertyValue <- R6::R6Class("PropertyValue", inherit = Base, public = list(name
         m$name = tson.scalar(self$name)
         m$value = tson.scalar(self$value)
         return(m)
-    }, print = function(...) {
-        cat(yaml::as.yaml(self$toTson()))
-        invisible(self)
     }))

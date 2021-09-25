@@ -22,11 +22,7 @@
 #' @field properties list of class \code{\link{Property}}.
 Operator <- R6::R6Class("Operator", inherit = Document, public = list(properties = NULL, 
     longDescription = NULL, initialize = function(json = NULL) {
-        if (!is.null(json)) {
-            self$initJson(json)
-        } else {
-            self$init()
-        }
+        super$initialize(json = json)
     }, init = function() {
         super$init()
         self$longDescription = ""
@@ -41,7 +37,4 @@ Operator <- R6::R6Class("Operator", inherit = Document, public = list(properties
         m$properties = lapply(self$properties, function(each) each$toTson())
         m$longDescription = tson.scalar(self$longDescription)
         return(m)
-    }, print = function(...) {
-        cat(yaml::as.yaml(self$toTson()))
-        invisible(self)
     }))

@@ -16,29 +16,27 @@ NULL
 unbox <- function(object) {
     return(tson.scalar(object))
 }
- 
+
 #' Base
 #'
 #' @export
-Base <- R6::R6Class("Base", portable = TRUE, public = list(
-   subKind = NULL,
-   initialize = function(json = NULL) {
-       if (!is.null(json)) {
-           self$initJson(json)
-       } else {
-           self$init()
-       }
-   }, init = function() {
-   }, initJson = function(json) {
-       self$subKind = json$subKind
-   }, toTson = function() {
-       return(list())
-   }, print = function(...) {
-       cat(yaml::as.yaml(self$toTson()))
-       invisible(self)
-   }))
- 
- 
+Base <- R6::R6Class("Base", portable = TRUE, public = list(subKind = NULL, initialize = function(json = NULL) {
+    if (!is.null(json)) {
+        self$initJson(json)
+    } else {
+        self$init()
+    }
+}, init = function() {
+}, initJson = function(json) {
+    self$subKind = json$subKind
+}, toTson = function() {
+    return(list())
+}, print = function(...) {
+    cat(yaml::as.yaml(self$toTson()))
+    invisible(self)
+}))
+
+
 #' MultiPart
 #'
 #' @export
@@ -51,7 +49,7 @@ MultiPart <- R6::R6Class("MultiPart", public = list(headers = structure(list(), 
     }, toTson = function() {
         list(headers = self$headers, content = self$content)
     }))
-  
+
 #' HttpClientService
 #'
 #' @export
@@ -145,5 +143,3 @@ HttpClientService <- R6::R6Class("HttpClientService", public = list(client = NUL
         list = response$content
         lapply(list, function(each) self$fromTson(each))
     }))
-
-   

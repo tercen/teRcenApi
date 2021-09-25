@@ -6,11 +6,7 @@
 #' @field size of type int.
 StorageProfile <- R6::R6Class("StorageProfile", inherit = Profile, public = list(size = NULL, 
     initialize = function(json = NULL) {
-        if (!is.null(json)) {
-            self$initJson(json)
-        } else {
-            self$init()
-        }
+        super$initialize(json = json)
     }, init = function() {
         super$init()
         self$size = 0
@@ -22,7 +18,4 @@ StorageProfile <- R6::R6Class("StorageProfile", inherit = Profile, public = list
         m$kind = tson.scalar("StorageProfile")
         m$size = tson.int(self$size)
         return(m)
-    }, print = function(...) {
-        cat(yaml::as.yaml(self$toTson()))
-        invisible(self)
     }))

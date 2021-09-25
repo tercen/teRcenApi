@@ -6,11 +6,7 @@
 #' @field taskState object of class \code{\link{State}}.
 StepState <- R6::R6Class("StepState", inherit = Base, public = list(taskId = NULL, 
     taskState = NULL, initialize = function(json = NULL) {
-        if (!is.null(json)) {
-            self$initJson(json)
-        } else {
-            self$init()
-        }
+        super$initialize(json = json)
     }, init = function() {
         super$init()
         self$taskId = ""
@@ -25,7 +21,4 @@ StepState <- R6::R6Class("StepState", inherit = Base, public = list(taskId = NUL
         m$taskId = tson.scalar(self$taskId)
         if (!is.null(self$taskState)) m$taskState = self$taskState$toTson()
         return(m)
-    }, print = function(...) {
-        cat(yaml::as.yaml(self$toTson()))
-        invisible(self)
     }))

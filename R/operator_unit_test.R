@@ -15,11 +15,7 @@
 OperatorUnitTest <- R6::R6Class("OperatorUnitTest", inherit = Base, public = list(name = NULL, 
     namespace = NULL, inputDataUri = NULL, outputDataUri = NULL, columns = NULL, 
     rows = NULL, colors = NULL, labels = NULL, yAxis = NULL, xAxis = NULL, initialize = function(json = NULL) {
-        if (!is.null(json)) {
-            self$initJson(json)
-        } else {
-            self$init()
-        }
+        super$initialize(json = json)
     }, init = function() {
         super$init()
         self$name = ""
@@ -58,7 +54,4 @@ OperatorUnitTest <- R6::R6Class("OperatorUnitTest", inherit = Base, public = lis
         m$yAxis = tson.scalar(self$yAxis)
         m$xAxis = tson.scalar(self$xAxis)
         return(m)
-    }, print = function(...) {
-        cat(yaml::as.yaml(self$toTson()))
-        invisible(self)
     }))

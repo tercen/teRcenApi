@@ -10,11 +10,7 @@
 #' @field state object of class \code{\link{State}}.
 TaskStateEvent <- R6::R6Class("TaskStateEvent", inherit = TaskEvent, public = list(state = NULL, 
     initialize = function(json = NULL) {
-        if (!is.null(json)) {
-            self$initJson(json)
-        } else {
-            self$init()
-        }
+        super$initialize(json = json)
     }, init = function() {
         super$init()
         self$state = State$new()
@@ -26,7 +22,4 @@ TaskStateEvent <- R6::R6Class("TaskStateEvent", inherit = TaskEvent, public = li
         m$kind = tson.scalar("TaskStateEvent")
         if (!is.null(self$state)) m$state = self$state$toTson()
         return(m)
-    }, print = function(...) {
-        cat(yaml::as.yaml(self$toTson()))
-        invisible(self)
     }))

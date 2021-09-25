@@ -23,11 +23,7 @@
 #' @field url object of class \code{\link{Url}} inherited from super class \code{\link{Document}}.
 GitOperator <- R6::R6Class("GitOperator", inherit = Operator, public = list(path = NULL, 
     initialize = function(json = NULL) {
-        if (!is.null(json)) {
-            self$initJson(json)
-        } else {
-            self$init()
-        }
+        super$initialize(json = json)
     }, init = function() {
         super$init()
         self$path = ""
@@ -39,7 +35,4 @@ GitOperator <- R6::R6Class("GitOperator", inherit = Operator, public = list(path
         m$kind = tson.scalar("GitOperator")
         m$path = tson.scalar(self$path)
         return(m)
-    }, print = function(...) {
-        cat(yaml::as.yaml(self$toTson()))
-        invisible(self)
     }))

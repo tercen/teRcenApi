@@ -12,11 +12,7 @@
 #' @field model object of class \code{\link{TableStepModel}}.
 TableStep <- R6::R6Class("TableStep", inherit = RelationStep, public = list(model = NULL, 
     initialize = function(json = NULL) {
-        if (!is.null(json)) {
-            self$initJson(json)
-        } else {
-            self$init()
-        }
+        super$initialize(json = json)
     }, init = function() {
         super$init()
         self$model = TableStepModel$new()
@@ -28,7 +24,4 @@ TableStep <- R6::R6Class("TableStep", inherit = RelationStep, public = list(mode
         m$kind = tson.scalar("TableStep")
         if (!is.null(self$model)) m$model = self$model$toTson()
         return(m)
-    }, print = function(...) {
-        cat(yaml::as.yaml(self$toTson()))
-        invisible(self)
     }))

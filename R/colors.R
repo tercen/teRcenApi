@@ -6,11 +6,7 @@
 #' @field palette object of class \code{\link{Palette}}.
 Colors <- R6::R6Class("Colors", inherit = Base, public = list(factors = NULL, palette = NULL, 
     initialize = function(json = NULL) {
-        if (!is.null(json)) {
-            self$initJson(json)
-        } else {
-            self$init()
-        }
+        super$initialize(json = json)
     }, init = function() {
         super$init()
         self$factors = list()
@@ -25,7 +21,4 @@ Colors <- R6::R6Class("Colors", inherit = Base, public = list(factors = NULL, pa
         m$factors = lapply(self$factors, function(each) each$toTson())
         if (!is.null(self$palette)) m$palette = self$palette$toTson()
         return(m)
-    }, print = function(...) {
-        cat(yaml::as.yaml(self$toTson()))
-        invisible(self)
     }))

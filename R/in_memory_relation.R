@@ -6,11 +6,7 @@
 #' @field inMemoryTable object of class \code{\link{Table}}.
 InMemoryRelation <- R6::R6Class("InMemoryRelation", inherit = Relation, public = list(inMemoryTable = NULL, 
     initialize = function(json = NULL) {
-        if (!is.null(json)) {
-            self$initJson(json)
-        } else {
-            self$init()
-        }
+        super$initialize(json = json)
     }, init = function() {
         super$init()
         self$inMemoryTable = Table$new()
@@ -22,7 +18,4 @@ InMemoryRelation <- R6::R6Class("InMemoryRelation", inherit = Relation, public =
         m$kind = tson.scalar("InMemoryRelation")
         if (!is.null(self$inMemoryTable)) m$inMemoryTable = self$inMemoryTable$toTson()
         return(m)
-    }, print = function(...) {
-        cat(yaml::as.yaml(self$toTson()))
-        invisible(self)
     }))

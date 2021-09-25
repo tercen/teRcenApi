@@ -8,11 +8,7 @@
 #' @field usedCpuTime of type double.
 ResourceSummary <- R6::R6Class("ResourceSummary", inherit = Base, public = list(storage = NULL, 
     usedStorage = NULL, cpuTime = NULL, usedCpuTime = NULL, initialize = function(json = NULL) {
-        if (!is.null(json)) {
-            self$initJson(json)
-        } else {
-            self$init()
-        }
+        super$initialize(json = json)
     }, init = function() {
         super$init()
         self$storage = 0
@@ -33,7 +29,4 @@ ResourceSummary <- R6::R6Class("ResourceSummary", inherit = Base, public = list(
         m$cpuTime = tson.scalar(self$cpuTime)
         m$usedCpuTime = tson.scalar(self$usedCpuTime)
         return(m)
-    }, print = function(...) {
-        cat(yaml::as.yaml(self$toTson()))
-        invisible(self)
     }))

@@ -21,11 +21,7 @@
 #' @field url object of class \code{\link{Url}}.
 RunWebAppTask <- R6::R6Class("RunWebAppTask", inherit = ProjectTask, public = list(operatorId = NULL, 
     url = NULL, initialize = function(json = NULL) {
-        if (!is.null(json)) {
-            self$initJson(json)
-        } else {
-            self$init()
-        }
+        super$initialize(json = json)
     }, init = function() {
         super$init()
         self$operatorId = ""
@@ -40,7 +36,4 @@ RunWebAppTask <- R6::R6Class("RunWebAppTask", inherit = ProjectTask, public = li
         m$operatorId = tson.scalar(self$operatorId)
         if (!is.null(self$url)) m$url = self$url$toTson()
         return(m)
-    }, print = function(...) {
-        cat(yaml::as.yaml(self$toTson()))
-        invisible(self)
     }))

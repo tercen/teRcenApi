@@ -27,11 +27,7 @@
 ExportTableTask <- R6::R6Class("ExportTableTask", inherit = ProjectTask, public = list(exportName = NULL, 
     schemaIds = NULL, exportType = NULL, exportToId = NULL, exportId = NULL, namespaces = NULL, 
     exportedSchemaIds = NULL, initialize = function(json = NULL) {
-        if (!is.null(json)) {
-            self$initJson(json)
-        } else {
-            self$init()
-        }
+        super$initialize(json = json)
     }, init = function() {
         super$init()
         self$exportName = ""
@@ -61,7 +57,4 @@ ExportTableTask <- R6::R6Class("ExportTableTask", inherit = ProjectTask, public 
         m$namespaces = lapply(self$namespaces, function(each) tson.scalar(each))
         m$exportedSchemaIds = lapply(self$exportedSchemaIds, function(each) tson.scalar(each))
         return(m)
-    }, print = function(...) {
-        cat(yaml::as.yaml(self$toTson()))
-        invisible(self)
     }))

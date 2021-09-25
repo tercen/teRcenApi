@@ -10,11 +10,7 @@
 #' @field metaData object of class \code{\link{ColumnSchemaMetaData}}.
 ColumnSchema <- R6::R6Class("ColumnSchema", inherit = IdObject, public = list(name = NULL, 
     type = NULL, nRows = NULL, size = NULL, metaData = NULL, initialize = function(json = NULL) {
-        if (!is.null(json)) {
-            self$initJson(json)
-        } else {
-            self$init()
-        }
+        super$initialize(json = json)
     }, init = function() {
         super$init()
         self$name = ""
@@ -38,7 +34,4 @@ ColumnSchema <- R6::R6Class("ColumnSchema", inherit = IdObject, public = list(na
         m$size = tson.int(self$size)
         if (!is.null(self$metaData)) m$metaData = self$metaData$toTson()
         return(m)
-    }, print = function(...) {
-        cat(yaml::as.yaml(self$toTson()))
-        invisible(self)
     }))

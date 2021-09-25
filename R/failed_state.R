@@ -6,11 +6,7 @@
 #' @field reason of type String.
 FailedState <- R6::R6Class("FailedState", inherit = State, public = list(error = NULL, 
     reason = NULL, initialize = function(json = NULL) {
-        if (!is.null(json)) {
-            self$initJson(json)
-        } else {
-            self$init()
-        }
+        super$initialize(json = json)
     }, init = function() {
         super$init()
         self$error = ""
@@ -25,7 +21,4 @@ FailedState <- R6::R6Class("FailedState", inherit = State, public = list(error =
         m$error = tson.scalar(self$error)
         m$reason = tson.scalar(self$reason)
         return(m)
-    }, print = function(...) {
-        cat(yaml::as.yaml(self$toTson()))
-        invisible(self)
     }))

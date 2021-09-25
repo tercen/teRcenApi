@@ -7,11 +7,7 @@
 #' @field token object of class \code{\link{Token}}.
 UserSession <- R6::R6Class("UserSession", inherit = Base, public = list(serverVersion = NULL, 
     user = NULL, token = NULL, initialize = function(json = NULL) {
-        if (!is.null(json)) {
-            self$initJson(json)
-        } else {
-            self$init()
-        }
+        super$initialize(json = json)
     }, init = function() {
         super$init()
         self$serverVersion = Version$new()
@@ -29,7 +25,4 @@ UserSession <- R6::R6Class("UserSession", inherit = Base, public = list(serverVe
         if (!is.null(self$user)) m$user = self$user$toTson()
         if (!is.null(self$token)) m$token = self$token$toTson()
         return(m)
-    }, print = function(...) {
-        cat(yaml::as.yaml(self$toTson()))
-        invisible(self)
     }))

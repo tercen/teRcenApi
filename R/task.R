@@ -20,11 +20,7 @@ Task <- R6::R6Class("Task", inherit = PersistentObject, public = list(environmen
     state = NULL, createdDate = NULL, lastModifiedDate = NULL, runDate = NULL, completedDate = NULL, 
     duration = NULL, aclContext = NULL, owner = NULL, taskHash = NULL, channelId = NULL, 
     initialize = function(json = NULL) {
-        if (!is.null(json)) {
-            self$initJson(json)
-        } else {
-            self$init()
-        }
+        super$initialize(json = json)
     }, init = function() {
         super$init()
         self$duration = 0
@@ -66,7 +62,4 @@ Task <- R6::R6Class("Task", inherit = PersistentObject, public = list(environmen
         m$taskHash = tson.scalar(self$taskHash)
         m$channelId = tson.scalar(self$channelId)
         return(m)
-    }, print = function(...) {
-        cat(yaml::as.yaml(self$toTson()))
-        invisible(self)
     }))

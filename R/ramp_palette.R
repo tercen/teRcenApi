@@ -8,11 +8,7 @@
 #' @field doubleColorElements list of class \code{\link{DoubleColorElement}}.
 RampPalette <- R6::R6Class("RampPalette", inherit = Palette, public = list(isUserDefined = NULL, 
     doubleColorElements = NULL, initialize = function(json = NULL) {
-        if (!is.null(json)) {
-            self$initJson(json)
-        } else {
-            self$init()
-        }
+        super$initialize(json = json)
     }, init = function() {
         super$init()
         self$isUserDefined = TRUE
@@ -27,7 +23,4 @@ RampPalette <- R6::R6Class("RampPalette", inherit = Palette, public = list(isUse
         m$isUserDefined = tson.scalar(self$isUserDefined)
         m$doubleColorElements = lapply(self$doubleColorElements, function(each) each$toTson())
         return(m)
-    }, print = function(...) {
-        cat(yaml::as.yaml(self$toTson()))
-        invisible(self)
     }))

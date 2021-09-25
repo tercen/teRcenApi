@@ -8,11 +8,7 @@
 #' @field taskSummary object of class \code{\link{TaskSummary}}.
 Summary <- R6::R6Class("Summary", inherit = Base, public = list(tableSummary = NULL, 
     computedTableSummary = NULL, queryTableSummary = NULL, taskSummary = NULL, initialize = function(json = NULL) {
-        if (!is.null(json)) {
-            self$initJson(json)
-        } else {
-            self$init()
-        }
+        super$initialize(json = json)
     }, init = function() {
         super$init()
         self$tableSummary = TableSummary$new()
@@ -33,7 +29,4 @@ Summary <- R6::R6Class("Summary", inherit = Base, public = list(tableSummary = N
         if (!is.null(self$queryTableSummary)) m$queryTableSummary = self$queryTableSummary$toTson()
         if (!is.null(self$taskSummary)) m$taskSummary = self$taskSummary$toTson()
         return(m)
-    }, print = function(...) {
-        cat(yaml::as.yaml(self$toTson()))
-        invisible(self)
     }))

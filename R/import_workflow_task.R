@@ -21,11 +21,7 @@
 #' @field aclContext object of class \code{\link{AclContext}} inherited from super class \code{\link{Task}}.
 ImportWorkflowTask <- R6::R6Class("ImportWorkflowTask", inherit = ProjectTask, public = list(fileId = NULL, 
     workflowId = NULL, initialize = function(json = NULL) {
-        if (!is.null(json)) {
-            self$initJson(json)
-        } else {
-            self$init()
-        }
+        super$initialize(json = json)
     }, init = function() {
         super$init()
         self$fileId = ""
@@ -40,7 +36,4 @@ ImportWorkflowTask <- R6::R6Class("ImportWorkflowTask", inherit = ProjectTask, p
         m$fileId = tson.scalar(self$fileId)
         m$workflowId = tson.scalar(self$workflowId)
         return(m)
-    }, print = function(...) {
-        cat(yaml::as.yaml(self$toTson()))
-        invisible(self)
     }))

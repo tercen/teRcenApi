@@ -9,11 +9,7 @@
 #' @field price of type double.
 Plan <- R6::R6Class("Plan", inherit = Base, public = list(name = NULL, displayName = NULL, 
     paymentProviderPlanId = NULL, descriptions = NULL, price = NULL, initialize = function(json = NULL) {
-        if (!is.null(json)) {
-            self$initJson(json)
-        } else {
-            self$init()
-        }
+        super$initialize(json = json)
     }, init = function() {
         super$init()
         self$name = ""
@@ -37,7 +33,4 @@ Plan <- R6::R6Class("Plan", inherit = Base, public = list(name = NULL, displayNa
         m$descriptions = lapply(self$descriptions, function(each) tson.scalar(each))
         m$price = tson.scalar(self$price)
         return(m)
-    }, print = function(...) {
-        cat(yaml::as.yaml(self$toTson()))
-        invisible(self)
     }))

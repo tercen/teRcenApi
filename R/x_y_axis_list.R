@@ -6,11 +6,7 @@
 #' @field xyAxis list of class \code{\link{XYAxis}}.
 XYAxisList <- R6::R6Class("XYAxisList", inherit = Base, public = list(rectangleSelections = NULL, 
     xyAxis = NULL, initialize = function(json = NULL) {
-        if (!is.null(json)) {
-            self$initJson(json)
-        } else {
-            self$init()
-        }
+        super$initialize(json = json)
     }, init = function() {
         super$init()
         self$rectangleSelections = list()
@@ -25,7 +21,4 @@ XYAxisList <- R6::R6Class("XYAxisList", inherit = Base, public = list(rectangleS
         m$rectangleSelections = lapply(self$rectangleSelections, function(each) each$toTson())
         m$xyAxis = lapply(self$xyAxis, function(each) each$toTson())
         return(m)
-    }, print = function(...) {
-        cat(yaml::as.yaml(self$toTson()))
-        invisible(self)
     }))
