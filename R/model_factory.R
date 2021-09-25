@@ -1,3 +1,5 @@
+#'
+#' @export
 createObjectFromJson = function(json) {
     if (is.null(json)) 
         return(NULL)
