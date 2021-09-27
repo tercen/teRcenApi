@@ -34,13 +34,13 @@ TableSummary
 \item \href{#method-init}{\code{TableSummary$init()}}
 \item \href{#method-initJson}{\code{TableSummary$initJson()}}
 \item \href{#method-toTson}{\code{TableSummary$toTson()}}
-\item \href{#method-print}{\code{TableSummary$print()}}
 \item \href{#method-clone}{\code{TableSummary$clone()}}
 }
 }
 \if{html}{
 \out{<details open ><summary>Inherited methods</summary>}
 \itemize{
+\item \out{<span class="pkg-link" data-pkg="tercenApi" data-topic="Base" data-id="print">}\href{../../tercenApi/html/Base.html#method-print}{\code{tercenApi::Base$print()}}\out{</span>}
 }
 \out{</details>}
 }
@@ -77,15 +77,6 @@ TableSummary
 \subsection{Method \code{toTson()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{TableSummary$toTson()}\if{html}{\out{</div>}}
-}
-
-}
-\if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-print"></a>}}
-\if{latex}{\out{\hypertarget{method-print}{}}}
-\subsection{Method \code{print()}}{
-\subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{TableSummary$print(...)}\if{html}{\out{</div>}}
 }
 
 }

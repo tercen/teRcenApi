@@ -21,13 +21,13 @@ FilterTopExpr
 \item \href{#method-init}{\code{FilterTopExpr$init()}}
 \item \href{#method-initJson}{\code{FilterTopExpr$initJson()}}
 \item \href{#method-toTson}{\code{FilterTopExpr$toTson()}}
-\item \href{#method-print}{\code{FilterTopExpr$print()}}
 \item \href{#method-clone}{\code{FilterTopExpr$clone()}}
 }
 }
 \if{html}{
 \out{<details open ><summary>Inherited methods</summary>}
 \itemize{
+\item \out{<span class="pkg-link" data-pkg="tercenApi" data-topic="Base" data-id="print">}\href{../../tercenApi/html/Base.html#method-print}{\code{tercenApi::Base$print()}}\out{</span>}
 }
 \out{</details>}
 }
@@ -64,15 +64,6 @@ FilterTopExpr
 \subsection{Method \code{toTson()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{FilterTopExpr$toTson()}\if{html}{\out{</div>}}
-}
-
-}
-\if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-print"></a>}}
-\if{latex}{\out{\hypertarget{method-print}{}}}
-\subsection{Method \code{print()}}{
-\subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{FilterTopExpr$print(...)}\if{html}{\out{</div>}}
 }
 
 }

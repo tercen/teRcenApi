@@ -131,13 +131,13 @@ Team
 \item \href{#method-init}{\code{Team$init()}}
 \item \href{#method-initJson}{\code{Team$initJson()}}
 \item \href{#method-toTson}{\code{Team$toTson()}}
-\item \href{#method-print}{\code{Team$print()}}
 \item \href{#method-clone}{\code{Team$clone()}}
 }
 }
 \if{html}{
 \out{<details open ><summary>Inherited methods</summary>}
 \itemize{
+\item \out{<span class="pkg-link" data-pkg="tercenApi" data-topic="Base" data-id="print">}\href{../../tercenApi/html/Base.html#method-print}{\code{tercenApi::Base$print()}}\out{</span>}
 }
 \out{</details>}
 }
@@ -174,15 +174,6 @@ Team
 \subsection{Method \code{toTson()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{Team$toTson()}\if{html}{\out{</div>}}
-}
-
-}
-\if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-print"></a>}}
-\if{latex}{\out{\hypertarget{method-print}{}}}
-\subsection{Method \code{print()}}{
-\subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{Team$print(...)}\if{html}{\out{</div>}}
 }
 
 }

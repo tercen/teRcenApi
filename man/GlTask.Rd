@@ -89,13 +89,13 @@ GlTask
 \item \href{#method-init}{\code{GlTask$init()}}
 \item \href{#method-initJson}{\code{GlTask$initJson()}}
 \item \href{#method-toTson}{\code{GlTask$toTson()}}
-\item \href{#method-print}{\code{GlTask$print()}}
 \item \href{#method-clone}{\code{GlTask$clone()}}
 }
 }
 \if{html}{
 \out{<details open ><summary>Inherited methods</summary>}
 \itemize{
+\item \out{<span class="pkg-link" data-pkg="tercenApi" data-topic="Base" data-id="print">}\href{../../tercenApi/html/Base.html#method-print}{\code{tercenApi::Base$print()}}\out{</span>}
 }
 \out{</details>}
 }
@@ -132,15 +132,6 @@ GlTask
 \subsection{Method \code{toTson()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{GlTask$toTson()}\if{html}{\out{</div>}}
-}
-
-}
-\if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-print"></a>}}
-\if{latex}{\out{\hypertarget{method-print}{}}}
-\subsection{Method \code{print()}}{
-\subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{GlTask$print(...)}\if{html}{\out{</div>}}
 }
 
 }

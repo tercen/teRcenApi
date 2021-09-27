@@ -28,13 +28,13 @@ Labels
 \item \href{#method-init}{\code{Labels$init()}}
 \item \href{#method-initJson}{\code{Labels$initJson()}}
 \item \href{#method-toTson}{\code{Labels$toTson()}}
-\item \href{#method-print}{\code{Labels$print()}}
 \item \href{#method-clone}{\code{Labels$clone()}}
 }
 }
 \if{html}{
 \out{<details open ><summary>Inherited methods</summary>}
 \itemize{
+\item \out{<span class="pkg-link" data-pkg="tercenApi" data-topic="Base" data-id="print">}\href{../../tercenApi/html/Base.html#method-print}{\code{tercenApi::Base$print()}}\out{</span>}
 }
 \out{</details>}
 }
@@ -71,15 +71,6 @@ Labels
 \subsection{Method \code{toTson()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{Labels$toTson()}\if{html}{\out{</div>}}
-}
-
-}
-\if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-print"></a>}}
-\if{latex}{\out{\hypertarget{method-print}{}}}
-\subsection{Method \code{print()}}{
-\subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{Labels$print(...)}\if{html}{\out{</div>}}
 }
 
 }

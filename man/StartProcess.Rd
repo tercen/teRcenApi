@@ -47,13 +47,13 @@ StartProcess
 \item \href{#method-init}{\code{StartProcess$init()}}
 \item \href{#method-initJson}{\code{StartProcess$initJson()}}
 \item \href{#method-toTson}{\code{StartProcess$toTson()}}
-\item \href{#method-print}{\code{StartProcess$print()}}
 \item \href{#method-clone}{\code{StartProcess$clone()}}
 }
 }
 \if{html}{
 \out{<details open ><summary>Inherited methods</summary>}
 \itemize{
+\item \out{<span class="pkg-link" data-pkg="tercenApi" data-topic="Base" data-id="print">}\href{../../tercenApi/html/Base.html#method-print}{\code{tercenApi::Base$print()}}\out{</span>}
 }
 \out{</details>}
 }
@@ -90,15 +90,6 @@ StartProcess
 \subsection{Method \code{toTson()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{StartProcess$toTson()}\if{html}{\out{</div>}}
-}
-
-}
-\if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-print"></a>}}
-\if{latex}{\out{\hypertarget{method-print}{}}}
-\subsection{Method \code{print()}}{
-\subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{StartProcess$print(...)}\if{html}{\out{</div>}}
 }
 
 }

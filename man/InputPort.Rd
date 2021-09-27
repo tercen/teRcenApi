@@ -43,13 +43,13 @@ InputPort
 \item \href{#method-init}{\code{InputPort$init()}}
 \item \href{#method-initJson}{\code{InputPort$initJson()}}
 \item \href{#method-toTson}{\code{InputPort$toTson()}}
-\item \href{#method-print}{\code{InputPort$print()}}
 \item \href{#method-clone}{\code{InputPort$clone()}}
 }
 }
 \if{html}{
 \out{<details open ><summary>Inherited methods</summary>}
 \itemize{
+\item \out{<span class="pkg-link" data-pkg="tercenApi" data-topic="Base" data-id="print">}\href{../../tercenApi/html/Base.html#method-print}{\code{tercenApi::Base$print()}}\out{</span>}
 }
 \out{</details>}
 }
@@ -86,15 +86,6 @@ InputPort
 \subsection{Method \code{toTson()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{InputPort$toTson()}\if{html}{\out{</div>}}
-}
-
-}
-\if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-print"></a>}}
-\if{latex}{\out{\hypertarget{method-print}{}}}
-\subsection{Method \code{print()}}{
-\subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{InputPort$print(...)}\if{html}{\out{</div>}}
 }
 
 }

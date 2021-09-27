@@ -30,13 +30,13 @@ Factor
 \item \href{#method-init}{\code{Factor$init()}}
 \item \href{#method-initJson}{\code{Factor$initJson()}}
 \item \href{#method-toTson}{\code{Factor$toTson()}}
-\item \href{#method-print}{\code{Factor$print()}}
 \item \href{#method-clone}{\code{Factor$clone()}}
 }
 }
 \if{html}{
 \out{<details open ><summary>Inherited methods</summary>}
 \itemize{
+\item \out{<span class="pkg-link" data-pkg="tercenApi" data-topic="Base" data-id="print">}\href{../../tercenApi/html/Base.html#method-print}{\code{tercenApi::Base$print()}}\out{</span>}
 }
 \out{</details>}
 }
@@ -73,15 +73,6 @@ Factor
 \subsection{Method \code{toTson()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{Factor$toTson()}\if{html}{\out{</div>}}
-}
-
-}
-\if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-print"></a>}}
-\if{latex}{\out{\hypertarget{method-print}{}}}
-\subsection{Method \code{print()}}{
-\subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{Factor$print(...)}\if{html}{\out{</div>}}
 }
 
 }

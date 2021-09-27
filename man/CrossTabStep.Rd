@@ -61,13 +61,13 @@ CrossTabStep
 \item \href{#method-init}{\code{CrossTabStep$init()}}
 \item \href{#method-initJson}{\code{CrossTabStep$initJson()}}
 \item \href{#method-toTson}{\code{CrossTabStep$toTson()}}
-\item \href{#method-print}{\code{CrossTabStep$print()}}
 \item \href{#method-clone}{\code{CrossTabStep$clone()}}
 }
 }
 \if{html}{
 \out{<details open ><summary>Inherited methods</summary>}
 \itemize{
+\item \out{<span class="pkg-link" data-pkg="tercenApi" data-topic="Base" data-id="print">}\href{../../tercenApi/html/Base.html#method-print}{\code{tercenApi::Base$print()}}\out{</span>}
 }
 \out{</details>}
 }
@@ -104,15 +104,6 @@ CrossTabStep
 \subsection{Method \code{toTson()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{CrossTabStep$toTson()}\if{html}{\out{</div>}}
-}
-
-}
-\if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-print"></a>}}
-\if{latex}{\out{\hypertarget{method-print}{}}}
-\subsection{Method \code{print()}}{
-\subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{CrossTabStep$print(...)}\if{html}{\out{</div>}}
 }
 
 }

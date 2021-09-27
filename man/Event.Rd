@@ -45,13 +45,13 @@ Event
 \item \href{#method-init}{\code{Event$init()}}
 \item \href{#method-initJson}{\code{Event$initJson()}}
 \item \href{#method-toTson}{\code{Event$toTson()}}
-\item \href{#method-print}{\code{Event$print()}}
 \item \href{#method-clone}{\code{Event$clone()}}
 }
 }
 \if{html}{
 \out{<details open ><summary>Inherited methods</summary>}
 \itemize{
+\item \out{<span class="pkg-link" data-pkg="tercenApi" data-topic="Base" data-id="print">}\href{../../tercenApi/html/Base.html#method-print}{\code{tercenApi::Base$print()}}\out{</span>}
 }
 \out{</details>}
 }
@@ -88,15 +88,6 @@ Event
 \subsection{Method \code{toTson()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{Event$toTson()}\if{html}{\out{</div>}}
-}
-
-}
-\if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-print"></a>}}
-\if{latex}{\out{\hypertarget{method-print}{}}}
-\subsection{Method \code{print()}}{
-\subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{Event$print(...)}\if{html}{\out{</div>}}
 }
 
 }

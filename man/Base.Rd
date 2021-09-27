@@ -15,6 +15,7 @@ Base
 \item \href{#method-init}{\code{Base$init()}}
 \item \href{#method-initJson}{\code{Base$initJson()}}
 \item \href{#method-toTson}{\code{Base$toTson()}}
+\item \href{#method-print}{\code{Base$print()}}
 \item \href{#method-clone}{\code{Base$clone()}}
 }
 }
@@ -51,6 +52,15 @@ Base
 \subsection{Method \code{toTson()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{Base$toTson()}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-print"></a>}}
+\if{latex}{\out{\hypertarget{method-print}{}}}
+\subsection{Method \code{print()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Base$print(...)}\if{html}{\out{</div>}}
 }
 
 }

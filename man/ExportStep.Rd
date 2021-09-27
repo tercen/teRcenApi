@@ -61,13 +61,13 @@ ExportStep
 \item \href{#method-init}{\code{ExportStep$init()}}
 \item \href{#method-initJson}{\code{ExportStep$initJson()}}
 \item \href{#method-toTson}{\code{ExportStep$toTson()}}
-\item \href{#method-print}{\code{ExportStep$print()}}
 \item \href{#method-clone}{\code{ExportStep$clone()}}
 }
 }
 \if{html}{
 \out{<details open ><summary>Inherited methods</summary>}
 \itemize{
+\item \out{<span class="pkg-link" data-pkg="tercenApi" data-topic="Base" data-id="print">}\href{../../tercenApi/html/Base.html#method-print}{\code{tercenApi::Base$print()}}\out{</span>}
 }
 \out{</details>}
 }
@@ -104,15 +104,6 @@ ExportStep
 \subsection{Method \code{toTson()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{ExportStep$toTson()}\if{html}{\out{</div>}}
-}
-
-}
-\if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-print"></a>}}
-\if{latex}{\out{\hypertarget{method-print}{}}}
-\subsection{Method \code{print()}}{
-\subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{ExportStep$print(...)}\if{html}{\out{</div>}}
 }
 
 }

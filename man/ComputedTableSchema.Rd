@@ -121,13 +121,13 @@ ComputedTableSchema
 \item \href{#method-init}{\code{ComputedTableSchema$init()}}
 \item \href{#method-initJson}{\code{ComputedTableSchema$initJson()}}
 \item \href{#method-toTson}{\code{ComputedTableSchema$toTson()}}
-\item \href{#method-print}{\code{ComputedTableSchema$print()}}
 \item \href{#method-clone}{\code{ComputedTableSchema$clone()}}
 }
 }
 \if{html}{
 \out{<details open ><summary>Inherited methods</summary>}
 \itemize{
+\item \out{<span class="pkg-link" data-pkg="tercenApi" data-topic="Base" data-id="print">}\href{../../tercenApi/html/Base.html#method-print}{\code{tercenApi::Base$print()}}\out{</span>}
 }
 \out{</details>}
 }
@@ -164,15 +164,6 @@ ComputedTableSchema
 \subsection{Method \code{toTson()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{ComputedTableSchema$toTson()}\if{html}{\out{</div>}}
-}
-
-}
-\if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-print"></a>}}
-\if{latex}{\out{\hypertarget{method-print}{}}}
-\subsection{Method \code{print()}}{
-\subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{ComputedTableSchema$print(...)}\if{html}{\out{</div>}}
 }
 
 }

@@ -30,13 +30,13 @@ Palette
 \item \href{#method-init}{\code{Palette$init()}}
 \item \href{#method-initJson}{\code{Palette$initJson()}}
 \item \href{#method-toTson}{\code{Palette$toTson()}}
-\item \href{#method-print}{\code{Palette$print()}}
 \item \href{#method-clone}{\code{Palette$clone()}}
 }
 }
 \if{html}{
 \out{<details open ><summary>Inherited methods</summary>}
 \itemize{
+\item \out{<span class="pkg-link" data-pkg="tercenApi" data-topic="Base" data-id="print">}\href{../../tercenApi/html/Base.html#method-print}{\code{tercenApi::Base$print()}}\out{</span>}
 }
 \out{</details>}
 }
@@ -73,15 +73,6 @@ Palette
 \subsection{Method \code{toTson()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{Palette$toTson()}\if{html}{\out{</div>}}
-}
-
-}
-\if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-print"></a>}}
-\if{latex}{\out{\hypertarget{method-print}{}}}
-\subsection{Method \code{print()}}{
-\subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{Palette$print(...)}\if{html}{\out{</div>}}
 }
 
 }

@@ -37,13 +37,13 @@ SimpleRelation
 \item \href{#method-init}{\code{SimpleRelation$init()}}
 \item \href{#method-initJson}{\code{SimpleRelation$initJson()}}
 \item \href{#method-toTson}{\code{SimpleRelation$toTson()}}
-\item \href{#method-print}{\code{SimpleRelation$print()}}
 \item \href{#method-clone}{\code{SimpleRelation$clone()}}
 }
 }
 \if{html}{
 \out{<details open ><summary>Inherited methods</summary>}
 \itemize{
+\item \out{<span class="pkg-link" data-pkg="tercenApi" data-topic="Base" data-id="print">}\href{../../tercenApi/html/Base.html#method-print}{\code{tercenApi::Base$print()}}\out{</span>}
 }
 \out{</details>}
 }
@@ -80,15 +80,6 @@ SimpleRelation
 \subsection{Method \code{toTson()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{SimpleRelation$toTson()}\if{html}{\out{</div>}}
-}
-
-}
-\if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-print"></a>}}
-\if{latex}{\out{\hypertarget{method-print}{}}}
-\subsection{Method \code{print()}}{
-\subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{SimpleRelation$print(...)}\if{html}{\out{</div>}}
 }
 
 }

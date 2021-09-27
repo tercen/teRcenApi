@@ -113,13 +113,13 @@ DockerWebAppOperator
 \item \href{#method-init}{\code{DockerWebAppOperator$init()}}
 \item \href{#method-initJson}{\code{DockerWebAppOperator$initJson()}}
 \item \href{#method-toTson}{\code{DockerWebAppOperator$toTson()}}
-\item \href{#method-print}{\code{DockerWebAppOperator$print()}}
 \item \href{#method-clone}{\code{DockerWebAppOperator$clone()}}
 }
 }
 \if{html}{
 \out{<details open ><summary>Inherited methods</summary>}
 \itemize{
+\item \out{<span class="pkg-link" data-pkg="tercenApi" data-topic="Base" data-id="print">}\href{../../tercenApi/html/Base.html#method-print}{\code{tercenApi::Base$print()}}\out{</span>}
 }
 \out{</details>}
 }
@@ -156,15 +156,6 @@ DockerWebAppOperator
 \subsection{Method \code{toTson()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{DockerWebAppOperator$toTson()}\if{html}{\out{</div>}}
-}
-
-}
-\if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-print"></a>}}
-\if{latex}{\out{\hypertarget{method-print}{}}}
-\subsection{Method \code{print()}}{
-\subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{DockerWebAppOperator$print(...)}\if{html}{\out{</div>}}
 }
 
 }

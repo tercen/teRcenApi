@@ -30,13 +30,13 @@ XYAxisList
 \item \href{#method-init}{\code{XYAxisList$init()}}
 \item \href{#method-initJson}{\code{XYAxisList$initJson()}}
 \item \href{#method-toTson}{\code{XYAxisList$toTson()}}
-\item \href{#method-print}{\code{XYAxisList$print()}}
 \item \href{#method-clone}{\code{XYAxisList$clone()}}
 }
 }
 \if{html}{
 \out{<details open ><summary>Inherited methods</summary>}
 \itemize{
+\item \out{<span class="pkg-link" data-pkg="tercenApi" data-topic="Base" data-id="print">}\href{../../tercenApi/html/Base.html#method-print}{\code{tercenApi::Base$print()}}\out{</span>}
 }
 \out{</details>}
 }
@@ -73,15 +73,6 @@ XYAxisList
 \subsection{Method \code{toTson()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{XYAxisList$toTson()}\if{html}{\out{</div>}}
-}
-
-}
-\if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-print"></a>}}
-\if{latex}{\out{\hypertarget{method-print}{}}}
-\subsection{Method \code{print()}}{
-\subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{XYAxisList$print(...)}\if{html}{\out{</div>}}
 }
 
 }

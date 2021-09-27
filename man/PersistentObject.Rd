@@ -39,13 +39,13 @@ PersistentObject
 \item \href{#method-init}{\code{PersistentObject$init()}}
 \item \href{#method-initJson}{\code{PersistentObject$initJson()}}
 \item \href{#method-toTson}{\code{PersistentObject$toTson()}}
-\item \href{#method-print}{\code{PersistentObject$print()}}
 \item \href{#method-clone}{\code{PersistentObject$clone()}}
 }
 }
 \if{html}{
 \out{<details open ><summary>Inherited methods</summary>}
 \itemize{
+\item \out{<span class="pkg-link" data-pkg="tercenApi" data-topic="Base" data-id="print">}\href{../../tercenApi/html/Base.html#method-print}{\code{tercenApi::Base$print()}}\out{</span>}
 }
 \out{</details>}
 }
@@ -82,15 +82,6 @@ PersistentObject
 \subsection{Method \code{toTson()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{PersistentObject$toTson()}\if{html}{\out{</div>}}
-}
-
-}
-\if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-print"></a>}}
-\if{latex}{\out{\hypertarget{method-print}{}}}
-\subsection{Method \code{print()}}{
-\subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{PersistentObject$print(...)}\if{html}{\out{</div>}}
 }
 
 }

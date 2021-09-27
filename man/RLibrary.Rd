@@ -97,13 +97,13 @@ RLibrary
 \item \href{#method-init}{\code{RLibrary$init()}}
 \item \href{#method-initJson}{\code{RLibrary$initJson()}}
 \item \href{#method-toTson}{\code{RLibrary$toTson()}}
-\item \href{#method-print}{\code{RLibrary$print()}}
 \item \href{#method-clone}{\code{RLibrary$clone()}}
 }
 }
 \if{html}{
 \out{<details open ><summary>Inherited methods</summary>}
 \itemize{
+\item \out{<span class="pkg-link" data-pkg="tercenApi" data-topic="Base" data-id="print">}\href{../../tercenApi/html/Base.html#method-print}{\code{tercenApi::Base$print()}}\out{</span>}
 }
 \out{</details>}
 }
@@ -140,15 +140,6 @@ RLibrary
 \subsection{Method \code{toTson()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{RLibrary$toTson()}\if{html}{\out{</div>}}
-}
-
-}
-\if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-print"></a>}}
-\if{latex}{\out{\hypertarget{method-print}{}}}
-\subsection{Method \code{print()}}{
-\subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{RLibrary$print(...)}\if{html}{\out{</div>}}
 }
 
 }

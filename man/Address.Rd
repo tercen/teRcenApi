@@ -40,13 +40,13 @@ Address
 \item \href{#method-init}{\code{Address$init()}}
 \item \href{#method-initJson}{\code{Address$initJson()}}
 \item \href{#method-toTson}{\code{Address$toTson()}}
-\item \href{#method-print}{\code{Address$print()}}
 \item \href{#method-clone}{\code{Address$clone()}}
 }
 }
 \if{html}{
 \out{<details open ><summary>Inherited methods</summary>}
 \itemize{
+\item \out{<span class="pkg-link" data-pkg="tercenApi" data-topic="Base" data-id="print">}\href{../../tercenApi/html/Base.html#method-print}{\code{tercenApi::Base$print()}}\out{</span>}
 }
 \out{</details>}
 }
@@ -83,15 +83,6 @@ Address
 \subsection{Method \code{toTson()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{Address$toTson()}\if{html}{\out{</div>}}
-}
-
-}
-\if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-print"></a>}}
-\if{latex}{\out{\hypertarget{method-print}{}}}
-\subsection{Method \code{print()}}{
-\subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{Address$print(...)}\if{html}{\out{</div>}}
 }
 
 }

@@ -103,13 +103,13 @@ Issue
 \item \href{#method-init}{\code{Issue$init()}}
 \item \href{#method-initJson}{\code{Issue$initJson()}}
 \item \href{#method-toTson}{\code{Issue$toTson()}}
-\item \href{#method-print}{\code{Issue$print()}}
 \item \href{#method-clone}{\code{Issue$clone()}}
 }
 }
 \if{html}{
 \out{<details open ><summary>Inherited methods</summary>}
 \itemize{
+\item \out{<span class="pkg-link" data-pkg="tercenApi" data-topic="Base" data-id="print">}\href{../../tercenApi/html/Base.html#method-print}{\code{tercenApi::Base$print()}}\out{</span>}
 }
 \out{</details>}
 }
@@ -146,15 +146,6 @@ Issue
 \subsection{Method \code{toTson()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{Issue$toTson()}\if{html}{\out{</div>}}
-}
-
-}
-\if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-print"></a>}}
-\if{latex}{\out{\hypertarget{method-print}{}}}
-\subsection{Method \code{print()}}{
-\subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{Issue$print(...)}\if{html}{\out{</div>}}
 }
 
 }

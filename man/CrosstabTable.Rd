@@ -34,13 +34,13 @@ CrosstabTable
 \item \href{#method-init}{\code{CrosstabTable$init()}}
 \item \href{#method-initJson}{\code{CrosstabTable$initJson()}}
 \item \href{#method-toTson}{\code{CrosstabTable$toTson()}}
-\item \href{#method-print}{\code{CrosstabTable$print()}}
 \item \href{#method-clone}{\code{CrosstabTable$clone()}}
 }
 }
 \if{html}{
 \out{<details open ><summary>Inherited methods</summary>}
 \itemize{
+\item \out{<span class="pkg-link" data-pkg="tercenApi" data-topic="Base" data-id="print">}\href{../../tercenApi/html/Base.html#method-print}{\code{tercenApi::Base$print()}}\out{</span>}
 }
 \out{</details>}
 }
@@ -77,15 +77,6 @@ CrosstabTable
 \subsection{Method \code{toTson()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{CrosstabTable$toTson()}\if{html}{\out{</div>}}
-}
-
-}
-\if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-print"></a>}}
-\if{latex}{\out{\hypertarget{method-print}{}}}
-\subsection{Method \code{print()}}{
-\subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{CrosstabTable$print(...)}\if{html}{\out{</div>}}
 }
 
 }

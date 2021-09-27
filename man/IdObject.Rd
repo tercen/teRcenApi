@@ -28,13 +28,13 @@ IdObject
 \item \href{#method-init}{\code{IdObject$init()}}
 \item \href{#method-initJson}{\code{IdObject$initJson()}}
 \item \href{#method-toTson}{\code{IdObject$toTson()}}
-\item \href{#method-print}{\code{IdObject$print()}}
 \item \href{#method-clone}{\code{IdObject$clone()}}
 }
 }
 \if{html}{
 \out{<details open ><summary>Inherited methods</summary>}
 \itemize{
+\item \out{<span class="pkg-link" data-pkg="tercenApi" data-topic="Base" data-id="print">}\href{../../tercenApi/html/Base.html#method-print}{\code{tercenApi::Base$print()}}\out{</span>}
 }
 \out{</details>}
 }
@@ -71,15 +71,6 @@ IdObject
 \subsection{Method \code{toTson()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{IdObject$toTson()}\if{html}{\out{</div>}}
-}
-
-}
-\if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-print"></a>}}
-\if{latex}{\out{\hypertarget{method-print}{}}}
-\subsection{Method \code{print()}}{
-\subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{IdObject$print(...)}\if{html}{\out{</div>}}
 }
 
 }

@@ -39,13 +39,13 @@ TableProfile
 \item \href{#method-init}{\code{TableProfile$init()}}
 \item \href{#method-initJson}{\code{TableProfile$initJson()}}
 \item \href{#method-toTson}{\code{TableProfile$toTson()}}
-\item \href{#method-print}{\code{TableProfile$print()}}
 \item \href{#method-clone}{\code{TableProfile$clone()}}
 }
 }
 \if{html}{
 \out{<details open ><summary>Inherited methods</summary>}
 \itemize{
+\item \out{<span class="pkg-link" data-pkg="tercenApi" data-topic="Base" data-id="print">}\href{../../tercenApi/html/Base.html#method-print}{\code{tercenApi::Base$print()}}\out{</span>}
 }
 \out{</details>}
 }
@@ -82,15 +82,6 @@ TableProfile
 \subsection{Method \code{toTson()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{TableProfile$toTson()}\if{html}{\out{</div>}}
-}
-
-}
-\if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-print"></a>}}
-\if{latex}{\out{\hypertarget{method-print}{}}}
-\subsection{Method \code{print()}}{
-\subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{TableProfile$print(...)}\if{html}{\out{</div>}}
 }
 
 }

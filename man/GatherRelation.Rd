@@ -45,13 +45,13 @@ GatherRelation
 \item \href{#method-init}{\code{GatherRelation$init()}}
 \item \href{#method-initJson}{\code{GatherRelation$initJson()}}
 \item \href{#method-toTson}{\code{GatherRelation$toTson()}}
-\item \href{#method-print}{\code{GatherRelation$print()}}
 \item \href{#method-clone}{\code{GatherRelation$clone()}}
 }
 }
 \if{html}{
 \out{<details open ><summary>Inherited methods</summary>}
 \itemize{
+\item \out{<span class="pkg-link" data-pkg="tercenApi" data-topic="Base" data-id="print">}\href{../../tercenApi/html/Base.html#method-print}{\code{tercenApi::Base$print()}}\out{</span>}
 }
 \out{</details>}
 }
@@ -88,15 +88,6 @@ GatherRelation
 \subsection{Method \code{toTson()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{GatherRelation$toTson()}\if{html}{\out{</div>}}
-}
-
-}
-\if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-print"></a>}}
-\if{latex}{\out{\hypertarget{method-print}{}}}
-\subsection{Method \code{print()}}{
-\subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{GatherRelation$print(...)}\if{html}{\out{</div>}}
 }
 
 }

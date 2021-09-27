@@ -28,13 +28,13 @@ ColorList
 \item \href{#method-init}{\code{ColorList$init()}}
 \item \href{#method-initJson}{\code{ColorList$initJson()}}
 \item \href{#method-toTson}{\code{ColorList$toTson()}}
-\item \href{#method-print}{\code{ColorList$print()}}
 \item \href{#method-clone}{\code{ColorList$clone()}}
 }
 }
 \if{html}{
 \out{<details open ><summary>Inherited methods</summary>}
 \itemize{
+\item \out{<span class="pkg-link" data-pkg="tercenApi" data-topic="Base" data-id="print">}\href{../../tercenApi/html/Base.html#method-print}{\code{tercenApi::Base$print()}}\out{</span>}
 }
 \out{</details>}
 }
@@ -71,15 +71,6 @@ ColorList
 \subsection{Method \code{toTson()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{ColorList$toTson()}\if{html}{\out{</div>}}
-}
-
-}
-\if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-print"></a>}}
-\if{latex}{\out{\hypertarget{method-print}{}}}
-\subsection{Method \code{print()}}{
-\subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{ColorList$print(...)}\if{html}{\out{</div>}}
 }
 
 }

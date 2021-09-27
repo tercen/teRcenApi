@@ -41,13 +41,13 @@ Attribute
 \item \href{#method-init}{\code{Attribute$init()}}
 \item \href{#method-initJson}{\code{Attribute$initJson()}}
 \item \href{#method-toTson}{\code{Attribute$toTson()}}
-\item \href{#method-print}{\code{Attribute$print()}}
 \item \href{#method-clone}{\code{Attribute$clone()}}
 }
 }
 \if{html}{
 \out{<details open ><summary>Inherited methods</summary>}
 \itemize{
+\item \out{<span class="pkg-link" data-pkg="tercenApi" data-topic="Base" data-id="print">}\href{../../tercenApi/html/Base.html#method-print}{\code{tercenApi::Base$print()}}\out{</span>}
 }
 \out{</details>}
 }
@@ -84,15 +84,6 @@ Attribute
 \subsection{Method \code{toTson()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{Attribute$toTson()}\if{html}{\out{</div>}}
-}
-
-}
-\if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-print"></a>}}
-\if{latex}{\out{\hypertarget{method-print}{}}}
-\subsection{Method \code{print()}}{
-\subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{Attribute$print(...)}\if{html}{\out{</div>}}
 }
 
 }

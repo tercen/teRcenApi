@@ -58,13 +58,13 @@ Ulimits
 \item \href{#method-init}{\code{Ulimits$init()}}
 \item \href{#method-initJson}{\code{Ulimits$initJson()}}
 \item \href{#method-toTson}{\code{Ulimits$toTson()}}
-\item \href{#method-print}{\code{Ulimits$print()}}
 \item \href{#method-clone}{\code{Ulimits$clone()}}
 }
 }
 \if{html}{
 \out{<details open ><summary>Inherited methods</summary>}
 \itemize{
+\item \out{<span class="pkg-link" data-pkg="tercenApi" data-topic="Base" data-id="print">}\href{../../tercenApi/html/Base.html#method-print}{\code{tercenApi::Base$print()}}\out{</span>}
 }
 \out{</details>}
 }
@@ -101,15 +101,6 @@ Ulimits
 \subsection{Method \code{toTson()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{Ulimits$toTson()}\if{html}{\out{</div>}}
-}
-
-}
-\if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-print"></a>}}
-\if{latex}{\out{\hypertarget{method-print}{}}}
-\subsection{Method \code{print()}}{
-\subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{Ulimits$print(...)}\if{html}{\out{</div>}}
 }
 
 }

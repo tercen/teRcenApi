@@ -49,13 +49,13 @@ MappingFactor
 \item \href{#method-init}{\code{MappingFactor$init()}}
 \item \href{#method-initJson}{\code{MappingFactor$initJson()}}
 \item \href{#method-toTson}{\code{MappingFactor$toTson()}}
-\item \href{#method-print}{\code{MappingFactor$print()}}
 \item \href{#method-clone}{\code{MappingFactor$clone()}}
 }
 }
 \if{html}{
 \out{<details open ><summary>Inherited methods</summary>}
 \itemize{
+\item \out{<span class="pkg-link" data-pkg="tercenApi" data-topic="Base" data-id="print">}\href{../../tercenApi/html/Base.html#method-print}{\code{tercenApi::Base$print()}}\out{</span>}
 }
 \out{</details>}
 }
@@ -92,15 +92,6 @@ MappingFactor
 \subsection{Method \code{toTson()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{MappingFactor$toTson()}\if{html}{\out{</div>}}
-}
-
-}
-\if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-print"></a>}}
-\if{latex}{\out{\hypertarget{method-print}{}}}
-\subsection{Method \code{print()}}{
-\subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{MappingFactor$print(...)}\if{html}{\out{</div>}}
 }
 
 }

@@ -30,13 +30,13 @@ Ace
 \item \href{#method-init}{\code{Ace$init()}}
 \item \href{#method-initJson}{\code{Ace$initJson()}}
 \item \href{#method-toTson}{\code{Ace$toTson()}}
-\item \href{#method-print}{\code{Ace$print()}}
 \item \href{#method-clone}{\code{Ace$clone()}}
 }
 }
 \if{html}{
 \out{<details open ><summary>Inherited methods</summary>}
 \itemize{
+\item \out{<span class="pkg-link" data-pkg="tercenApi" data-topic="Base" data-id="print">}\href{../../tercenApi/html/Base.html#method-print}{\code{tercenApi::Base$print()}}\out{</span>}
 }
 \out{</details>}
 }
@@ -73,15 +73,6 @@ Ace
 \subsection{Method \code{toTson()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{Ace$toTson()}\if{html}{\out{</div>}}
-}
-
-}
-\if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-print"></a>}}
-\if{latex}{\out{\hypertarget{method-print}{}}}
-\subsection{Method \code{print()}}{
-\subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{Ace$print(...)}\if{html}{\out{</div>}}
 }
 
 }

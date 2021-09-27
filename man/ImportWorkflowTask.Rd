@@ -95,13 +95,13 @@ ImportWorkflowTask
 \item \href{#method-init}{\code{ImportWorkflowTask$init()}}
 \item \href{#method-initJson}{\code{ImportWorkflowTask$initJson()}}
 \item \href{#method-toTson}{\code{ImportWorkflowTask$toTson()}}
-\item \href{#method-print}{\code{ImportWorkflowTask$print()}}
 \item \href{#method-clone}{\code{ImportWorkflowTask$clone()}}
 }
 }
 \if{html}{
 \out{<details open ><summary>Inherited methods</summary>}
 \itemize{
+\item \out{<span class="pkg-link" data-pkg="tercenApi" data-topic="Base" data-id="print">}\href{../../tercenApi/html/Base.html#method-print}{\code{tercenApi::Base$print()}}\out{</span>}
 }
 \out{</details>}
 }
@@ -138,15 +138,6 @@ ImportWorkflowTask
 \subsection{Method \code{toTson()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{ImportWorkflowTask$toTson()}\if{html}{\out{</div>}}
-}
-
-}
-\if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-print"></a>}}
-\if{latex}{\out{\hypertarget{method-print}{}}}
-\subsection{Method \code{print()}}{
-\subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{ImportWorkflowTask$print(...)}\if{html}{\out{</div>}}
 }
 
 }

@@ -41,13 +41,13 @@ StringProperty
 \item \href{#method-init}{\code{StringProperty$init()}}
 \item \href{#method-initJson}{\code{StringProperty$initJson()}}
 \item \href{#method-toTson}{\code{StringProperty$toTson()}}
-\item \href{#method-print}{\code{StringProperty$print()}}
 \item \href{#method-clone}{\code{StringProperty$clone()}}
 }
 }
 \if{html}{
 \out{<details open ><summary>Inherited methods</summary>}
 \itemize{
+\item \out{<span class="pkg-link" data-pkg="tercenApi" data-topic="Base" data-id="print">}\href{../../tercenApi/html/Base.html#method-print}{\code{tercenApi::Base$print()}}\out{</span>}
 }
 \out{</details>}
 }
@@ -84,15 +84,6 @@ StringProperty
 \subsection{Method \code{toTson()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{StringProperty$toTson()}\if{html}{\out{</div>}}
-}
-
-}
-\if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-print"></a>}}
-\if{latex}{\out{\hypertarget{method-print}{}}}
-\subsection{Method \code{print()}}{
-\subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{StringProperty$print(...)}\if{html}{\out{</div>}}
 }
 
 }

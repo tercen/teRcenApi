@@ -105,13 +105,13 @@ GitOperator
 \item \href{#method-init}{\code{GitOperator$init()}}
 \item \href{#method-initJson}{\code{GitOperator$initJson()}}
 \item \href{#method-toTson}{\code{GitOperator$toTson()}}
-\item \href{#method-print}{\code{GitOperator$print()}}
 \item \href{#method-clone}{\code{GitOperator$clone()}}
 }
 }
 \if{html}{
 \out{<details open ><summary>Inherited methods</summary>}
 \itemize{
+\item \out{<span class="pkg-link" data-pkg="tercenApi" data-topic="Base" data-id="print">}\href{../../tercenApi/html/Base.html#method-print}{\code{tercenApi::Base$print()}}\out{</span>}
 }
 \out{</details>}
 }
@@ -148,15 +148,6 @@ GitOperator
 \subsection{Method \code{toTson()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{GitOperator$toTson()}\if{html}{\out{</div>}}
-}
-
-}
-\if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-print"></a>}}
-\if{latex}{\out{\hypertarget{method-print}{}}}
-\subsection{Method \code{print()}}{
-\subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{GitOperator$print(...)}\if{html}{\out{</div>}}
 }
 
 }

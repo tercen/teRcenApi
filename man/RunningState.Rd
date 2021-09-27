@@ -21,13 +21,13 @@ RunningState
 \item \href{#method-init}{\code{RunningState$init()}}
 \item \href{#method-initJson}{\code{RunningState$initJson()}}
 \item \href{#method-toTson}{\code{RunningState$toTson()}}
-\item \href{#method-print}{\code{RunningState$print()}}
 \item \href{#method-clone}{\code{RunningState$clone()}}
 }
 }
 \if{html}{
 \out{<details open ><summary>Inherited methods</summary>}
 \itemize{
+\item \out{<span class="pkg-link" data-pkg="tercenApi" data-topic="Base" data-id="print">}\href{../../tercenApi/html/Base.html#method-print}{\code{tercenApi::Base$print()}}\out{</span>}
 }
 \out{</details>}
 }
@@ -64,15 +64,6 @@ RunningState
 \subsection{Method \code{toTson()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{RunningState$toTson()}\if{html}{\out{</div>}}
-}
-
-}
-\if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-print"></a>}}
-\if{latex}{\out{\hypertarget{method-print}{}}}
-\subsection{Method \code{print()}}{
-\subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{RunningState$print(...)}\if{html}{\out{</div>}}
 }
 
 }

@@ -61,13 +61,13 @@ InStep
 \item \href{#method-init}{\code{InStep$init()}}
 \item \href{#method-initJson}{\code{InStep$initJson()}}
 \item \href{#method-toTson}{\code{InStep$toTson()}}
-\item \href{#method-print}{\code{InStep$print()}}
 \item \href{#method-clone}{\code{InStep$clone()}}
 }
 }
 \if{html}{
 \out{<details open ><summary>Inherited methods</summary>}
 \itemize{
+\item \out{<span class="pkg-link" data-pkg="tercenApi" data-topic="Base" data-id="print">}\href{../../tercenApi/html/Base.html#method-print}{\code{tercenApi::Base$print()}}\out{</span>}
 }
 \out{</details>}
 }
@@ -104,15 +104,6 @@ InStep
 \subsection{Method \code{toTson()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{InStep$toTson()}\if{html}{\out{</div>}}
-}
-
-}
-\if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-print"></a>}}
-\if{latex}{\out{\hypertarget{method-print}{}}}
-\subsection{Method \code{print()}}{
-\subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{InStep$print(...)}\if{html}{\out{</div>}}
 }
 
 }

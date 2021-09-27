@@ -65,13 +65,13 @@ Task
 \item \href{#method-init}{\code{Task$init()}}
 \item \href{#method-initJson}{\code{Task$initJson()}}
 \item \href{#method-toTson}{\code{Task$toTson()}}
-\item \href{#method-print}{\code{Task$print()}}
 \item \href{#method-clone}{\code{Task$clone()}}
 }
 }
 \if{html}{
 \out{<details open ><summary>Inherited methods</summary>}
 \itemize{
+\item \out{<span class="pkg-link" data-pkg="tercenApi" data-topic="Base" data-id="print">}\href{../../tercenApi/html/Base.html#method-print}{\code{tercenApi::Base$print()}}\out{</span>}
 }
 \out{</details>}
 }
@@ -108,15 +108,6 @@ Task
 \subsection{Method \code{toTson()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{Task$toTson()}\if{html}{\out{</div>}}
-}
-
-}
-\if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-print"></a>}}
-\if{latex}{\out{\hypertarget{method-print}{}}}
-\subsection{Method \code{print()}}{
-\subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{Task$print(...)}\if{html}{\out{</div>}}
 }
 
 }

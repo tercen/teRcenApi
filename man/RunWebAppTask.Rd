@@ -95,13 +95,13 @@ RunWebAppTask
 \item \href{#method-init}{\code{RunWebAppTask$init()}}
 \item \href{#method-initJson}{\code{RunWebAppTask$initJson()}}
 \item \href{#method-toTson}{\code{RunWebAppTask$toTson()}}
-\item \href{#method-print}{\code{RunWebAppTask$print()}}
 \item \href{#method-clone}{\code{RunWebAppTask$clone()}}
 }
 }
 \if{html}{
 \out{<details open ><summary>Inherited methods</summary>}
 \itemize{
+\item \out{<span class="pkg-link" data-pkg="tercenApi" data-topic="Base" data-id="print">}\href{../../tercenApi/html/Base.html#method-print}{\code{tercenApi::Base$print()}}\out{</span>}
 }
 \out{</details>}
 }
@@ -138,15 +138,6 @@ RunWebAppTask
 \subsection{Method \code{toTson()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{RunWebAppTask$toTson()}\if{html}{\out{</div>}}
-}
-
-}
-\if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-print"></a>}}
-\if{latex}{\out{\hypertarget{method-print}{}}}
-\subsection{Method \code{print()}}{
-\subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{RunWebAppTask$print(...)}\if{html}{\out{</div>}}
 }
 
 }

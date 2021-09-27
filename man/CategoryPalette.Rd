@@ -43,13 +43,13 @@ CategoryPalette
 \item \href{#method-init}{\code{CategoryPalette$init()}}
 \item \href{#method-initJson}{\code{CategoryPalette$initJson()}}
 \item \href{#method-toTson}{\code{CategoryPalette$toTson()}}
-\item \href{#method-print}{\code{CategoryPalette$print()}}
 \item \href{#method-clone}{\code{CategoryPalette$clone()}}
 }
 }
 \if{html}{
 \out{<details open ><summary>Inherited methods</summary>}
 \itemize{
+\item \out{<span class="pkg-link" data-pkg="tercenApi" data-topic="Base" data-id="print">}\href{../../tercenApi/html/Base.html#method-print}{\code{tercenApi::Base$print()}}\out{</span>}
 }
 \out{</details>}
 }
@@ -86,15 +86,6 @@ CategoryPalette
 \subsection{Method \code{toTson()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{CategoryPalette$toTson()}\if{html}{\out{</div>}}
-}
-
-}
-\if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-print"></a>}}
-\if{latex}{\out{\hypertarget{method-print}{}}}
-\subsection{Method \code{print()}}{
-\subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{CategoryPalette$print(...)}\if{html}{\out{</div>}}
 }
 
 }
