@@ -38,7 +38,7 @@ PersistentService <- R6::R6Class("PersistentService", inherit = HttpClientServic
         if (response$status != 200) {
             self$onResponseError(response, "getDependentObjects")
         } else {
-            answer = createObjectFromJson(response$content)
+            answer = lapply(response$content, createObjectFromJson)
         }
         return(answer)
     }, getDependentObjectIds = function(id) {
@@ -52,7 +52,7 @@ PersistentService <- R6::R6Class("PersistentService", inherit = HttpClientServic
         if (response$status != 200) {
             self$onResponseError(response, "getDependentObjectIds")
         } else {
-            answer = createObjectFromJson(response$content)
+            answer = lapply(response$content, createObjectFromJson)
         }
         return(answer)
     }))

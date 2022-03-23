@@ -23,7 +23,7 @@ ProjectDocumentService <- R6::R6Class("ProjectDocumentService", inherit = HttpCl
         if (response$status != 200) {
             self$onResponseError(response, "getParentFolders")
         } else {
-            answer = createObjectFromJson(response$content)
+            answer = lapply(response$content, createObjectFromJson)
         }
         return(answer)
     }, cloneProjectDocument = function(documentId, projectId) {

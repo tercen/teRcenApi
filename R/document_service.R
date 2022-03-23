@@ -47,7 +47,7 @@ DocumentService <- R6::R6Class("DocumentService", inherit = HttpClientService, p
     if (response$status != 200) {
         self$onResponseError(response, "getTercenOperatorLibrary")
     } else {
-        answer = createObjectFromJson(response$content)
+        answer = lapply(response$content, createObjectFromJson)
     }
     return(answer)
 }, getTercenWorkflowLibrary = function(offset, limit) {
@@ -62,7 +62,7 @@ DocumentService <- R6::R6Class("DocumentService", inherit = HttpClientService, p
     if (response$status != 200) {
         self$onResponseError(response, "getTercenWorkflowLibrary")
     } else {
-        answer = createObjectFromJson(response$content)
+        answer = lapply(response$content, createObjectFromJson)
     }
     return(answer)
 }, getTercenAppLibrary = function(offset, limit) {
@@ -77,7 +77,7 @@ DocumentService <- R6::R6Class("DocumentService", inherit = HttpClientService, p
     if (response$status != 200) {
         self$onResponseError(response, "getTercenAppLibrary")
     } else {
-        answer = createObjectFromJson(response$content)
+        answer = lapply(response$content, createObjectFromJson)
     }
     return(answer)
 }))

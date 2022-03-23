@@ -99,7 +99,7 @@ WorkerService <- R6::R6Class("WorkerService", inherit = HttpClientService, publi
     if (response$status != 200) {
         self$onResponseError(response, "updateTaskEnv")
     } else {
-        answer = createObjectFromJson(response$content)
+        answer = lapply(response$content, createObjectFromJson)
     }
     return(answer)
 }, getTaskEnv = function(taskId) {
@@ -113,7 +113,7 @@ WorkerService <- R6::R6Class("WorkerService", inherit = HttpClientService, publi
     if (response$status != 200) {
         self$onResponseError(response, "getTaskEnv")
     } else {
-        answer = createObjectFromJson(response$content)
+        answer = lapply(response$content, createObjectFromJson)
     }
     return(answer)
 }))

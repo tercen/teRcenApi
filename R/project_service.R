@@ -56,7 +56,7 @@ ProjectService <- R6::R6Class("ProjectService", inherit = HttpClientService, pub
     if (response$status != 200) {
         self$onResponseError(response, "explore")
     } else {
-        answer = createObjectFromJson(response$content)
+        answer = lapply(response$content, createObjectFromJson)
     }
     return(answer)
 }, recentProjects = function(userId) {
@@ -70,7 +70,7 @@ ProjectService <- R6::R6Class("ProjectService", inherit = HttpClientService, pub
     if (response$status != 200) {
         self$onResponseError(response, "recentProjects")
     } else {
-        answer = createObjectFromJson(response$content)
+        answer = lapply(response$content, createObjectFromJson)
     }
     return(answer)
 }, cloneProject = function(projectId, project) {

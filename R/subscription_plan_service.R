@@ -29,7 +29,7 @@ SubscriptionPlanService <- R6::R6Class("SubscriptionPlanService", inherit = Http
         if (response$status != 200) {
             self$onResponseError(response, "getSubscriptionPlans")
         } else {
-            answer = createObjectFromJson(response$content)
+            answer = lapply(response$content, createObjectFromJson)
         }
         return(answer)
     }, getPlans = function(userId) {
@@ -43,7 +43,7 @@ SubscriptionPlanService <- R6::R6Class("SubscriptionPlanService", inherit = Http
         if (response$status != 200) {
             self$onResponseError(response, "getPlans")
         } else {
-            answer = createObjectFromJson(response$content)
+            answer = lapply(response$content, createObjectFromJson)
         }
         return(answer)
     }, createSubscriptionPlan = function(userId, plan, successUrl, cancelUrl) {

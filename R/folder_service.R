@@ -40,7 +40,7 @@ FolderService <- R6::R6Class("FolderService", inherit = HttpClientService, publi
     if (response$status != 200) {
         self$onResponseError(response, "getExternalStorageFolders")
     } else {
-        answer = createObjectFromJson(response$content)
+        answer = lapply(response$content, createObjectFromJson)
     }
     return(answer)
 }))
