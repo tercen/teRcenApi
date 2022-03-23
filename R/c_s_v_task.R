@@ -22,6 +22,7 @@
 #' @field runDate object of class \code{\link{Date}} inherited from super class \code{\link{Task}}.
 #' @field completedDate object of class \code{\link{Date}} inherited from super class \code{\link{Task}}.
 #' @field aclContext object of class \code{\link{AclContext}} inherited from super class \code{\link{Task}}.
+#' @field meta list of class \code{\link{Pair}} inherited from super class \code{\link{Task}}.
 #' @field schema object of class \code{\link{Schema}}.
 #' @field params object of class \code{\link{CSVParserParam}}.
 CSVTask <- R6::R6Class("CSVTask", inherit = ProjectTask, public = list(fileDocumentId = NULL, 

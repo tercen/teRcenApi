@@ -14,13 +14,6 @@ TableSchemaService <- R6::R6Class("TableSchemaService", inherit = HttpClientServ
     public = list(initialize = function(baseRestUri, client) {
         super$initialize(baseRestUri, client)
         self$uri = "api/v1/schema"
-    }, findByQueryHash = function(keys = NULL, useFactory = FALSE) {
-        return(self$findKeys("findByQueryHash", keys = keys, useFactory = useFactory))
-    }, findSchemaByDataDirectory = function(startKey = NULL, endKey = NULL, limit = 20, 
-        skip = 0, descending = TRUE, useFactory = FALSE) {
-        return(self$findStartKeys("findSchemaByDataDirectory", startKey = startKey, 
-            endKey = endKey, limit = limit, skip = skip, descending = descending, 
-            useFactory = useFactory))
     }, select = function(tableId, cnames, offset, limit) {
         answer = NULL
         response = NULL

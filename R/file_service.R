@@ -17,14 +17,6 @@ FileService <- R6::R6Class("FileService", inherit = HttpClientService, public = 
     skip = 0, descending = TRUE, useFactory = FALSE) {
     return(self$findStartKeys("findFileByWorkflowIdAndStepId", startKey = startKey, 
         endKey = endKey, limit = limit, skip = skip, descending = descending, useFactory = useFactory))
-}, findFileByTaskId = function(startKey = NULL, endKey = NULL, limit = 20, skip = 0, 
-    descending = TRUE, useFactory = FALSE) {
-    return(self$findStartKeys("findFileByTaskId", startKey = startKey, endKey = endKey, 
-        limit = limit, skip = skip, descending = descending, useFactory = useFactory))
-}, findByDataUri = function(startKey = NULL, endKey = NULL, limit = 20, skip = 0, 
-    descending = TRUE, useFactory = FALSE) {
-    return(self$findStartKeys("findByDataUri", startKey = startKey, endKey = endKey, 
-        limit = limit, skip = skip, descending = descending, useFactory = useFactory))
 }, upload = function(file, bytes) {
     answer = NULL
     response = NULL

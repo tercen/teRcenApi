@@ -15,12 +15,6 @@ TaskService <- R6::R6Class("TaskService", inherit = HttpClientService, public = 
     client) {
     super$initialize(baseRestUri, client)
     self$uri = "api/v1/task"
-}, findByHash = function(keys = NULL, useFactory = FALSE) {
-    return(self$findKeys("findByHash", keys = keys, useFactory = useFactory))
-}, findGCTaskByLastModifiedDate = function(startKey = NULL, endKey = NULL, limit = 20, 
-    skip = 0, descending = TRUE, useFactory = FALSE) {
-    return(self$findStartKeys("findGCTaskByLastModifiedDate", startKey = startKey, 
-        endKey = endKey, limit = limit, skip = skip, descending = descending, useFactory = useFactory))
 }, runTask = function(taskId) {
     answer = NULL
     response = NULL

@@ -1,7 +1,7 @@
 #' Task
 #'
 #' @export
-#' @format \code{\link{R6Class}} object, super class \code{\link{PersistentObject}}, sub classes \code{\link{RunComputationTask}}, \code{\link{SaveComputationResultTask}}, \code{\link{ComputationTask}}, \code{\link{ExportWorkflowTask}}, \code{\link{CSVTask}}, \code{\link{CubeQueryTask}}, \code{\link{ImportWorkflowTask}}, \code{\link{TestOperatorTask}}, \code{\link{ImportGitWorkflowTask}}, \code{\link{RunWebAppTask}}, \code{\link{ExportTableTask}}, \code{\link{ProjectTask}}, \code{\link{GlTask}}, \code{\link{CreateGitOperatorTask}}.
+#' @format \code{\link{R6Class}} object, super class \code{\link{PersistentObject}}, sub classes \code{\link{RunComputationTask}}, \code{\link{SaveComputationResultTask}}, \code{\link{ComputationTask}}, \code{\link{ImportGitWorkflowTask}}, \code{\link{ExportWorkflowTask}}, \code{\link{CSVTask}}, \code{\link{CubeQueryTask}}, \code{\link{ImportWorkflowTask}}, \code{\link{TestOperatorTask}}, \code{\link{RunWebAppTask}}, \code{\link{ExportTableTask}}, \code{\link{ProjectTask}}, \code{\link{GlTask}}, \code{\link{CreateGitOperatorTask}}.
 #' @field isDeleted of type bool inherited from super class \code{\link{PersistentObject}}.
 #' @field rev of type String inherited from super class \code{\link{PersistentObject}}.
 #' @field id of type String inherited from super class \code{\link{IdObject}}.
@@ -16,10 +16,11 @@
 #' @field runDate object of class \code{\link{Date}}.
 #' @field completedDate object of class \code{\link{Date}}.
 #' @field aclContext object of class \code{\link{AclContext}}.
+#' @field meta list of class \code{\link{Pair}}.
 Task <- R6::R6Class("Task", inherit = PersistentObject, public = list(environment = NULL, 
     state = NULL, createdDate = NULL, lastModifiedDate = NULL, runDate = NULL, completedDate = NULL, 
     duration = NULL, aclContext = NULL, owner = NULL, taskHash = NULL, channelId = NULL, 
-    initialize = function(json = NULL) {
+    meta = NULL, initialize = function(json = NULL) {
         super$initialize(json = json)
     }, init = function() {
         super$init()
@@ -34,6 +35,7 @@ Task <- R6::R6Class("Task", inherit = PersistentObject, public = list(environmen
         self$runDate = Date$new()
         self$completedDate = Date$new()
         self$aclContext = AclContext$new()
+        self$meta = list()
     }, initJson = function(json) {
         super$initJson(json)
         self$duration = as.double(json$duration)
@@ -47,6 +49,7 @@ Task <- R6::R6Class("Task", inherit = PersistentObject, public = list(environmen
         self$runDate = createObjectFromJson(json$runDate)
         self$completedDate = createObjectFromJson(json$completedDate)
         self$aclContext = createObjectFromJson(json$aclContext)
+        self$meta = lapply(json$meta, createObjectFromJson)
     }, toTson = function() {
         m = super$toTson()
         m$kind = tson.scalar("Task")
@@ -61,5 +64,6 @@ Task <- R6::R6Class("Task", inherit = PersistentObject, public = list(environmen
         m$owner = tson.scalar(self$owner)
         m$taskHash = tson.scalar(self$taskHash)
         m$channelId = tson.scalar(self$channelId)
+        m$meta = lapply(self$meta, function(each) each$toTson())
         return(m)
     }))

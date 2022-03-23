@@ -6,20 +6,13 @@
 #' \describe{
 #'    \item{\code{profiles(teamId)}}{method}
 #'    \item{\code{resourceSummary(teamId)}}{method}
+#'    \item{\code{transferOwnership(teamIds,newOwner)}}{method}
 #' }
 #' 
 TeamService <- R6::R6Class("TeamService", inherit = HttpClientService, public = list(initialize = function(baseRestUri, 
     client) {
     super$initialize(baseRestUri, client)
     self$uri = "api/v1/team"
-}, findTeamByNameByLastModifiedDate = function(startKey = NULL, endKey = NULL, limit = 20, 
-    skip = 0, descending = TRUE, useFactory = FALSE) {
-    return(self$findStartKeys("findTeamByNameByLastModifiedDate", startKey = startKey, 
-        endKey = endKey, limit = limit, skip = skip, descending = descending, useFactory = useFactory))
-}, findTeamByOwner = function(keys = NULL, useFactory = FALSE) {
-    return(self$findKeys("teamByOwner", keys = keys, useFactory = useFactory))
-}, findTeamByName = function(keys = NULL, useFactory = FALSE) {
-    return(self$findKeys("teamByName", keys = keys, useFactory = useFactory))
 }, profiles = function(teamId) {
     answer = NULL
     response = NULL
@@ -46,6 +39,21 @@ TeamService <- R6::R6Class("TeamService", inherit = HttpClientService, public = 
         self$onResponseError(response, "resourceSummary")
     } else {
         answer = createObjectFromJson(response$content)
+    }
+    return(answer)
+}, transferOwnership = function(teamIds, newOwner) {
+    answer = NULL
+    response = NULL
+    uri = paste0("api/v1/team", "/", "transferOwnership")
+    params = list()
+    params[["teamIds"]] = lapply(teamIds, unbox)
+    params[["newOwner"]] = unbox(newOwner)
+    url = self$getServiceUri(uri)
+    response = self$client$post(url, body = params)
+    if (response$status != 200) {
+        self$onResponseError(response, "transferOwnership")
+    } else {
+        answer = NULL
     }
     return(answer)
 }))

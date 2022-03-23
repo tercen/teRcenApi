@@ -4,6 +4,7 @@
 #' @format \code{\link{R6Class}} object.
 #' @section Methods:
 #' \describe{
+#'    \item{\code{getSamlMessage(type)}}{method}
 #'    \item{\code{cookieConsent(dummy)}}{method}
 #'    \item{\code{connect(usernameOrEmail,password)}}{method}
 #'    \item{\code{connect2(domain,usernameOrEmail,password)}}{method}
@@ -31,16 +32,22 @@ UserService <- R6::R6Class("UserService", inherit = HttpClientService, public = 
     client) {
     super$initialize(baseRestUri, client)
     self$uri = "api/v1/user"
-}, findUserByCreatedDateAndName = function(startKey = NULL, endKey = NULL, limit = 20, 
-    skip = 0, descending = TRUE, useFactory = FALSE) {
-    return(self$findStartKeys("findUserByCreatedDateAndName", startKey = startKey, 
-        endKey = endKey, limit = limit, skip = skip, descending = descending, useFactory = useFactory))
-}, findUserByName = function(keys = NULL, useFactory = FALSE) {
-    return(self$findKeys("userByName", keys = keys, useFactory = useFactory))
-}, findUserByEmail = function(keys = NULL, useFactory = FALSE) {
-    return(self$findKeys("userByEmail", keys = keys, useFactory = useFactory))
 }, findTeamMembers = function(keys = NULL, useFactory = FALSE) {
     return(self$findKeys("teamMembers", keys = keys, useFactory = useFactory))
+}, getSamlMessage = function(type) {
+    answer = NULL
+    response = NULL
+    uri = paste0("api/v1/user", "/", "getSamlMessage")
+    params = list()
+    params[["type"]] = unbox(type)
+    url = self$getServiceUri(uri)
+    response = self$client$post(url, body = params)
+    if (response$status != 200) {
+        self$onResponseError(response, "getSamlMessage")
+    } else {
+        answer = response$content[[1]]
+    }
+    return(answer)
 }, cookieConsent = function(dummy) {
     answer = NULL
     response = NULL

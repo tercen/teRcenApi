@@ -24,6 +24,7 @@
 #' @field runDate object of class \code{\link{Date}} inherited from super class \code{\link{Task}}.
 #' @field completedDate object of class \code{\link{Date}} inherited from super class \code{\link{Task}}.
 #' @field aclContext object of class \code{\link{AclContext}} inherited from super class \code{\link{Task}}.
+#' @field meta list of class \code{\link{Pair}} inherited from super class \code{\link{Task}}.
 ExportTableTask <- R6::R6Class("ExportTableTask", inherit = ProjectTask, public = list(exportName = NULL, 
     schemaIds = NULL, exportType = NULL, exportToId = NULL, exportId = NULL, namespaces = NULL, 
     exportedSchemaIds = NULL, initialize = function(json = NULL) {

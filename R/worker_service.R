@@ -9,6 +9,8 @@
 #'    \item{\code{setStatus(status)}}{method}
 #'    \item{\code{setHeartBeat(heartBeat)}}{method}
 #'    \item{\code{getState(all)}}{method}
+#'    \item{\code{updateTaskEnv(taskId,env)}}{method}
+#'    \item{\code{getTaskEnv(taskId)}}{method}
 #' }
 #' 
 WorkerService <- R6::R6Class("WorkerService", inherit = HttpClientService, public = list(initialize = function(baseRestUri, 
@@ -81,6 +83,35 @@ WorkerService <- R6::R6Class("WorkerService", inherit = HttpClientService, publi
     response = self$client$post(url, body = params)
     if (response$status != 200) {
         self$onResponseError(response, "getState")
+    } else {
+        answer = createObjectFromJson(response$content)
+    }
+    return(answer)
+}, updateTaskEnv = function(taskId, env) {
+    answer = NULL
+    response = NULL
+    uri = paste0("api/v1/worker", "/", "updateTaskEnv")
+    params = list()
+    params[["taskId"]] = unbox(taskId)
+    params[["env"]] = lapply(env, function(each) each$toTson())
+    url = self$getServiceUri(uri)
+    response = self$client$post(url, body = params)
+    if (response$status != 200) {
+        self$onResponseError(response, "updateTaskEnv")
+    } else {
+        answer = createObjectFromJson(response$content)
+    }
+    return(answer)
+}, getTaskEnv = function(taskId) {
+    answer = NULL
+    response = NULL
+    uri = paste0("api/v1/worker", "/", "getTaskEnv")
+    params = list()
+    params[["taskId"]] = unbox(taskId)
+    url = self$getServiceUri(uri)
+    response = self$client$post(url, body = params)
+    if (response$status != 200) {
+        self$onResponseError(response, "getTaskEnv")
     } else {
         answer = createObjectFromJson(response$content)
     }

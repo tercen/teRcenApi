@@ -514,6 +514,9 @@ createObjectFromJson = function(json) {
     if (kind == "Link") {
         return(Link$new(json = json))
     }
+    if (kind == "AppDesign") {
+        return(AppDesign$new(json = json))
+    }
     if (kind == "Workflow") {
         return(Workflow$new(json = json))
     }

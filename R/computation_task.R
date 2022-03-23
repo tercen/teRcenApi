@@ -22,6 +22,7 @@
 #' @field runDate object of class \code{\link{Date}} inherited from super class \code{\link{Task}}.
 #' @field completedDate object of class \code{\link{Date}} inherited from super class \code{\link{Task}}.
 #' @field aclContext object of class \code{\link{AclContext}} inherited from super class \code{\link{Task}}.
+#' @field meta list of class \code{\link{Pair}} inherited from super class \code{\link{Task}}.
 #' @field computedRelation object of class \code{\link{Relation}}.
 ComputationTask <- R6::R6Class("ComputationTask", inherit = CubeQueryTask, public = list(parentTaskId = NULL, 
     fileResultId = NULL, computedRelation = NULL, initialize = function(json = NULL) {

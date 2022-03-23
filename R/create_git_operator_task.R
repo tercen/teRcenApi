@@ -12,6 +12,7 @@
 #' @field version of type String.
 #' @field operatorId of type String.
 #' @field gitToken of type String.
+#' @field testRequired of type bool.
 #' @field environment list of class \code{\link{Pair}} inherited from super class \code{\link{Task}}.
 #' @field state object of class \code{\link{State}} inherited from super class \code{\link{Task}}.
 #' @field createdDate object of class \code{\link{Date}} inherited from super class \code{\link{Task}}.
@@ -19,21 +20,24 @@
 #' @field runDate object of class \code{\link{Date}} inherited from super class \code{\link{Task}}.
 #' @field completedDate object of class \code{\link{Date}} inherited from super class \code{\link{Task}}.
 #' @field aclContext object of class \code{\link{AclContext}} inherited from super class \code{\link{Task}}.
+#' @field meta list of class \code{\link{Pair}} inherited from super class \code{\link{Task}}.
 #' @field url object of class \code{\link{Url}}.
 CreateGitOperatorTask <- R6::R6Class("CreateGitOperatorTask", inherit = Task, public = list(url = NULL, 
-    version = NULL, operatorId = NULL, gitToken = NULL, initialize = function(json = NULL) {
+    version = NULL, operatorId = NULL, gitToken = NULL, testRequired = NULL, initialize = function(json = NULL) {
         super$initialize(json = json)
     }, init = function() {
         super$init()
         self$version = ""
         self$operatorId = ""
         self$gitToken = ""
+        self$testRequired = TRUE
         self$url = Url$new()
     }, initJson = function(json) {
         super$initJson(json)
         self$version = json$version
         self$operatorId = json$operatorId
         self$gitToken = json$gitToken
+        self$testRequired = json$testRequired
         self$url = createObjectFromJson(json$url)
     }, toTson = function() {
         m = super$toTson()
@@ -42,5 +46,6 @@ CreateGitOperatorTask <- R6::R6Class("CreateGitOperatorTask", inherit = Task, pu
         m$version = tson.scalar(self$version)
         m$operatorId = tson.scalar(self$operatorId)
         m$gitToken = tson.scalar(self$gitToken)
+        m$testRequired = tson.scalar(self$testRequired)
         return(m)
     }))

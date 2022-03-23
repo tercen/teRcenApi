@@ -4,19 +4,21 @@
 #' @format \code{\link{R6Class}} object, super class \code{\link{StepModel}}.
 #' @field namespace of type String.
 #' @field description of type String.
+#' @field appDesignType of type String.
 #' @field factors list of class \code{\link{MappingFactor}}.
 #' @field filters list of class \code{\link{MappingFilter}}.
 #' @field steps list of class \code{\link{Step}}.
 #' @field defaultFactors list of class \code{\link{MappingFactor}}.
 #' @field defaultFilters list of class \code{\link{MappingFilter}}.
 WizardStepModel <- R6::R6Class("WizardStepModel", inherit = StepModel, public = list(namespace = NULL, 
-    description = NULL, factors = NULL, filters = NULL, steps = NULL, defaultFactors = NULL, 
-    defaultFilters = NULL, initialize = function(json = NULL) {
+    description = NULL, appDesignType = NULL, factors = NULL, filters = NULL, steps = NULL, 
+    defaultFactors = NULL, defaultFilters = NULL, initialize = function(json = NULL) {
         super$initialize(json = json)
     }, init = function() {
         super$init()
         self$namespace = ""
         self$description = ""
+        self$appDesignType = ""
         self$factors = list()
         self$filters = list()
         self$steps = list()
@@ -26,6 +28,7 @@ WizardStepModel <- R6::R6Class("WizardStepModel", inherit = StepModel, public = 
         super$initJson(json)
         self$namespace = json$namespace
         self$description = json$description
+        self$appDesignType = json$appDesignType
         self$factors = lapply(json$factors, createObjectFromJson)
         self$filters = lapply(json$filters, createObjectFromJson)
         self$steps = lapply(json$steps, createObjectFromJson)
@@ -36,6 +39,7 @@ WizardStepModel <- R6::R6Class("WizardStepModel", inherit = StepModel, public = 
         m$kind = tson.scalar("WizardStepModel")
         m$namespace = tson.scalar(self$namespace)
         m$description = tson.scalar(self$description)
+        m$appDesignType = tson.scalar(self$appDesignType)
         m$factors = lapply(self$factors, function(each) each$toTson())
         m$filters = lapply(self$filters, function(each) each$toTson())
         m$steps = lapply(self$steps, function(each) each$toTson())
