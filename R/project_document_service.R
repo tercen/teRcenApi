@@ -5,7 +5,7 @@
 #' @section Methods:
 #' \describe{
 #'    \item{\code{getParentFolders(documentId)}}{method}
-#'    \item{\code{clone(documentId,projectId)}}{method}
+#'    \item{\code{cloneProjectDocument(documentId,projectId)}}{method}
 #' }
 #' 
 ProjectDocumentService <- R6::R6Class("ProjectDocumentService", inherit = HttpClientService, 
@@ -56,17 +56,17 @@ ProjectDocumentService <- R6::R6Class("ProjectDocumentService", inherit = HttpCl
             answer = lapply(response$content, createObjectFromJson)
         }
         return(answer)
-    }, clone = function(documentId, projectId) {
+    }, cloneProjectDocument = function(documentId, projectId) {
         answer = NULL
         response = NULL
-        uri = paste0("api/v1/pd", "/", "clone")
+        uri = paste0("api/v1/pd", "/", "cloneProjectDocument")
         params = list()
         params[["documentId"]] = unbox(documentId)
         params[["projectId"]] = unbox(projectId)
         url = self$getServiceUri(uri)
         response = self$client$post(url, body = params)
         if (response$status != 200) {
-            self$onResponseError(response, "clone")
+            self$onResponseError(response, "cloneProjectDocument")
         } else {
             answer = createObjectFromJson(response$content)
         }
