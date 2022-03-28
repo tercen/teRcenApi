@@ -18,6 +18,10 @@ SubscriptionPlanService <- R6::R6Class("SubscriptionPlanService", inherit = Http
     public = list(initialize = function(baseRestUri, client) {
         super$initialize(baseRestUri, client)
         self$uri = "api/v1/subscription"
+    }, findByOwner = function(keys = NULL, useFactory = FALSE) {
+        return(self$findKeys("findByOwner", keys = keys, useFactory = useFactory))
+    }, findSubscriptionPlanByCheckoutSessionId = function(keys = NULL, useFactory = FALSE) {
+        return(self$findKeys("checkoutSessionId", keys = keys, useFactory = useFactory))
     }, getSubscriptionPlans = function(userId) {
         answer = NULL
         response = NULL

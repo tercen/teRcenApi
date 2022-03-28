@@ -34,6 +34,12 @@ UserService <- R6::R6Class("UserService", inherit = HttpClientService, public = 
     self$uri = "api/v1/user"
 }, findTeamMembers = function(keys = NULL, useFactory = FALSE) {
     return(self$findKeys("teamMembers", keys = keys, useFactory = useFactory))
+}, findUserByCreatedDateAndName = function(startKey = NULL, endKey = NULL, limit = 20, 
+    skip = 0, descending = TRUE, useFactory = FALSE) {
+    return(self$findStartKeys("findUserByCreatedDateAndName", startKey = startKey, 
+        endKey = endKey, limit = limit, skip = skip, descending = descending, useFactory = useFactory))
+}, findUserByEmail = function(keys = NULL, useFactory = FALSE) {
+    return(self$findKeys("userByEmail", keys = keys, useFactory = useFactory))
 }, getSamlMessage = function(type) {
     answer = NULL
     response = NULL

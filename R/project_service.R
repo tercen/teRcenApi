@@ -15,6 +15,14 @@ ProjectService <- R6::R6Class("ProjectService", inherit = HttpClientService, pub
     client) {
     super$initialize(baseRestUri, client)
     self$uri = "api/v1/project"
+}, findByIsPublicAndLastModifiedDate = function(startKey = NULL, endKey = NULL, limit = 20, 
+    skip = 0, descending = TRUE, useFactory = FALSE) {
+    return(self$findStartKeys("findByIsPublicAndLastModifiedDate", startKey = startKey, 
+        endKey = endKey, limit = limit, skip = skip, descending = descending, useFactory = useFactory))
+}, findByTeamAndIsPublicAndLastModifiedDate = function(startKey = NULL, endKey = NULL, 
+    limit = 20, skip = 0, descending = TRUE, useFactory = FALSE) {
+    return(self$findStartKeys("findByTeamAndIsPublicAndLastModifiedDate", startKey = startKey, 
+        endKey = endKey, limit = limit, skip = skip, descending = descending, useFactory = useFactory))
 }, profiles = function(projectId) {
     answer = NULL
     response = NULL

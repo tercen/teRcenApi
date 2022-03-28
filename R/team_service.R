@@ -13,6 +13,8 @@ TeamService <- R6::R6Class("TeamService", inherit = HttpClientService, public = 
     client) {
     super$initialize(baseRestUri, client)
     self$uri = "api/v1/team"
+}, findTeamByOwner = function(keys = NULL, useFactory = FALSE) {
+    return(self$findKeys("teamByOwner", keys = keys, useFactory = useFactory))
 }, profiles = function(teamId) {
     answer = NULL
     response = NULL

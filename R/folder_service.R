@@ -12,6 +12,10 @@ FolderService <- R6::R6Class("FolderService", inherit = HttpClientService, publi
     client) {
     super$initialize(baseRestUri, client)
     self$uri = "api/v1/folder"
+}, findFolderByParentFolderAndName = function(startKey = NULL, endKey = NULL, limit = 20, 
+    skip = 0, descending = TRUE, useFactory = FALSE) {
+    return(self$findStartKeys("findFolderByParentFolderAndName", startKey = startKey, 
+        endKey = endKey, limit = limit, skip = skip, descending = descending, useFactory = useFactory))
 }, getOrCreate = function(projectId, path) {
     answer = NULL
     response = NULL

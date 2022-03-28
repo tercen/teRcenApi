@@ -13,6 +13,10 @@ PersistentService <- R6::R6Class("PersistentService", inherit = HttpClientServic
     public = list(initialize = function(baseRestUri, client) {
         super$initialize(baseRestUri, client)
         self$uri = "api/v1/po"
+    }, findDeleted = function(keys = NULL, useFactory = FALSE) {
+        return(self$findKeys("findDeleted", keys = keys, useFactory = useFactory))
+    }, findByKind = function(keys = NULL, useFactory = FALSE) {
+        return(self$findKeys("findByKind", keys = keys, useFactory = useFactory))
     }, summary = function(teamOrProjectId) {
         answer = NULL
         response = NULL
