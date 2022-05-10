@@ -1,7 +1,7 @@
 Package: tercenApi
 Type: Package
 Title: Tercen R api
-Version: 0.12.2
+Version: 0.12.7
 Date: 2021-09-25
 Author: Alexandre Maurel
 Maintainer: Alexandre Maurel <alexandre.maurel@tercen.com>
@@ -14,6 +14,8 @@ Imports:
     R6,
     teRcenHttp (>= 1.0.21),
     yaml
+Remotes:
+    tercen/teRcenHttp@1.0.21
 URL: https://github.com/tercen/teRcenApi
 BugReports: https://github.com/tercen/teRcenApi/issues
 RoxygenNote: 7.1.1
