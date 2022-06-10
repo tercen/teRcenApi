@@ -15,6 +15,8 @@ PersistentService
 
 \describe{
    \item{\code{summary(teamOrProjectId)}}{method}
+   \item{\code{getDependentObjects(id)}}{method}
+   \item{\code{getDependentObjectIds(id)}}{method}
 }
 }
 
@@ -25,10 +27,11 @@ PersistentService
 \subsection{Public methods}{
 \itemize{
 \item \href{#method-new}{\code{PersistentService$new()}}
-\item \href{#method-findWorkflowByTask}{\code{PersistentService$findWorkflowByTask()}}
 \item \href{#method-findDeleted}{\code{PersistentService$findDeleted()}}
 \item \href{#method-findByKind}{\code{PersistentService$findByKind()}}
 \item \href{#method-summary}{\code{PersistentService$summary()}}
+\item \href{#method-getDependentObjects}{\code{PersistentService$getDependentObjects()}}
+\item \href{#method-getDependentObjectIds}{\code{PersistentService$getDependentObjectIds()}}
 \item \href{#method-clone}{\code{PersistentService$clone()}}
 }
 }
@@ -59,15 +62,6 @@ PersistentService
 
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-findWorkflowByTask"></a>}}
-\if{latex}{\out{\hypertarget{method-findWorkflowByTask}{}}}
-\subsection{Method \code{findWorkflowByTask()}}{
-\subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{PersistentService$findWorkflowByTask(keys = NULL, useFactory = FALSE)}\if{html}{\out{</div>}}
-}
-
-}
-\if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-findDeleted"></a>}}
 \if{latex}{\out{\hypertarget{method-findDeleted}{}}}
 \subsection{Method \code{findDeleted()}}{
@@ -91,6 +85,24 @@ PersistentService
 \subsection{Method \code{summary()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{PersistentService$summary(teamOrProjectId)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-getDependentObjects"></a>}}
+\if{latex}{\out{\hypertarget{method-getDependentObjects}{}}}
+\subsection{Method \code{getDependentObjects()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{PersistentService$getDependentObjects(id)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-getDependentObjectIds"></a>}}
+\if{latex}{\out{\hypertarget{method-getDependentObjectIds}{}}}
+\subsection{Method \code{getDependentObjectIds()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{PersistentService$getDependentObjectIds(id)}\if{html}{\out{</div>}}
 }
 
 }

@@ -15,6 +15,7 @@ ProjectDocumentService
 
 \describe{
    \item{\code{getParentFolders(documentId)}}{method}
+   \item{\code{cloneProjectDocument(documentId,projectId)}}{method}
 }
 }
 
@@ -31,11 +32,8 @@ ProjectDocumentService
 \item \href{#method-findSchemaByLastModifiedDate}{\code{ProjectDocumentService$findSchemaByLastModifiedDate()}}
 \item \href{#method-findSchemaByOwnerAndLastModifiedDate}{\code{ProjectDocumentService$findSchemaByOwnerAndLastModifiedDate()}}
 \item \href{#method-findFileByOwnerAndLastModifiedDate}{\code{ProjectDocumentService$findFileByOwnerAndLastModifiedDate()}}
-\item \href{#method-findWorkflowBySchema}{\code{ProjectDocumentService$findWorkflowBySchema()}}
-\item \href{#method-findWorkflowByOperator}{\code{ProjectDocumentService$findWorkflowByOperator()}}
-\item \href{#method-findWorkflowTemplateByOwnerCreatedDate}{\code{ProjectDocumentService$findWorkflowTemplateByOwnerCreatedDate()}}
-\item \href{#method-findWorkflowAppByOwnerCreatedDate}{\code{ProjectDocumentService$findWorkflowAppByOwnerCreatedDate()}}
 \item \href{#method-getParentFolders}{\code{ProjectDocumentService$getParentFolders()}}
+\item \href{#method-cloneProjectDocument}{\code{ProjectDocumentService$cloneProjectDocument()}}
 \item \href{#method-clone}{\code{ProjectDocumentService$clone()}}
 }
 }
@@ -162,61 +160,20 @@ ProjectDocumentService
 
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-findWorkflowBySchema"></a>}}
-\if{latex}{\out{\hypertarget{method-findWorkflowBySchema}{}}}
-\subsection{Method \code{findWorkflowBySchema()}}{
-\subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{ProjectDocumentService$findWorkflowBySchema(keys = NULL, useFactory = FALSE)}\if{html}{\out{</div>}}
-}
-
-}
-\if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-findWorkflowByOperator"></a>}}
-\if{latex}{\out{\hypertarget{method-findWorkflowByOperator}{}}}
-\subsection{Method \code{findWorkflowByOperator()}}{
-\subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{ProjectDocumentService$findWorkflowByOperator(keys = NULL, useFactory = FALSE)}\if{html}{\out{</div>}}
-}
-
-}
-\if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-findWorkflowTemplateByOwnerCreatedDate"></a>}}
-\if{latex}{\out{\hypertarget{method-findWorkflowTemplateByOwnerCreatedDate}{}}}
-\subsection{Method \code{findWorkflowTemplateByOwnerCreatedDate()}}{
-\subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{ProjectDocumentService$findWorkflowTemplateByOwnerCreatedDate(
-  startKey = NULL,
-  endKey = NULL,
-  limit = 20,
-  skip = 0,
-  descending = TRUE,
-  useFactory = FALSE
-)}\if{html}{\out{</div>}}
-}
-
-}
-\if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-findWorkflowAppByOwnerCreatedDate"></a>}}
-\if{latex}{\out{\hypertarget{method-findWorkflowAppByOwnerCreatedDate}{}}}
-\subsection{Method \code{findWorkflowAppByOwnerCreatedDate()}}{
-\subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{ProjectDocumentService$findWorkflowAppByOwnerCreatedDate(
-  startKey = NULL,
-  endKey = NULL,
-  limit = 20,
-  skip = 0,
-  descending = TRUE,
-  useFactory = FALSE
-)}\if{html}{\out{</div>}}
-}
-
-}
-\if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-getParentFolders"></a>}}
 \if{latex}{\out{\hypertarget{method-getParentFolders}{}}}
 \subsection{Method \code{getParentFolders()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{ProjectDocumentService$getParentFolders(documentId)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-cloneProjectDocument"></a>}}
+\if{latex}{\out{\hypertarget{method-cloneProjectDocument}{}}}
+\subsection{Method \code{cloneProjectDocument()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{ProjectDocumentService$cloneProjectDocument(documentId, projectId)}\if{html}{\out{</div>}}
 }
 
 }

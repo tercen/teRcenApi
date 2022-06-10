@@ -4,7 +4,7 @@
 \alias{ProjectTask}
 \title{ProjectTask}
 \format{
-\code{\link{R6Class}} object, super class \code{\link{Task}}, sub classes \code{\link{RunComputationTask}}, \code{\link{SaveComputationResultTask}}, \code{\link{ComputationTask}}, \code{\link{ExportWorkflowTask}}, \code{\link{CSVTask}}, \code{\link{CubeQueryTask}}, \code{\link{ImportWorkflowTask}}, \code{\link{TestOperatorTask}}, \code{\link{ImportGitWorkflowTask}}, \code{\link{RunWebAppTask}}, \code{\link{ExportTableTask}}.
+\code{\link{R6Class}} object, super class \code{\link{Task}}, sub classes \code{\link{RunComputationTask}}, \code{\link{SaveComputationResultTask}}, \code{\link{ComputationTask}}, \code{\link{ImportGitWorkflowTask}}, \code{\link{ExportWorkflowTask}}, \code{\link{CSVTask}}, \code{\link{CubeQueryTask}}, \code{\link{ImportWorkflowTask}}, \code{\link{TestOperatorTask}}, \code{\link{RunWebAppTask}}, \code{\link{ExportTableTask}}.
 }
 \description{
 ProjectTask
@@ -46,6 +46,8 @@ ProjectTask
 \item{\code{completedDate}}{object of class \code{\link{Date}} inherited from super class \code{\link{Task}}.}
 
 \item{\code{aclContext}}{object of class \code{\link{AclContext}} inherited from super class \code{\link{Task}}.}
+
+\item{\code{meta}}{list of class \code{\link{Pair}} inherited from super class \code{\link{Task}}.}
 }
 \if{html}{\out{</div>}}
 }
@@ -79,6 +81,8 @@ ProjectTask
 \item{\code{completedDate}}{object of class \code{\link{Date}} inherited from super class \code{\link{Task}}.}
 
 \item{\code{aclContext}}{object of class \code{\link{AclContext}} inherited from super class \code{\link{Task}}.}
+
+\item{\code{meta}}{list of class \code{\link{Pair}} inherited from super class \code{\link{Task}}.}
 }
 \if{html}{\out{</div>}}
 }

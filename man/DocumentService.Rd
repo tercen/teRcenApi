@@ -28,11 +28,10 @@ DocumentService
 \subsection{Public methods}{
 \itemize{
 \item \href{#method-new}{\code{DocumentService$new()}}
+\item \href{#method-findWorkflowByTagOwnerCreatedDate}{\code{DocumentService$findWorkflowByTagOwnerCreatedDate()}}
 \item \href{#method-findProjectByOwnersAndName}{\code{DocumentService$findProjectByOwnersAndName()}}
 \item \href{#method-findProjectByOwnersAndCreatedDate}{\code{DocumentService$findProjectByOwnersAndCreatedDate()}}
-\item \href{#method-findWorkflowByTagOwnerCreatedDate}{\code{DocumentService$findWorkflowByTagOwnerCreatedDate()}}
 \item \href{#method-findOperatorByOwnerLastModifiedDate}{\code{DocumentService$findOperatorByOwnerLastModifiedDate()}}
-\item \href{#method-findOperatorByCreatedDate}{\code{DocumentService$findOperatorByCreatedDate()}}
 \item \href{#method-search}{\code{DocumentService$search()}}
 \item \href{#method-getTercenOperatorLibrary}{\code{DocumentService$getTercenOperatorLibrary()}}
 \item \href{#method-getTercenWorkflowLibrary}{\code{DocumentService$getTercenWorkflowLibrary()}}
@@ -63,6 +62,22 @@ DocumentService
 \subsection{Method \code{new()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{DocumentService$new(baseRestUri, client)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-findWorkflowByTagOwnerCreatedDate"></a>}}
+\if{latex}{\out{\hypertarget{method-findWorkflowByTagOwnerCreatedDate}{}}}
+\subsection{Method \code{findWorkflowByTagOwnerCreatedDate()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{DocumentService$findWorkflowByTagOwnerCreatedDate(
+  startKey = NULL,
+  endKey = NULL,
+  limit = 20,
+  skip = 0,
+  descending = TRUE,
+  useFactory = FALSE
+)}\if{html}{\out{</div>}}
 }
 
 }
@@ -99,43 +114,11 @@ DocumentService
 
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-findWorkflowByTagOwnerCreatedDate"></a>}}
-\if{latex}{\out{\hypertarget{method-findWorkflowByTagOwnerCreatedDate}{}}}
-\subsection{Method \code{findWorkflowByTagOwnerCreatedDate()}}{
-\subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{DocumentService$findWorkflowByTagOwnerCreatedDate(
-  startKey = NULL,
-  endKey = NULL,
-  limit = 20,
-  skip = 0,
-  descending = TRUE,
-  useFactory = FALSE
-)}\if{html}{\out{</div>}}
-}
-
-}
-\if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-findOperatorByOwnerLastModifiedDate"></a>}}
 \if{latex}{\out{\hypertarget{method-findOperatorByOwnerLastModifiedDate}{}}}
 \subsection{Method \code{findOperatorByOwnerLastModifiedDate()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{DocumentService$findOperatorByOwnerLastModifiedDate(
-  startKey = NULL,
-  endKey = NULL,
-  limit = 20,
-  skip = 0,
-  descending = TRUE,
-  useFactory = FALSE
-)}\if{html}{\out{</div>}}
-}
-
-}
-\if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-findOperatorByCreatedDate"></a>}}
-\if{latex}{\out{\hypertarget{method-findOperatorByCreatedDate}{}}}
-\subsection{Method \code{findOperatorByCreatedDate()}}{
-\subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{DocumentService$findOperatorByCreatedDate(
   startKey = NULL,
   endKey = NULL,
   limit = 20,

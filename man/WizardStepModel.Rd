@@ -21,6 +21,8 @@ WizardStepModel
 
 \item{\code{description}}{of type String.}
 
+\item{\code{appDesignType}}{of type String.}
+
 \item{\code{factors}}{list of class \code{\link{MappingFactor}}.}
 
 \item{\code{filters}}{list of class \code{\link{MappingFilter}}.}

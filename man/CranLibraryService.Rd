@@ -29,8 +29,6 @@ CranLibraryService
 \subsection{Public methods}{
 \itemize{
 \item \href{#method-new}{\code{CranLibraryService$new()}}
-\item \href{#method-findByOwner}{\code{CranLibraryService$findByOwner()}}
-\item \href{#method-findByFileId}{\code{CranLibraryService$findByFileId()}}
 \item \href{#method-findByOwnerNameVersion}{\code{CranLibraryService$findByOwnerNameVersion()}}
 \item \href{#method-packagesGz}{\code{CranLibraryService$packagesGz()}}
 \item \href{#method-packagesRds}{\code{CranLibraryService$packagesRds()}}
@@ -63,24 +61,6 @@ CranLibraryService
 \subsection{Method \code{new()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{CranLibraryService$new(baseRestUri, client)}\if{html}{\out{</div>}}
-}
-
-}
-\if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-findByOwner"></a>}}
-\if{latex}{\out{\hypertarget{method-findByOwner}{}}}
-\subsection{Method \code{findByOwner()}}{
-\subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{CranLibraryService$findByOwner(keys = NULL, useFactory = FALSE)}\if{html}{\out{</div>}}
-}
-
-}
-\if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-findByFileId"></a>}}
-\if{latex}{\out{\hypertarget{method-findByFileId}{}}}
-\subsection{Method \code{findByFileId()}}{
-\subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{CranLibraryService$findByFileId(keys = NULL, useFactory = FALSE)}\if{html}{\out{</div>}}
 }
 
 }

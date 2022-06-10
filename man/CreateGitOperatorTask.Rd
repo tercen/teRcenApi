@@ -37,6 +37,8 @@ CreateGitOperatorTask
 
 \item{\code{gitToken}}{of type String.}
 
+\item{\code{testRequired}}{of type bool.}
+
 \item{\code{environment}}{list of class \code{\link{Pair}} inherited from super class \code{\link{Task}}.}
 
 \item{\code{state}}{object of class \code{\link{State}} inherited from super class \code{\link{Task}}.}
@@ -50,6 +52,8 @@ CreateGitOperatorTask
 \item{\code{completedDate}}{object of class \code{\link{Date}} inherited from super class \code{\link{Task}}.}
 
 \item{\code{aclContext}}{object of class \code{\link{AclContext}} inherited from super class \code{\link{Task}}.}
+
+\item{\code{meta}}{list of class \code{\link{Pair}} inherited from super class \code{\link{Task}}.}
 
 \item{\code{url}}{object of class \code{\link{Url}}.}
 }
@@ -85,6 +89,8 @@ CreateGitOperatorTask
 \item{\code{completedDate}}{object of class \code{\link{Date}} inherited from super class \code{\link{Task}}.}
 
 \item{\code{aclContext}}{object of class \code{\link{AclContext}} inherited from super class \code{\link{Task}}.}
+
+\item{\code{meta}}{list of class \code{\link{Pair}} inherited from super class \code{\link{Task}}.}
 }
 \if{html}{\out{</div>}}
 }

@@ -15,8 +15,7 @@ WorkflowService
 
 \describe{
    \item{\code{getCubeQuery(workflowId,stepId)}}{method}
-   \item{\code{copy(workflowId)}}{method}
-   \item{\code{cloneWorkflow(workflowId,teamId,projectId)}}{method}
+   \item{\code{copyApp(workflowId,projectId)}}{method}
 }
 }
 
@@ -28,8 +27,7 @@ WorkflowService
 \itemize{
 \item \href{#method-new}{\code{WorkflowService$new()}}
 \item \href{#method-getCubeQuery}{\code{WorkflowService$getCubeQuery()}}
-\item \href{#method-copy}{\code{WorkflowService$copy()}}
-\item \href{#method-cloneWorkflow}{\code{WorkflowService$cloneWorkflow()}}
+\item \href{#method-copyApp}{\code{WorkflowService$copyApp()}}
 \item \href{#method-clone}{\code{WorkflowService$clone()}}
 }
 }
@@ -69,20 +67,11 @@ WorkflowService
 
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-copy"></a>}}
-\if{latex}{\out{\hypertarget{method-copy}{}}}
-\subsection{Method \code{copy()}}{
+\if{html}{\out{<a id="method-copyApp"></a>}}
+\if{latex}{\out{\hypertarget{method-copyApp}{}}}
+\subsection{Method \code{copyApp()}}{
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{WorkflowService$copy(workflowId)}\if{html}{\out{</div>}}
-}
-
-}
-\if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-cloneWorkflow"></a>}}
-\if{latex}{\out{\hypertarget{method-cloneWorkflow}{}}}
-\subsection{Method \code{cloneWorkflow()}}{
-\subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{WorkflowService$cloneWorkflow(workflowId, teamId, projectId)}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}\preformatted{WorkflowService$copyApp(workflowId, projectId)}\if{html}{\out{</div>}}
 }
 
 }

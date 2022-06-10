@@ -70,7 +70,14 @@ TaskService
 \if{latex}{\out{\hypertarget{method-findByHash}{}}}
 \subsection{Method \code{findByHash()}}{
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{TaskService$findByHash(keys = NULL, useFactory = FALSE)}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}\preformatted{TaskService$findByHash(
+  startKey = NULL,
+  endKey = NULL,
+  limit = 20,
+  skip = 0,
+  descending = TRUE,
+  useFactory = FALSE
+)}\if{html}{\out{</div>}}
 }
 
 }

@@ -19,6 +19,8 @@ WorkerService
    \item{\code{setStatus(status)}}{method}
    \item{\code{setHeartBeat(heartBeat)}}{method}
    \item{\code{getState(all)}}{method}
+   \item{\code{updateTaskEnv(taskId,env)}}{method}
+   \item{\code{getTaskEnv(taskId)}}{method}
 }
 }
 
@@ -34,6 +36,8 @@ WorkerService
 \item \href{#method-setStatus}{\code{WorkerService$setStatus()}}
 \item \href{#method-setHeartBeat}{\code{WorkerService$setHeartBeat()}}
 \item \href{#method-getState}{\code{WorkerService$getState()}}
+\item \href{#method-updateTaskEnv}{\code{WorkerService$updateTaskEnv()}}
+\item \href{#method-getTaskEnv}{\code{WorkerService$getTaskEnv()}}
 \item \href{#method-clone}{\code{WorkerService$clone()}}
 }
 }
@@ -105,6 +109,24 @@ WorkerService
 \subsection{Method \code{getState()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{WorkerService$getState(all)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-updateTaskEnv"></a>}}
+\if{latex}{\out{\hypertarget{method-updateTaskEnv}{}}}
+\subsection{Method \code{updateTaskEnv()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{WorkerService$updateTaskEnv(taskId, env)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-getTaskEnv"></a>}}
+\if{latex}{\out{\hypertarget{method-getTaskEnv}{}}}
+\subsection{Method \code{getTaskEnv()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{WorkerService$getTaskEnv(taskId)}\if{html}{\out{</div>}}
 }
 
 }

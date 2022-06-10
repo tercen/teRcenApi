@@ -4,7 +4,7 @@
 \alias{Task}
 \title{Task}
 \format{
-\code{\link{R6Class}} object, super class \code{\link{PersistentObject}}, sub classes \code{\link{RunComputationTask}}, \code{\link{SaveComputationResultTask}}, \code{\link{ComputationTask}}, \code{\link{ExportWorkflowTask}}, \code{\link{CSVTask}}, \code{\link{CubeQueryTask}}, \code{\link{ImportWorkflowTask}}, \code{\link{TestOperatorTask}}, \code{\link{ImportGitWorkflowTask}}, \code{\link{RunWebAppTask}}, \code{\link{ExportTableTask}}, \code{\link{ProjectTask}}, \code{\link{GlTask}}, \code{\link{CreateGitOperatorTask}}.
+\code{\link{R6Class}} object, super class \code{\link{PersistentObject}}, sub classes \code{\link{RunComputationTask}}, \code{\link{SaveComputationResultTask}}, \code{\link{ComputationTask}}, \code{\link{ImportGitWorkflowTask}}, \code{\link{ExportWorkflowTask}}, \code{\link{CSVTask}}, \code{\link{CubeQueryTask}}, \code{\link{ImportWorkflowTask}}, \code{\link{TestOperatorTask}}, \code{\link{RunWebAppTask}}, \code{\link{ExportTableTask}}, \code{\link{ProjectTask}}, \code{\link{GlTask}}, \code{\link{CreateGitOperatorTask}}.
 }
 \description{
 Task
@@ -44,6 +44,8 @@ Task
 \item{\code{completedDate}}{object of class \code{\link{Date}}.}
 
 \item{\code{aclContext}}{object of class \code{\link{AclContext}}.}
+
+\item{\code{meta}}{list of class \code{\link{Pair}}.}
 }
 \if{html}{\out{</div>}}
 }

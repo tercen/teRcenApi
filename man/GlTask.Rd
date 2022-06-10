@@ -46,6 +46,8 @@ GlTask
 \item{\code{completedDate}}{object of class \code{\link{Date}} inherited from super class \code{\link{Task}}.}
 
 \item{\code{aclContext}}{object of class \code{\link{AclContext}} inherited from super class \code{\link{Task}}.}
+
+\item{\code{meta}}{list of class \code{\link{Pair}} inherited from super class \code{\link{Task}}.}
 }
 \if{html}{\out{</div>}}
 }
@@ -79,6 +81,8 @@ GlTask
 \item{\code{completedDate}}{object of class \code{\link{Date}} inherited from super class \code{\link{Task}}.}
 
 \item{\code{aclContext}}{object of class \code{\link{AclContext}} inherited from super class \code{\link{Task}}.}
+
+\item{\code{meta}}{list of class \code{\link{Pair}} inherited from super class \code{\link{Task}}.}
 }
 \if{html}{\out{</div>}}
 }

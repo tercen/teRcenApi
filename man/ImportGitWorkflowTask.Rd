@@ -4,7 +4,7 @@
 \alias{ImportGitWorkflowTask}
 \title{ImportGitWorkflowTask}
 \format{
-\code{\link{R6Class}} object, super class \code{\link{ProjectTask}}.
+\code{\link{R6Class}} object, super class \code{\link{ImportWorkflowTask}}.
 }
 \description{
 ImportGitWorkflowTask
@@ -12,11 +12,17 @@ ImportGitWorkflowTask
 ImportGitWorkflowTask
 }
 \section{Super classes}{
-\code{\link[tercenApi:Base]{tercenApi::Base}} -> \code{\link[tercenApi:IdObject]{tercenApi::IdObject}} -> \code{\link[tercenApi:PersistentObject]{tercenApi::PersistentObject}} -> \code{\link[tercenApi:Task]{tercenApi::Task}} -> \code{\link[tercenApi:ProjectTask]{tercenApi::ProjectTask}} -> \code{ImportGitWorkflowTask}
+\code{\link[tercenApi:Base]{tercenApi::Base}} -> \code{\link[tercenApi:IdObject]{tercenApi::IdObject}} -> \code{\link[tercenApi:PersistentObject]{tercenApi::PersistentObject}} -> \code{\link[tercenApi:Task]{tercenApi::Task}} -> \code{\link[tercenApi:ProjectTask]{tercenApi::ProjectTask}} -> \code{\link[tercenApi:ImportWorkflowTask]{tercenApi::ImportWorkflowTask}} -> \code{ImportGitWorkflowTask}
 }
 \section{Public fields}{
 \if{html}{\out{<div class="r6-fields">}}
 \describe{
+\item{\code{fileId}}{of type String inherited from super class \code{\link{ImportWorkflowTask}}.}
+
+\item{\code{workflowId}}{of type String inherited from super class \code{\link{ImportWorkflowTask}}.}
+
+\item{\code{gitToken}}{of type String inherited from super class \code{\link{ImportWorkflowTask}}.}
+
 \item{\code{projectId}}{of type String inherited from super class \code{\link{ProjectTask}}.}
 
 \item{\code{duration}}{of type double inherited from super class \code{\link{Task}}.}
@@ -35,10 +41,6 @@ ImportGitWorkflowTask
 
 \item{\code{version}}{of type String.}
 
-\item{\code{workflowId}}{of type String.}
-
-\item{\code{gitToken}}{of type String.}
-
 \item{\code{environment}}{list of class \code{\link{Pair}} inherited from super class \code{\link{Task}}.}
 
 \item{\code{state}}{object of class \code{\link{State}} inherited from super class \code{\link{Task}}.}
@@ -53,6 +55,8 @@ ImportGitWorkflowTask
 
 \item{\code{aclContext}}{object of class \code{\link{AclContext}} inherited from super class \code{\link{Task}}.}
 
+\item{\code{meta}}{list of class \code{\link{Pair}} inherited from super class \code{\link{Task}}.}
+
 \item{\code{url}}{object of class \code{\link{Url}}.}
 }
 \if{html}{\out{</div>}}
@@ -60,6 +64,12 @@ ImportGitWorkflowTask
 \section{Active bindings}{
 \if{html}{\out{<div class="r6-active-bindings">}}
 \describe{
+\item{\code{fileId}}{of type String inherited from super class \code{\link{ImportWorkflowTask}}.}
+
+\item{\code{workflowId}}{of type String inherited from super class \code{\link{ImportWorkflowTask}}.}
+
+\item{\code{gitToken}}{of type String inherited from super class \code{\link{ImportWorkflowTask}}.}
+
 \item{\code{projectId}}{of type String inherited from super class \code{\link{ProjectTask}}.}
 
 \item{\code{duration}}{of type double inherited from super class \code{\link{Task}}.}
@@ -89,6 +99,8 @@ ImportGitWorkflowTask
 \item{\code{completedDate}}{object of class \code{\link{Date}} inherited from super class \code{\link{Task}}.}
 
 \item{\code{aclContext}}{object of class \code{\link{AclContext}} inherited from super class \code{\link{Task}}.}
+
+\item{\code{meta}}{list of class \code{\link{Pair}} inherited from super class \code{\link{Task}}.}
 }
 \if{html}{\out{</div>}}
 }

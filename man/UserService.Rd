@@ -14,6 +14,7 @@ UserService
 \section{Methods}{
 
 \describe{
+   \item{\code{getSamlMessage(type)}}{method}
    \item{\code{cookieConsent(dummy)}}{method}
    \item{\code{connect(usernameOrEmail,password)}}{method}
    \item{\code{connect2(domain,usernameOrEmail,password)}}{method}
@@ -45,10 +46,10 @@ UserService
 \subsection{Public methods}{
 \itemize{
 \item \href{#method-new}{\code{UserService$new()}}
-\item \href{#method-findUserByCreatedDateAndName}{\code{UserService$findUserByCreatedDateAndName()}}
-\item \href{#method-findUserByName}{\code{UserService$findUserByName()}}
-\item \href{#method-findUserByEmail}{\code{UserService$findUserByEmail()}}
 \item \href{#method-findTeamMembers}{\code{UserService$findTeamMembers()}}
+\item \href{#method-findUserByCreatedDateAndName}{\code{UserService$findUserByCreatedDateAndName()}}
+\item \href{#method-findUserByEmail}{\code{UserService$findUserByEmail()}}
+\item \href{#method-getSamlMessage}{\code{UserService$getSamlMessage()}}
 \item \href{#method-cookieConsent}{\code{UserService$cookieConsent()}}
 \item \href{#method-connect}{\code{UserService$connect()}}
 \item \href{#method-connect2}{\code{UserService$connect2()}}
@@ -100,6 +101,15 @@ UserService
 
 }
 \if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-findTeamMembers"></a>}}
+\if{latex}{\out{\hypertarget{method-findTeamMembers}{}}}
+\subsection{Method \code{findTeamMembers()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{UserService$findTeamMembers(keys = NULL, useFactory = FALSE)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-findUserByCreatedDateAndName"></a>}}
 \if{latex}{\out{\hypertarget{method-findUserByCreatedDateAndName}{}}}
 \subsection{Method \code{findUserByCreatedDateAndName()}}{
@@ -116,15 +126,6 @@ UserService
 
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-findUserByName"></a>}}
-\if{latex}{\out{\hypertarget{method-findUserByName}{}}}
-\subsection{Method \code{findUserByName()}}{
-\subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{UserService$findUserByName(keys = NULL, useFactory = FALSE)}\if{html}{\out{</div>}}
-}
-
-}
-\if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-findUserByEmail"></a>}}
 \if{latex}{\out{\hypertarget{method-findUserByEmail}{}}}
 \subsection{Method \code{findUserByEmail()}}{
@@ -134,11 +135,11 @@ UserService
 
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-findTeamMembers"></a>}}
-\if{latex}{\out{\hypertarget{method-findTeamMembers}{}}}
-\subsection{Method \code{findTeamMembers()}}{
+\if{html}{\out{<a id="method-getSamlMessage"></a>}}
+\if{latex}{\out{\hypertarget{method-getSamlMessage}{}}}
+\subsection{Method \code{getSamlMessage()}}{
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{UserService$findTeamMembers(keys = NULL, useFactory = FALSE)}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}\preformatted{UserService$getSamlMessage(type)}\if{html}{\out{</div>}}
 }
 
 }

@@ -21,6 +21,8 @@ CrosstabTable
 
 \item{\code{offset}}{of type int.}
 
+\item{\code{nRows}}{of type int.}
+
 \item{\code{graphicalFactors}}{list of class \code{\link{GraphicalFactor}}.}
 
 \item{\code{rectangleSelections}}{list of class \code{\link{Rectangle}}.}

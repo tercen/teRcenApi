@@ -16,6 +16,7 @@ TeamService
 \describe{
    \item{\code{profiles(teamId)}}{method}
    \item{\code{resourceSummary(teamId)}}{method}
+   \item{\code{transferOwnership(teamIds,newOwner)}}{method}
 }
 }
 
@@ -26,11 +27,10 @@ TeamService
 \subsection{Public methods}{
 \itemize{
 \item \href{#method-new}{\code{TeamService$new()}}
-\item \href{#method-findTeamByNameByLastModifiedDate}{\code{TeamService$findTeamByNameByLastModifiedDate()}}
 \item \href{#method-findTeamByOwner}{\code{TeamService$findTeamByOwner()}}
-\item \href{#method-findTeamByName}{\code{TeamService$findTeamByName()}}
 \item \href{#method-profiles}{\code{TeamService$profiles()}}
 \item \href{#method-resourceSummary}{\code{TeamService$resourceSummary()}}
+\item \href{#method-transferOwnership}{\code{TeamService$transferOwnership()}}
 \item \href{#method-clone}{\code{TeamService$clone()}}
 }
 }
@@ -61,36 +61,11 @@ TeamService
 
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-findTeamByNameByLastModifiedDate"></a>}}
-\if{latex}{\out{\hypertarget{method-findTeamByNameByLastModifiedDate}{}}}
-\subsection{Method \code{findTeamByNameByLastModifiedDate()}}{
-\subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{TeamService$findTeamByNameByLastModifiedDate(
-  startKey = NULL,
-  endKey = NULL,
-  limit = 20,
-  skip = 0,
-  descending = TRUE,
-  useFactory = FALSE
-)}\if{html}{\out{</div>}}
-}
-
-}
-\if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-findTeamByOwner"></a>}}
 \if{latex}{\out{\hypertarget{method-findTeamByOwner}{}}}
 \subsection{Method \code{findTeamByOwner()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{TeamService$findTeamByOwner(keys = NULL, useFactory = FALSE)}\if{html}{\out{</div>}}
-}
-
-}
-\if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-findTeamByName"></a>}}
-\if{latex}{\out{\hypertarget{method-findTeamByName}{}}}
-\subsection{Method \code{findTeamByName()}}{
-\subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{TeamService$findTeamByName(keys = NULL, useFactory = FALSE)}\if{html}{\out{</div>}}
 }
 
 }
@@ -109,6 +84,15 @@ TeamService
 \subsection{Method \code{resourceSummary()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{TeamService$resourceSummary(teamId)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-transferOwnership"></a>}}
+\if{latex}{\out{\hypertarget{method-transferOwnership}{}}}
+\subsection{Method \code{transferOwnership()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{TeamService$transferOwnership(teamIds, newOwner)}\if{html}{\out{</div>}}
 }
 
 }

@@ -15,6 +15,7 @@ FolderService
 
 \describe{
    \item{\code{getOrCreate(projectId,path)}}{method}
+   \item{\code{getExternalStorageFolders(projectId,volume,path)}}{method}
 }
 }
 
@@ -27,6 +28,7 @@ FolderService
 \item \href{#method-new}{\code{FolderService$new()}}
 \item \href{#method-findFolderByParentFolderAndName}{\code{FolderService$findFolderByParentFolderAndName()}}
 \item \href{#method-getOrCreate}{\code{FolderService$getOrCreate()}}
+\item \href{#method-getExternalStorageFolders}{\code{FolderService$getExternalStorageFolders()}}
 \item \href{#method-clone}{\code{FolderService$clone()}}
 }
 }
@@ -78,6 +80,15 @@ FolderService
 \subsection{Method \code{getOrCreate()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{FolderService$getOrCreate(projectId, path)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-getExternalStorageFolders"></a>}}
+\if{latex}{\out{\hypertarget{method-getExternalStorageFolders}{}}}
+\subsection{Method \code{getExternalStorageFolders()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{FolderService$getExternalStorageFolders(projectId, volume, path)}\if{html}{\out{</div>}}
 }
 
 }

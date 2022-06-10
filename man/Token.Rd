@@ -21,6 +21,8 @@ Token
 
 \item{\code{token}}{of type String.}
 
+\item{\code{domain}}{of type String.}
+
 \item{\code{expiry}}{object of class \code{\link{Date}}.}
 }
 \if{html}{\out{</div>}}

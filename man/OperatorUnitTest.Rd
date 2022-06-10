@@ -21,6 +21,8 @@ OperatorUnitTest
 
 \item{\code{namespace}}{of type String.}
 
+\item{\code{inputFileUris}}{list of type String.}
+
 \item{\code{inputDataUri}}{of type String.}
 
 \item{\code{outputDataUri}}{list of type String.}
@@ -36,6 +38,18 @@ OperatorUnitTest
 \item{\code{yAxis}}{of type String.}
 
 \item{\code{xAxis}}{of type String.}
+
+\item{\code{absTol}}{of type double.}
+
+\item{\code{relTol}}{of type double.}
+
+\item{\code{equalityMethod}}{of type String.}
+
+\item{\code{r2}}{of type double.}
+
+\item{\code{skipColumns}}{list of type String.}
+
+\item{\code{propertyValues}}{list of class \code{\link{PropertyValue}}.}
 }
 \if{html}{\out{</div>}}
 }

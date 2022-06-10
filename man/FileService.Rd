@@ -28,7 +28,6 @@ FileService
 \itemize{
 \item \href{#method-new}{\code{FileService$new()}}
 \item \href{#method-findFileByWorkflowIdAndStepId}{\code{FileService$findFileByWorkflowIdAndStepId()}}
-\item \href{#method-findFileByTaskId}{\code{FileService$findFileByTaskId()}}
 \item \href{#method-findByDataUri}{\code{FileService$findByDataUri()}}
 \item \href{#method-upload}{\code{FileService$upload()}}
 \item \href{#method-append}{\code{FileService$append()}}
@@ -68,22 +67,6 @@ FileService
 \subsection{Method \code{findFileByWorkflowIdAndStepId()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{FileService$findFileByWorkflowIdAndStepId(
-  startKey = NULL,
-  endKey = NULL,
-  limit = 20,
-  skip = 0,
-  descending = TRUE,
-  useFactory = FALSE
-)}\if{html}{\out{</div>}}
-}
-
-}
-\if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-findFileByTaskId"></a>}}
-\if{latex}{\out{\hypertarget{method-findFileByTaskId}{}}}
-\subsection{Method \code{findFileByTaskId()}}{
-\subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{FileService$findFileByTaskId(
   startKey = NULL,
   endKey = NULL,
   limit = 20,

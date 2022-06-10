@@ -4,7 +4,7 @@
 \alias{ImportWorkflowTask}
 \title{ImportWorkflowTask}
 \format{
-\code{\link{R6Class}} object, super class \code{\link{ProjectTask}}.
+\code{\link{R6Class}} object, super class \code{\link{ProjectTask}}, sub classes \code{\link{ImportGitWorkflowTask}}.
 }
 \description{
 ImportWorkflowTask
@@ -37,6 +37,8 @@ ImportWorkflowTask
 
 \item{\code{workflowId}}{of type String.}
 
+\item{\code{gitToken}}{of type String.}
+
 \item{\code{environment}}{list of class \code{\link{Pair}} inherited from super class \code{\link{Task}}.}
 
 \item{\code{state}}{object of class \code{\link{State}} inherited from super class \code{\link{Task}}.}
@@ -50,6 +52,8 @@ ImportWorkflowTask
 \item{\code{completedDate}}{object of class \code{\link{Date}} inherited from super class \code{\link{Task}}.}
 
 \item{\code{aclContext}}{object of class \code{\link{AclContext}} inherited from super class \code{\link{Task}}.}
+
+\item{\code{meta}}{list of class \code{\link{Pair}} inherited from super class \code{\link{Task}}.}
 }
 \if{html}{\out{</div>}}
 }
@@ -85,6 +89,8 @@ ImportWorkflowTask
 \item{\code{completedDate}}{object of class \code{\link{Date}} inherited from super class \code{\link{Task}}.}
 
 \item{\code{aclContext}}{object of class \code{\link{AclContext}} inherited from super class \code{\link{Task}}.}
+
+\item{\code{meta}}{list of class \code{\link{Pair}} inherited from super class \code{\link{Task}}.}
 }
 \if{html}{\out{</div>}}
 }
