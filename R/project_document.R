@@ -1,13 +1,11 @@
 #' ProjectDocument
 #'
 #' @export
-#' @format \code{\link{R6Class}} object, super class \code{\link{Document}}, sub classes \code{\link{CubeQueryTableSchema}}, \code{\link{TableSchema}}, \code{\link{ComputedTableSchema}}, \code{\link{Issue}}, \code{\link{FileDocument}}, \code{\link{FolderDocument}}, \code{\link{Schema}}, \code{\link{IssueMessage}}, \code{\link{Workflow}}.
+#' @format \code{\link{R6Class}} object, super class \code{\link{Document}}, sub classes \code{\link{CubeQueryTableSchema}}, \code{\link{TableSchema}}, \code{\link{ComputedTableSchema}}, \code{\link{FileDocument}}, \code{\link{FolderDocument}}, \code{\link{Schema}}, \code{\link{Workflow}}.
 #' @field description of type String inherited from super class \code{\link{Document}}.
 #' @field name of type String inherited from super class \code{\link{Document}}.
-#' @field createdBy of type String inherited from super class \code{\link{Document}}.
 #' @field tags list of type String inherited from super class \code{\link{Document}}.
 #' @field version of type String inherited from super class \code{\link{Document}}.
-#' @field authors list of type String inherited from super class \code{\link{Document}}.
 #' @field isPublic of type bool inherited from super class \code{\link{Document}}.
 #' @field isDeleted of type bool inherited from super class \code{\link{PersistentObject}}.
 #' @field rev of type String inherited from super class \code{\link{PersistentObject}}.
@@ -20,7 +18,7 @@
 #' @field urls list of class \code{\link{Url}} inherited from super class \code{\link{Document}}.
 #' @field meta list of class \code{\link{Pair}} inherited from super class \code{\link{Document}}.
 #' @field url object of class \code{\link{Url}} inherited from super class \code{\link{Document}}.
-ProjectDocument <- R6::R6Class("ProjectDocument", inherit = Document, public = list(projectId = NULL, 
+ProjectDocument <- R6::R6Class("ProjectDocument", inherit = Document, public = list(projectId = NULL,
     folderId = NULL, initialize = function(json = NULL) {
         super$initialize(json = json)
     }, init = function() {

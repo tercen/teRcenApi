@@ -3,7 +3,7 @@
 #' @export
 #' @format \code{\link{R6Class}} object, super class \code{\link{StepModel}}.
 #' @field relation object of class \code{\link{Relation}}.
-TableStepModel <- R6::R6Class("TableStepModel", inherit = StepModel, public = list(relation = NULL, 
+TableStepModel <- R6::R6Class("TableStepModel", inherit = StepModel, public = list(relation = NULL,
     initialize = function(json = NULL) {
         super$initialize(json = json)
     }, init = function() {

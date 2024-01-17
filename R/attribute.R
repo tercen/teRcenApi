@@ -4,19 +4,14 @@
 #' @format \code{\link{R6Class}} object, super class \code{\link{Factor}}.
 #' @field name of type String inherited from super class \code{\link{Factor}}.
 #' @field type of type String inherited from super class \code{\link{Factor}}.
-#' @field relationId of type String.
-Attribute <- R6::R6Class("Attribute", inherit = Factor, public = list(relationId = NULL, 
-    initialize = function(json = NULL) {
-        super$initialize(json = json)
-    }, init = function() {
-        super$init()
-        self$relationId = ""
-    }, initJson = function(json) {
-        super$initJson(json)
-        self$relationId = json$relationId
-    }, toTson = function() {
-        m = super$toTson()
-        m$kind = tson.scalar("Attribute")
-        m$relationId = tson.scalar(self$relationId)
-        return(m)
-    }))
+Attribute <- R6::R6Class("Attribute", inherit = Factor, public = list(initialize = function(json = NULL) {
+    super$initialize(json = json)
+}, init = function() {
+    super$init()
+}, initJson = function(json) {
+    super$initJson(json)
+}, toTson = function() {
+    m = super$toTson()
+    m$kind = tson.scalar("Attribute")
+    return(m)
+}))

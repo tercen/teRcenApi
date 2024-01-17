@@ -1,13 +1,13 @@
 #' BillingInfo
 #'
 #' @export
-#' @format \code{\link{R6Class}} object.
+#' @format \code{\link{R6Class}} object, super class \code{\link{SciObject}}.
 #' @field firstName of type String.
 #' @field lastName of type String.
 #' @field companyName of type String.
 #' @field taxId object of class \code{\link{TaxId}}.
 #' @field address object of class \code{\link{Address}}.
-BillingInfo <- R6::R6Class("BillingInfo", inherit = Base, public = list(firstName = NULL, 
+BillingInfo <- R6::R6Class("BillingInfo", inherit = SciObject, public = list(firstName = NULL,
     lastName = NULL, companyName = NULL, taxId = NULL, address = NULL, initialize = function(json = NULL) {
         super$initialize(json = json)
     }, init = function() {

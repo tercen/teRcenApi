@@ -10,8 +10,8 @@
 #' @field steps list of class \code{\link{Step}}.
 #' @field defaultFactors list of class \code{\link{MappingFactor}}.
 #' @field defaultFilters list of class \code{\link{MappingFilter}}.
-WizardStepModel <- R6::R6Class("WizardStepModel", inherit = StepModel, public = list(namespace = NULL, 
-    description = NULL, appDesignType = NULL, factors = NULL, filters = NULL, steps = NULL, 
+WizardStepModel <- R6::R6Class("WizardStepModel", inherit = StepModel, public = list(namespace = NULL,
+    description = NULL, appDesignType = NULL, factors = NULL, filters = NULL, steps = NULL,
     defaultFactors = NULL, defaultFilters = NULL, initialize = function(json = NULL) {
         super$initialize(json = json)
     }, init = function() {

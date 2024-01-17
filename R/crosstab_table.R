@@ -1,14 +1,14 @@
 #' CrosstabTable
 #'
 #' @export
-#' @format \code{\link{R6Class}} object.
+#' @format \code{\link{R6Class}} object, super class \code{\link{SciObject}}.
 #' @field cellSize of type double.
 #' @field offset of type int.
 #' @field nRows of type int.
 #' @field graphicalFactors list of class \code{\link{GraphicalFactor}}.
 #' @field rectangleSelections list of class \code{\link{Rectangle}}.
-CrosstabTable <- R6::R6Class("CrosstabTable", inherit = Base, public = list(cellSize = NULL, 
-    offset = NULL, graphicalFactors = NULL, rectangleSelections = NULL, nRows = NULL, 
+CrosstabTable <- R6::R6Class("CrosstabTable", inherit = SciObject, public = list(cellSize = NULL,
+    offset = NULL, graphicalFactors = NULL, rectangleSelections = NULL, nRows = NULL,
     initialize = function(json = NULL) {
         super$initialize(json = json)
     }, init = function() {

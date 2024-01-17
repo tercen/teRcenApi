@@ -8,7 +8,7 @@
 #' @field type of type String.
 #' @field content of type String.
 #' @field date object of class \code{\link{Date}} inherited from super class \code{\link{Event}}.
-GenericEvent <- R6::R6Class("GenericEvent", inherit = Event, public = list(type = NULL, 
+GenericEvent <- R6::R6Class("GenericEvent", inherit = Event, public = list(type = NULL,
     content = NULL, initialize = function(json = NULL) {
         super$initialize(json = json)
     }, init = function() {

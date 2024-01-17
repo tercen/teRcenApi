@@ -5,7 +5,7 @@
 #' @field id of type String inherited from super class \code{\link{IdObject}}.
 #' @field relation object of class \code{\link{Relation}}.
 #' @field filters object of class \code{\link{Filters}}.
-WhereRelation <- R6::R6Class("WhereRelation", inherit = Relation, public = list(relation = NULL, 
+WhereRelation <- R6::R6Class("WhereRelation", inherit = Relation, public = list(relation = NULL,
     filters = NULL, initialize = function(json = NULL) {
         super$initialize(json = json)
     }, init = function() {

@@ -4,7 +4,7 @@
 #' @format \code{\link{R6Class}} object, super class \code{\link{Profile}}.
 #' @field name of type String inherited from super class \code{\link{Profile}}.
 #' @field nCalls of type int.
-ApiCallProfile <- R6::R6Class("ApiCallProfile", inherit = Profile, public = list(nCalls = NULL, 
+ApiCallProfile <- R6::R6Class("ApiCallProfile", inherit = Profile, public = list(nCalls = NULL,
     initialize = function(json = NULL) {
         super$initialize(json = json)
     }, init = function() {

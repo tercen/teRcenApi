@@ -1,12 +1,12 @@
 #' TableSummary
 #'
 #' @export
-#' @format \code{\link{R6Class}} object.
+#' @format \code{\link{R6Class}} object, super class \code{\link{SciObject}}.
 #' @field n of type int.
 #' @field size of type int.
 #' @field nr of type int.
 #' @field nc of type int.
-TableSummary <- R6::R6Class("TableSummary", inherit = Base, public = list(n = NULL, 
+TableSummary <- R6::R6Class("TableSummary", inherit = SciObject, public = list(n = NULL,
     size = NULL, nr = NULL, nc = NULL, initialize = function(json = NULL) {
         super$initialize(json = json)
     }, init = function() {

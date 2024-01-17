@@ -1,11 +1,11 @@
 #' UserSession
 #'
 #' @export
-#' @format \code{\link{R6Class}} object.
+#' @format \code{\link{R6Class}} object, super class \code{\link{SciObject}}.
 #' @field serverVersion object of class \code{\link{Version}}.
 #' @field user object of class \code{\link{User}}.
 #' @field token object of class \code{\link{Token}}.
-UserSession <- R6::R6Class("UserSession", inherit = Base, public = list(serverVersion = NULL, 
+UserSession <- R6::R6Class("UserSession", inherit = SciObject, public = list(serverVersion = NULL,
     user = NULL, token = NULL, initialize = function(json = NULL) {
         super$initialize(json = json)
     }, init = function() {

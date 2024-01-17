@@ -1,7 +1,7 @@
 #' CubeQuery
 #'
 #' @export
-#' @format \code{\link{R6Class}} object.
+#' @format \code{\link{R6Class}} object, super class \code{\link{SciObject}}.
 #' @field qtHash of type String.
 #' @field columnHash of type String.
 #' @field rowHash of type String.
@@ -11,8 +11,8 @@
 #' @field axisQueries list of class \code{\link{CubeAxisQuery}}.
 #' @field filters object of class \code{\link{Filters}}.
 #' @field operatorSettings object of class \code{\link{OperatorSettings}}.
-CubeQuery <- R6::R6Class("CubeQuery", inherit = Base, public = list(relation = NULL, 
-    colColumns = NULL, rowColumns = NULL, axisQueries = NULL, filters = NULL, operatorSettings = NULL, 
+CubeQuery <- R6::R6Class("CubeQuery", inherit = SciObject, public = list(relation = NULL,
+    colColumns = NULL, rowColumns = NULL, axisQueries = NULL, filters = NULL, operatorSettings = NULL,
     qtHash = NULL, columnHash = NULL, rowHash = NULL, initialize = function(json = NULL) {
         super$initialize(json = json)
     }, init = function() {

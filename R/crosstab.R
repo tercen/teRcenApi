@@ -8,8 +8,8 @@
 #' @field filters object of class \code{\link{Filters}}.
 #' @field operatorSettings object of class \code{\link{OperatorSettings}}.
 #' @field rowTable object of class \code{\link{CrosstabTable}}.
-Crosstab <- R6::R6Class("Crosstab", inherit = StepModel, public = list(axis = NULL, 
-    columnTable = NULL, filters = NULL, operatorSettings = NULL, rowTable = NULL, 
+Crosstab <- R6::R6Class("Crosstab", inherit = StepModel, public = list(axis = NULL,
+    columnTable = NULL, filters = NULL, operatorSettings = NULL, rowTable = NULL,
     taskId = NULL, initialize = function(json = NULL) {
         super$initialize(json = json)
     }, init = function() {

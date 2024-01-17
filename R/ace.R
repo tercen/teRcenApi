@@ -1,10 +1,10 @@
 #' Ace
 #'
 #' @export
-#' @format \code{\link{R6Class}} object.
+#' @format \code{\link{R6Class}} object, super class \code{\link{SciObject}}.
 #' @field principals list of class \code{\link{Principal}}.
 #' @field privileges list of class \code{\link{Privilege}}.
-Ace <- R6::R6Class("Ace", inherit = Base, public = list(principals = NULL, privileges = NULL, 
+Ace <- R6::R6Class("Ace", inherit = SciObject, public = list(principals = NULL, privileges = NULL,
     initialize = function(json = NULL) {
         super$initialize(json = json)
     }, init = function() {

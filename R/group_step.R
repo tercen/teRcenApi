@@ -4,6 +4,7 @@
 #' @format \code{\link{R6Class}} object, super class \code{\link{RelationStep}}.
 #' @field groupId of type String inherited from super class \code{\link{Step}}.
 #' @field name of type String inherited from super class \code{\link{Step}}.
+#' @field description of type String inherited from super class \code{\link{Step}}.
 #' @field id of type String inherited from super class \code{\link{IdObject}}.
 #' @field appId of type String.
 #' @field appName of type String.
@@ -13,7 +14,7 @@
 #' @field rectangle object of class \code{\link{Rectangle}} inherited from super class \code{\link{Step}}.
 #' @field state object of class \code{\link{StepState}} inherited from super class \code{\link{Step}}.
 #' @field offset object of class \code{\link{Point}}.
-GroupStep <- R6::R6Class("GroupStep", inherit = RelationStep, public = list(appId = NULL, 
+GroupStep <- R6::R6Class("GroupStep", inherit = RelationStep, public = list(appId = NULL,
     appName = NULL, version = NULL, offset = NULL, initialize = function(json = NULL) {
         super$initialize(json = json)
     }, init = function() {

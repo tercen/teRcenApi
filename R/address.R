@@ -1,7 +1,7 @@
 #' Address
 #'
 #' @export
-#' @format \code{\link{R6Class}} object.
+#' @format \code{\link{R6Class}} object, super class \code{\link{SciObject}}.
 #' @field country of type String.
 #' @field state of type String.
 #' @field city of type String.
@@ -9,9 +9,9 @@
 #' @field address1 of type String.
 #' @field address2 of type String.
 #' @field phone of type String.
-Address <- R6::R6Class("Address", inherit = Base, public = list(country = NULL, state = NULL, 
-    city = NULL, zipCode = NULL, address1 = NULL, address2 = NULL, phone = NULL, 
-    initialize = function(json = NULL) {
+Address <- R6::R6Class("Address", inherit = SciObject, public = list(country = NULL,
+    state = NULL, city = NULL, zipCode = NULL, address1 = NULL, address2 = NULL,
+    phone = NULL, initialize = function(json = NULL) {
         super$initialize(json = json)
     }, init = function() {
         super$init()

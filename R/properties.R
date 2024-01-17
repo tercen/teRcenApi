@@ -1,10 +1,10 @@
 #' Properties
 #'
 #' @export
-#' @format \code{\link{R6Class}} object.
+#' @format \code{\link{R6Class}} object, super class \code{\link{SciObject}}.
 #' @field properties list of class \code{\link{Property}}.
 #' @field propertyValues list of class \code{\link{PropertyValue}}.
-Properties <- R6::R6Class("Properties", inherit = Base, public = list(properties = NULL, 
+Properties <- R6::R6Class("Properties", inherit = SciObject, public = list(properties = NULL,
     propertyValues = NULL, initialize = function(json = NULL) {
         super$initialize(json = json)
     }, init = function() {

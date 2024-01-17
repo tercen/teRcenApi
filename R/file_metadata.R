@@ -1,14 +1,14 @@
 #' FileMetadata
 #'
 #' @export
-#' @format \code{\link{R6Class}} object, sub classes \code{\link{CSVFileMetadata}}.
+#' @format \code{\link{R6Class}} object, super class \code{\link{SciObject}}, sub classes \code{\link{CSVFileMetadata}}.
 #' @field contentType of type String.
 #' @field cacheControl of type String.
 #' @field contentEncoding of type String.
 #' @field contentLanguage of type String.
 #' @field md5Hash of type String.
-FileMetadata <- R6::R6Class("FileMetadata", inherit = Base, public = list(contentType = NULL, 
-    cacheControl = NULL, contentEncoding = NULL, contentLanguage = NULL, md5Hash = NULL, 
+FileMetadata <- R6::R6Class("FileMetadata", inherit = SciObject, public = list(contentType = NULL,
+    cacheControl = NULL, contentEncoding = NULL, contentLanguage = NULL, md5Hash = NULL,
     initialize = function(json = NULL) {
         super$initialize(json = json)
     }, init = function() {

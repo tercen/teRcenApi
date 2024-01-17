@@ -9,8 +9,8 @@
 #' @field pid of type int.
 #' @field script of type String.
 #' @field ulimits object of class \code{\link{Ulimits}}.
-StartProcess <- R6::R6Class("StartProcess", inherit = IdObject, public = list(executable = NULL, 
-    arguments = NULL, ulimits = NULL, timeout = NULL, pid = NULL, script = NULL, 
+StartProcess <- R6::R6Class("StartProcess", inherit = IdObject, public = list(executable = NULL,
+    arguments = NULL, ulimits = NULL, timeout = NULL, pid = NULL, script = NULL,
     initialize = function(json = NULL) {
         super$initialize(json = json)
     }, init = function() {

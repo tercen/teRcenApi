@@ -1,9 +1,9 @@
 #' ColorElement
 #'
 #' @export
-#' @format \code{\link{R6Class}} object, sub classes \code{\link{DoubleColorElement}}, \code{\link{StringColorElement}}.
+#' @format \code{\link{R6Class}} object, super class \code{\link{SciObject}}, sub classes \code{\link{DoubleColorElement}}, \code{\link{StringColorElement}}.
 #' @field color of type int.
-ColorElement <- R6::R6Class("ColorElement", inherit = Base, public = list(color = NULL, 
+ColorElement <- R6::R6Class("ColorElement", inherit = SciObject, public = list(color = NULL,
     initialize = function(json = NULL) {
         super$initialize(json = json)
     }, init = function() {

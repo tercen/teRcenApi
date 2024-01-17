@@ -14,7 +14,7 @@
 #'    \item{\code{upgradeSubscription(subscriptionPlanId,plan)}}{method}
 #' }
 #' 
-SubscriptionPlanService <- R6::R6Class("SubscriptionPlanService", inherit = HttpClientService, 
+SubscriptionPlanService <- R6::R6Class("SubscriptionPlanService", inherit = HttpClientService,
     public = list(initialize = function(baseRestUri, client) {
         super$initialize(baseRestUri, client)
         self$uri = "api/v1/subscription"

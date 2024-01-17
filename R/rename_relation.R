@@ -6,7 +6,7 @@
 #' @field inNames list of type String.
 #' @field outNames list of type String.
 #' @field relation object of class \code{\link{Relation}}.
-RenameRelation <- R6::R6Class("RenameRelation", inherit = Relation, public = list(relation = NULL, 
+RenameRelation <- R6::R6Class("RenameRelation", inherit = Relation, public = list(relation = NULL,
     inNames = NULL, outNames = NULL, initialize = function(json = NULL) {
         super$initialize(json = json)
     }, init = function() {

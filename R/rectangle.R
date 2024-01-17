@@ -1,10 +1,10 @@
 #' Rectangle
 #'
 #' @export
-#' @format \code{\link{R6Class}} object.
+#' @format \code{\link{R6Class}} object, super class \code{\link{SciObject}}.
 #' @field extent object of class \code{\link{Point}}.
 #' @field topLeft object of class \code{\link{Point}}.
-Rectangle <- R6::R6Class("Rectangle", inherit = Base, public = list(extent = NULL, 
+Rectangle <- R6::R6Class("Rectangle", inherit = SciObject, public = list(extent = NULL,
     topLeft = NULL, initialize = function(json = NULL) {
         super$initialize(json = json)
     }, init = function() {

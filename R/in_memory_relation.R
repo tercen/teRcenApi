@@ -4,7 +4,7 @@
 #' @format \code{\link{R6Class}} object, super class \code{\link{Relation}}.
 #' @field id of type String inherited from super class \code{\link{IdObject}}.
 #' @field inMemoryTable object of class \code{\link{Table}}.
-InMemoryRelation <- R6::R6Class("InMemoryRelation", inherit = Relation, public = list(inMemoryTable = NULL, 
+InMemoryRelation <- R6::R6Class("InMemoryRelation", inherit = Relation, public = list(inMemoryTable = NULL,
     initialize = function(json = NULL) {
         super$initialize(json = json)
     }, init = function() {

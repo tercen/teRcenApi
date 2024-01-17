@@ -9,7 +9,7 @@
 #' @field factorName of type String.
 #' @field isRequired of type bool.
 #' @field factors list of class \code{\link{Factor}}.
-MappingFactor <- R6::R6Class("MappingFactor", inherit = Factor, public = list(isSingle = NULL, 
+MappingFactor <- R6::R6Class("MappingFactor", inherit = Factor, public = list(isSingle = NULL,
     description = NULL, factorName = NULL, factors = NULL, isRequired = NULL, initialize = function(json = NULL) {
         super$initialize(json = json)
     }, init = function() {

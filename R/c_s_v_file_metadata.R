@@ -10,7 +10,7 @@
 #' @field separator of type String.
 #' @field quote of type String.
 #' @field headers of type bool.
-CSVFileMetadata <- R6::R6Class("CSVFileMetadata", inherit = FileMetadata, public = list(separator = NULL, 
+CSVFileMetadata <- R6::R6Class("CSVFileMetadata", inherit = FileMetadata, public = list(separator = NULL,
     quote = NULL, headers = NULL, initialize = function(json = NULL) {
         super$initialize(json = json)
     }, init = function() {

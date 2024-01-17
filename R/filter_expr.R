@@ -1,11 +1,11 @@
 #' FilterExpr
 #'
 #' @export
-#' @format \code{\link{R6Class}} object, super class \code{\link{FilterTopExpr}}.
+#' @format \code{\link{R6Class}} object, super class \code{\link{FilterTopExpr}}, sub classes \code{\link{FilterExpr2d}}.
 #' @field filterOp of type String.
 #' @field stringValue of type String.
 #' @field factor object of class \code{\link{Factor}}.
-FilterExpr <- R6::R6Class("FilterExpr", inherit = FilterTopExpr, public = list(filterOp = NULL, 
+FilterExpr <- R6::R6Class("FilterExpr", inherit = FilterTopExpr, public = list(filterOp = NULL,
     stringValue = NULL, factor = NULL, initialize = function(json = NULL) {
         super$initialize(json = json)
     }, init = function() {

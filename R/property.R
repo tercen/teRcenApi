@@ -1,11 +1,11 @@
 #' Property
 #'
 #' @export
-#' @format \code{\link{R6Class}} object, sub classes \code{\link{EnumeratedProperty}}, \code{\link{FactorsProperty}}, \code{\link{FormulaProperty}}, \code{\link{DoubleProperty}}, \code{\link{StringProperty}}, \code{\link{BooleanProperty}}.
+#' @format \code{\link{R6Class}} object, super class \code{\link{SciObject}}, sub classes \code{\link{EnumeratedProperty}}, \code{\link{FactorsProperty}}, \code{\link{FormulaProperty}}, \code{\link{DoubleProperty}}, \code{\link{StringProperty}}, \code{\link{BooleanProperty}}.
 #' @field name of type String.
 #' @field description of type String.
-Property <- R6::R6Class("Property", inherit = Base, public = list(name = NULL, description = NULL, 
-    initialize = function(json = NULL) {
+Property <- R6::R6Class("Property", inherit = SciObject, public = list(name = NULL,
+    description = NULL, initialize = function(json = NULL) {
         super$initialize(json = json)
     }, init = function() {
         super$init()

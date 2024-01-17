@@ -1,9 +1,9 @@
 #' Date
 #'
 #' @export
-#' @format \code{\link{R6Class}} object.
+#' @format \code{\link{R6Class}} object, super class \code{\link{SciObject}}.
 #' @field value of type String.
-Date <- R6::R6Class("Date", inherit = Base, public = list(value = NULL, initialize = function(json = NULL) {
+Date <- R6::R6Class("Date", inherit = SciObject, public = list(value = NULL, initialize = function(json = NULL) {
     super$initialize(json = json)
 }, init = function() {
     super$init()

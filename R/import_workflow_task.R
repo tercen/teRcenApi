@@ -21,7 +21,7 @@
 #' @field completedDate object of class \code{\link{Date}} inherited from super class \code{\link{Task}}.
 #' @field aclContext object of class \code{\link{AclContext}} inherited from super class \code{\link{Task}}.
 #' @field meta list of class \code{\link{Pair}} inherited from super class \code{\link{Task}}.
-ImportWorkflowTask <- R6::R6Class("ImportWorkflowTask", inherit = ProjectTask, public = list(fileId = NULL, 
+ImportWorkflowTask <- R6::R6Class("ImportWorkflowTask", inherit = ProjectTask, public = list(fileId = NULL,
     workflowId = NULL, gitToken = NULL, initialize = function(json = NULL) {
         super$initialize(json = json)
     }, init = function() {

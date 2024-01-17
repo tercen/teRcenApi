@@ -8,7 +8,7 @@
 #'    \item{\code{releaseLock(lock)}}{method}
 #' }
 #' 
-LockService <- R6::R6Class("LockService", inherit = HttpClientService, public = list(initialize = function(baseRestUri, 
+LockService <- R6::R6Class("LockService", inherit = HttpClientService, public = list(initialize = function(baseRestUri,
     client) {
     super$initialize(baseRestUri, client)
     self$uri = "api/v1/lock"

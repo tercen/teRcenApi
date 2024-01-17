@@ -1,7 +1,7 @@
 #' Version
 #'
 #' @export
-#' @format \code{\link{R6Class}} object.
+#' @format \code{\link{R6Class}} object, super class \code{\link{SciObject}}.
 #' @field major of type int.
 #' @field minor of type int.
 #' @field patch of type int.
@@ -9,8 +9,9 @@
 #' @field date of type String.
 #' @field commit of type String.
 #' @field features list of type String.
-Version <- R6::R6Class("Version", inherit = Base, public = list(major = NULL, minor = NULL, 
-    patch = NULL, tag = NULL, date = NULL, commit = NULL, features = NULL, initialize = function(json = NULL) {
+Version <- R6::R6Class("Version", inherit = SciObject, public = list(major = NULL,
+    minor = NULL, patch = NULL, tag = NULL, date = NULL, commit = NULL, features = NULL,
+    initialize = function(json = NULL) {
         super$initialize(json = json)
     }, init = function() {
         super$init()

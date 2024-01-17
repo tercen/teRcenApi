@@ -1,9 +1,9 @@
 #' Privilege
 #'
 #' @export
-#' @format \code{\link{R6Class}} object.
+#' @format \code{\link{R6Class}} object, super class \code{\link{SciObject}}.
 #' @field type of type String.
-Privilege <- R6::R6Class("Privilege", inherit = Base, public = list(type = NULL, 
+Privilege <- R6::R6Class("Privilege", inherit = SciObject, public = list(type = NULL,
     initialize = function(json = NULL) {
         super$initialize(json = json)
     }, init = function() {

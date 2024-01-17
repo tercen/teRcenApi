@@ -5,17 +5,20 @@
 #' @field id of type String inherited from super class \code{\link{IdObject}}.
 #' @field groupId of type String.
 #' @field name of type String.
+#' @field description of type String.
 #' @field inputs list of class \code{\link{InputPort}}.
 #' @field outputs list of class \code{\link{OutputPort}}.
 #' @field rectangle object of class \code{\link{Rectangle}}.
 #' @field state object of class \code{\link{StepState}}.
-Step <- R6::R6Class("Step", inherit = IdObject, public = list(groupId = NULL, name = NULL, 
-    inputs = NULL, outputs = NULL, rectangle = NULL, state = NULL, initialize = function(json = NULL) {
+Step <- R6::R6Class("Step", inherit = IdObject, public = list(groupId = NULL, name = NULL,
+    inputs = NULL, outputs = NULL, rectangle = NULL, state = NULL, description = NULL,
+    initialize = function(json = NULL) {
         super$initialize(json = json)
     }, init = function() {
         super$init()
         self$groupId = ""
         self$name = ""
+        self$description = ""
         self$inputs = list()
         self$outputs = list()
         self$rectangle = Rectangle$new()
@@ -24,6 +27,7 @@ Step <- R6::R6Class("Step", inherit = IdObject, public = list(groupId = NULL, na
         super$initJson(json)
         self$groupId = json$groupId
         self$name = json$name
+        self$description = json$description
         self$inputs = lapply(json$inputs, createObjectFromJson)
         self$outputs = lapply(json$outputs, createObjectFromJson)
         self$rectangle = createObjectFromJson(json$rectangle)
@@ -37,5 +41,6 @@ Step <- R6::R6Class("Step", inherit = IdObject, public = list(groupId = NULL, na
         m$outputs = lapply(self$outputs, function(each) each$toTson())
         if (!is.null(self$rectangle)) m$rectangle = self$rectangle$toTson()
         if (!is.null(self$state)) m$state = self$state$toTson()
+        m$description = tson.scalar(self$description)
         return(m)
     }))

@@ -5,7 +5,7 @@
 #' @field logical of type String.
 #' @field not of type bool.
 #' @field filterExprs list of class \code{\link{FilterTopExpr}}.
-Filter <- R6::R6Class("Filter", inherit = FilterTopExpr, public = list(logical = NULL, 
+Filter <- R6::R6Class("Filter", inherit = FilterTopExpr, public = list(logical = NULL,
     not = NULL, filterExprs = NULL, initialize = function(json = NULL) {
         super$initialize(json = json)
     }, init = function() {

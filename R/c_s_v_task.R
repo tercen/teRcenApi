@@ -25,8 +25,8 @@
 #' @field meta list of class \code{\link{Pair}} inherited from super class \code{\link{Task}}.
 #' @field schema object of class \code{\link{Schema}}.
 #' @field params object of class \code{\link{CSVParserParam}}.
-CSVTask <- R6::R6Class("CSVTask", inherit = ProjectTask, public = list(fileDocumentId = NULL, 
-    schemaId = NULL, valueName = NULL, variableName = NULL, gatherNames = NULL, schema = NULL, 
+CSVTask <- R6::R6Class("CSVTask", inherit = ProjectTask, public = list(fileDocumentId = NULL,
+    schemaId = NULL, valueName = NULL, variableName = NULL, gatherNames = NULL, schema = NULL,
     params = NULL, initialize = function(json = NULL) {
         super$initialize(json = json)
     }, init = function() {

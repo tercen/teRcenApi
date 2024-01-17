@@ -1,10 +1,10 @@
 #' PropertyValue
 #'
 #' @export
-#' @format \code{\link{R6Class}} object.
+#' @format \code{\link{R6Class}} object, super class \code{\link{SciObject}}.
 #' @field name of type String.
 #' @field value of type String.
-PropertyValue <- R6::R6Class("PropertyValue", inherit = Base, public = list(name = NULL, 
+PropertyValue <- R6::R6Class("PropertyValue", inherit = SciObject, public = list(name = NULL,
     value = NULL, initialize = function(json = NULL) {
         super$initialize(json = json)
     }, init = function() {

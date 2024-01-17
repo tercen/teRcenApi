@@ -5,7 +5,7 @@
 #' @field name of type String inherited from super class \code{\link{Chart}}.
 #' @field pointSize of type int.
 #' @field properties object of class \code{\link{Properties}} inherited from super class \code{\link{Chart}}.
-ChartSize <- R6::R6Class("ChartSize", inherit = Chart, public = list(pointSize = NULL, 
+ChartSize <- R6::R6Class("ChartSize", inherit = Chart, public = list(pointSize = NULL,
     initialize = function(json = NULL) {
         super$initialize(json = json)
     }, init = function() {

@@ -1,7 +1,7 @@
 #' XYAxis
 #'
 #' @export
-#' @format \code{\link{R6Class}} object.
+#' @format \code{\link{R6Class}} object, super class \code{\link{SciObject}}.
 #' @field taskId of type String.
 #' @field chart object of class \code{\link{Chart}}.
 #' @field colors object of class \code{\link{Colors}}.
@@ -9,8 +9,10 @@
 #' @field labels object of class \code{\link{Labels}}.
 #' @field xAxis object of class \code{\link{Axis}}.
 #' @field yAxis object of class \code{\link{Axis}}.
-XYAxis <- R6::R6Class("XYAxis", inherit = Base, public = list(chart = NULL, colors = NULL, 
-    errors = NULL, labels = NULL, xAxis = NULL, yAxis = NULL, taskId = NULL, initialize = function(json = NULL) {
+#' @field preprocessors list of class \code{\link{PreProcessor}}.
+XYAxis <- R6::R6Class("XYAxis", inherit = SciObject, public = list(chart = NULL,
+    colors = NULL, errors = NULL, labels = NULL, xAxis = NULL, yAxis = NULL, taskId = NULL,
+    preprocessors = NULL, initialize = function(json = NULL) {
         super$initialize(json = json)
     }, init = function() {
         super$init()
@@ -21,6 +23,7 @@ XYAxis <- R6::R6Class("XYAxis", inherit = Base, public = list(chart = NULL, colo
         self$labels = Labels$new()
         self$xAxis = Axis$new()
         self$yAxis = Axis$new()
+        self$preprocessors = list()
     }, initJson = function(json) {
         super$initJson(json)
         self$taskId = json$taskId
@@ -30,6 +33,7 @@ XYAxis <- R6::R6Class("XYAxis", inherit = Base, public = list(chart = NULL, colo
         self$labels = createObjectFromJson(json$labels)
         self$xAxis = createObjectFromJson(json$xAxis)
         self$yAxis = createObjectFromJson(json$yAxis)
+        self$preprocessors = lapply(json$preprocessors, createObjectFromJson)
     }, toTson = function() {
         m = super$toTson()
         m$kind = tson.scalar("XYAxis")
@@ -40,5 +44,6 @@ XYAxis <- R6::R6Class("XYAxis", inherit = Base, public = list(chart = NULL, colo
         if (!is.null(self$xAxis)) m$xAxis = self$xAxis$toTson()
         if (!is.null(self$yAxis)) m$yAxis = self$yAxis$toTson()
         m$taskId = tson.scalar(self$taskId)
+        m$preprocessors = lapply(self$preprocessors, function(each) each$toTson())
         return(m)
     }))

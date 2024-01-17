@@ -1,7 +1,7 @@
 #' OperatorUnitTest
 #'
 #' @export
-#' @format \code{\link{R6Class}} object.
+#' @format \code{\link{R6Class}} object, super class \code{\link{SciObject}}.
 #' @field name of type String.
 #' @field namespace of type String.
 #' @field inputFileUris list of type String.
@@ -19,10 +19,10 @@
 #' @field r2 of type double.
 #' @field skipColumns list of type String.
 #' @field propertyValues list of class \code{\link{PropertyValue}}.
-OperatorUnitTest <- R6::R6Class("OperatorUnitTest", inherit = Base, public = list(name = NULL, 
-    namespace = NULL, propertyValues = NULL, inputFileUris = NULL, inputDataUri = NULL, 
-    outputDataUri = NULL, columns = NULL, rows = NULL, colors = NULL, labels = NULL, 
-    yAxis = NULL, xAxis = NULL, absTol = NULL, relTol = NULL, equalityMethod = NULL, 
+OperatorUnitTest <- R6::R6Class("OperatorUnitTest", inherit = SciObject, public = list(name = NULL,
+    namespace = NULL, propertyValues = NULL, inputFileUris = NULL, inputDataUri = NULL,
+    outputDataUri = NULL, columns = NULL, rows = NULL, colors = NULL, labels = NULL,
+    yAxis = NULL, xAxis = NULL, absTol = NULL, relTol = NULL, equalityMethod = NULL,
     r2 = NULL, skipColumns = NULL, initialize = function(json = NULL) {
         super$initialize(json = json)
     }, init = function() {

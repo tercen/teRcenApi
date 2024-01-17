@@ -7,7 +7,7 @@
 #' @field id of type String inherited from super class \code{\link{IdObject}}.
 #' @field taskId of type String.
 #' @field date object of class \code{\link{Date}} inherited from super class \code{\link{Event}}.
-TaskEvent <- R6::R6Class("TaskEvent", inherit = Event, public = list(taskId = NULL, 
+TaskEvent <- R6::R6Class("TaskEvent", inherit = Event, public = list(taskId = NULL,
     initialize = function(json = NULL) {
         super$initialize(json = json)
     }, init = function() {

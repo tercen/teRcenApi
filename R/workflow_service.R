@@ -8,7 +8,7 @@
 #'    \item{\code{copyApp(workflowId,projectId)}}{method}
 #' }
 #' 
-WorkflowService <- R6::R6Class("WorkflowService", inherit = HttpClientService, public = list(initialize = function(baseRestUri, 
+WorkflowService <- R6::R6Class("WorkflowService", inherit = HttpClientService, public = list(initialize = function(baseRestUri,
     client) {
     super$initialize(baseRestUri, client)
     self$uri = "api/v1/workflow"

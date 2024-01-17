@@ -4,10 +4,8 @@
 #' @format \code{\link{R6Class}} object, super class \code{\link{RLibrary}}.
 #' @field description of type String inherited from super class \code{\link{Document}}.
 #' @field name of type String inherited from super class \code{\link{Document}}.
-#' @field createdBy of type String inherited from super class \code{\link{Document}}.
 #' @field tags list of type String inherited from super class \code{\link{Document}}.
 #' @field version of type String inherited from super class \code{\link{Document}}.
-#' @field authors list of type String inherited from super class \code{\link{Document}}.
 #' @field isPublic of type bool inherited from super class \code{\link{Document}}.
 #' @field isDeleted of type bool inherited from super class \code{\link{PersistentObject}}.
 #' @field rev of type String inherited from super class \code{\link{PersistentObject}}.
@@ -20,7 +18,7 @@
 #' @field urls list of class \code{\link{Url}} inherited from super class \code{\link{Document}}.
 #' @field meta list of class \code{\link{Pair}} inherited from super class \code{\link{Document}}.
 #' @field url object of class \code{\link{Url}} inherited from super class \code{\link{Document}}.
-RSourceLibrary <- R6::R6Class("RSourceLibrary", inherit = RLibrary, public = list(fileId = NULL, 
+RSourceLibrary <- R6::R6Class("RSourceLibrary", inherit = RLibrary, public = list(fileId = NULL,
     initialize = function(json = NULL) {
         super$initialize(json = json)
     }, init = function() {

@@ -8,7 +8,7 @@
 #' @field id of type String inherited from super class \code{\link{IdObject}}.
 #' @field bytes of type Uint8List.
 #' @field date object of class \code{\link{Date}} inherited from super class \code{\link{Event}}.
-TaskDataEvent <- R6::R6Class("TaskDataEvent", inherit = TaskEvent, public = list(bytes = NULL, 
+TaskDataEvent <- R6::R6Class("TaskDataEvent", inherit = TaskEvent, public = list(bytes = NULL,
     initialize = function(json = NULL) {
         super$initialize(json = json)
     }, init = function() {

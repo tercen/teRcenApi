@@ -22,7 +22,7 @@
 #' @field aclContext object of class \code{\link{AclContext}} inherited from super class \code{\link{Task}}.
 #' @field meta list of class \code{\link{Pair}} inherited from super class \code{\link{Task}}.
 #' @field url object of class \code{\link{Url}}.
-CreateGitOperatorTask <- R6::R6Class("CreateGitOperatorTask", inherit = Task, public = list(url = NULL, 
+CreateGitOperatorTask <- R6::R6Class("CreateGitOperatorTask", inherit = Task, public = list(url = NULL,
     version = NULL, operatorId = NULL, gitToken = NULL, testRequired = NULL, initialize = function(json = NULL) {
         super$initialize(json = json)
     }, init = function() {

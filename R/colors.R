@@ -1,11 +1,11 @@
 #' Colors
 #'
 #' @export
-#' @format \code{\link{R6Class}} object.
+#' @format \code{\link{R6Class}} object, super class \code{\link{SciObject}}.
 #' @field factors list of class \code{\link{Factor}}.
 #' @field palette object of class \code{\link{Palette}}.
-Colors <- R6::R6Class("Colors", inherit = Base, public = list(factors = NULL, palette = NULL, 
-    initialize = function(json = NULL) {
+Colors <- R6::R6Class("Colors", inherit = SciObject, public = list(factors = NULL,
+    palette = NULL, initialize = function(json = NULL) {
         super$initialize(json = json)
     }, init = function() {
         super$init()

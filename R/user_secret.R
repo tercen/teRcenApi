@@ -8,7 +8,7 @@
 #' @field userId of type String.
 #' @field salt of type String.
 #' @field hashPassword of type String.
-UserSecret <- R6::R6Class("UserSecret", inherit = PersistentObject, public = list(userId = NULL, 
+UserSecret <- R6::R6Class("UserSecret", inherit = PersistentObject, public = list(userId = NULL,
     salt = NULL, hashPassword = NULL, initialize = function(json = NULL) {
         super$initialize(json = json)
     }, init = function() {

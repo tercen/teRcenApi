@@ -1,7 +1,7 @@
 #' RDescription
 #'
 #' @export
-#' @format \code{\link{R6Class}} object.
+#' @format \code{\link{R6Class}} object, super class \code{\link{SciObject}}.
 #' @field Package of type String.
 #' @field Version of type String.
 #' @field Depends of type String.
@@ -11,8 +11,8 @@
 #' @field License of type String.
 #' @field MD5sum of type String.
 #' @field NeedsCompilation of type String.
-RDescription <- R6::R6Class("RDescription", inherit = Base, public = list(Package = NULL, 
-    Version = NULL, Depends = NULL, Imports = NULL, LinkingTo = NULL, Suggests = NULL, 
+RDescription <- R6::R6Class("RDescription", inherit = SciObject, public = list(Package = NULL,
+    Version = NULL, Depends = NULL, Imports = NULL, LinkingTo = NULL, Suggests = NULL,
     License = NULL, MD5sum = NULL, NeedsCompilation = NULL, initialize = function(json = NULL) {
         super$initialize(json = json)
     }, init = function() {

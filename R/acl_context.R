@@ -1,10 +1,10 @@
 #' AclContext
 #'
 #' @export
-#' @format \code{\link{R6Class}} object.
+#' @format \code{\link{R6Class}} object, super class \code{\link{SciObject}}.
 #' @field username of type String.
 #' @field domain of type String.
-AclContext <- R6::R6Class("AclContext", inherit = Base, public = list(username = NULL, 
+AclContext <- R6::R6Class("AclContext", inherit = SciObject, public = list(username = NULL,
     domain = NULL, initialize = function(json = NULL) {
         super$initialize(json = json)
     }, init = function() {

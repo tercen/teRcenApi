@@ -1,10 +1,10 @@
 #' TaskSummary
 #'
 #' @export
-#' @format \code{\link{R6Class}} object.
+#' @format \code{\link{R6Class}} object, super class \code{\link{SciObject}}.
 #' @field n of type int.
 #' @field duration of type double.
-TaskSummary <- R6::R6Class("TaskSummary", inherit = Base, public = list(n = NULL, 
+TaskSummary <- R6::R6Class("TaskSummary", inherit = SciObject, public = list(n = NULL,
     duration = NULL, initialize = function(json = NULL) {
         super$initialize(json = json)
     }, init = function() {

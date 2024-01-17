@@ -4,7 +4,7 @@
 #' @format \code{\link{R6Class}} object, super class \code{\link{Profile}}.
 #' @field name of type String inherited from super class \code{\link{Profile}}.
 #' @field size of type int.
-StorageProfile <- R6::R6Class("StorageProfile", inherit = Profile, public = list(size = NULL, 
+StorageProfile <- R6::R6Class("StorageProfile", inherit = Profile, public = list(size = NULL,
     initialize = function(json = NULL) {
         super$initialize(json = json)
     }, init = function() {

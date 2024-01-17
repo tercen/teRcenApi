@@ -1,13 +1,13 @@
 #' Plan
 #'
 #' @export
-#' @format \code{\link{R6Class}} object.
+#' @format \code{\link{R6Class}} object, super class \code{\link{SciObject}}.
 #' @field name of type String.
 #' @field displayName of type String.
 #' @field paymentProviderPlanId of type String.
 #' @field descriptions list of type String.
 #' @field price of type double.
-Plan <- R6::R6Class("Plan", inherit = Base, public = list(name = NULL, displayName = NULL, 
+Plan <- R6::R6Class("Plan", inherit = SciObject, public = list(name = NULL, displayName = NULL,
     paymentProviderPlanId = NULL, descriptions = NULL, price = NULL, initialize = function(json = NULL) {
         super$initialize(json = json)
     }, init = function() {

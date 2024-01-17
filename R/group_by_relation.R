@@ -5,7 +5,7 @@
 #' @field id of type String inherited from super class \code{\link{IdObject}}.
 #' @field group list of type String.
 #' @field relation object of class \code{\link{Relation}}.
-GroupByRelation <- R6::R6Class("GroupByRelation", inherit = Relation, public = list(relation = NULL, 
+GroupByRelation <- R6::R6Class("GroupByRelation", inherit = Relation, public = list(relation = NULL,
     group = NULL, initialize = function(json = NULL) {
         super$initialize(json = json)
     }, init = function() {

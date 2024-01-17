@@ -1,11 +1,11 @@
 #' SearchResult
 #'
 #' @export
-#' @format \code{\link{R6Class}} object.
+#' @format \code{\link{R6Class}} object, super class \code{\link{SciObject}}.
 #' @field total_rows of type int.
 #' @field bookmark of type String.
 #' @field rows list of class \code{\link{PersistentObject}}.
-SearchResult <- R6::R6Class("SearchResult", inherit = Base, public = list(total_rows = NULL, 
+SearchResult <- R6::R6Class("SearchResult", inherit = SciObject, public = list(total_rows = NULL,
     bookmark = NULL, rows = NULL, initialize = function(json = NULL) {
         super$initialize(json = json)
     }, init = function() {

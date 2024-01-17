@@ -5,7 +5,7 @@
 #' @field name of type String inherited from super class \code{\link{Property}}.
 #' @field description of type String inherited from super class \code{\link{Property}}.
 #' @field defaultValue of type bool.
-BooleanProperty <- R6::R6Class("BooleanProperty", inherit = Property, public = list(defaultValue = NULL, 
+BooleanProperty <- R6::R6Class("BooleanProperty", inherit = Property, public = list(defaultValue = NULL,
     initialize = function(json = NULL) {
         super$initialize(json = json)
     }, init = function() {

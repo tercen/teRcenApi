@@ -1,8 +1,8 @@
 #' FilterTopExpr
 #'
 #' @export
-#' @format \code{\link{R6Class}} object, sub classes \code{\link{NamedFilter}}, \code{\link{Filter}}, \code{\link{FilterExpr}}.
-FilterTopExpr <- R6::R6Class("FilterTopExpr", inherit = Base, public = list(initialize = function(json = NULL) {
+#' @format \code{\link{R6Class}} object, super class \code{\link{SciObject}}, sub classes \code{\link{NamedFilter}}, \code{\link{FilterExpr2d}}, \code{\link{Filter}}, \code{\link{FilterExpr}}.
+FilterTopExpr <- R6::R6Class("FilterTopExpr", inherit = SciObject, public = list(initialize = function(json = NULL) {
     super$initialize(json = json)
 }, init = function() {
     super$init()

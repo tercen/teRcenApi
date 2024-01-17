@@ -18,10 +18,10 @@
 #' @field max_user_processes of type int.
 #' @field virtual_memory of type int.
 #' @field file_locks of type int.
-Ulimits <- R6::R6Class("Ulimits", inherit = Base, public = list(core_file_size = NULL, 
-    data_seg_size = NULL, scheduling_priority = NULL, file_size = NULL, pending_signals = NULL, 
-    max_locked_memory = NULL, max_memory_size = NULL, open_files = NULL, pipe_size = NULL, 
-    message_queues = NULL, real_time_priority = NULL, stack_size = NULL, cpu_time = NULL, 
+Ulimits <- R6::R6Class("Ulimits", inherit = Base, public = list(core_file_size = NULL,
+    data_seg_size = NULL, scheduling_priority = NULL, file_size = NULL, pending_signals = NULL,
+    max_locked_memory = NULL, max_memory_size = NULL, open_files = NULL, pipe_size = NULL,
+    message_queues = NULL, real_time_priority = NULL, stack_size = NULL, cpu_time = NULL,
     max_user_processes = NULL, virtual_memory = NULL, file_locks = NULL, initialize = function(json = NULL) {
         super$initialize(json = json)
     }, init = function() {

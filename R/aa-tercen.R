@@ -40,7 +40,7 @@ Base <- R6::R6Class("Base", portable = TRUE, public = list(subKind = NULL, initi
 #' MultiPart
 #'
 #' @export
-MultiPart <- R6::R6Class("MultiPart", public = list(headers = structure(list(), names = character(0)), 
+MultiPart <- R6::R6Class("MultiPart", public = list(headers = structure(list(), names = character(0)),
     content = NULL, initialize = function(headers, content = NULL) {
         if (is.null(content)) stop("MultiPart : content is required")
         if (is.null(headers)) stop("MultiPart : headers is required")
@@ -53,7 +53,7 @@ MultiPart <- R6::R6Class("MultiPart", public = list(headers = structure(list(), 
 #' HttpClientService
 #'
 #' @export
-HttpClientService <- R6::R6Class("HttpClientService", public = list(client = NULL, 
+HttpClientService <- R6::R6Class("HttpClientService", public = list(client = NULL,
     baseRestUri = NULL, uri = NULL, initialize = function(baseRestUri, client) {
         if (endsWith(baseRestUri, "/")) {
             self$baseRestUri = baseRestUri
@@ -64,7 +64,7 @@ HttpClientService <- R6::R6Class("HttpClientService", public = list(client = NUL
     }, onResponseError = function(response, msg = "") {
         body = response$content
         stop(paste0("Failed : ", msg, " : status=", response$status, " body=", toString(body)))
-        
+
     }, toTson = function(object) {
         return(object$toTson())
     }, fromTson = function(object) {
@@ -110,7 +110,7 @@ HttpClientService <- R6::R6Class("HttpClientService", public = list(client = NUL
         }
         list = response$content
         lapply(list, function(each) self$fromTson(each))
-    }, findStartKeys = function(viewName, startKey = NULL, endKey = NULL, limit = 20, 
+    }, findStartKeys = function(viewName, startKey = NULL, endKey = NULL, limit = 20,
         skip = 0, descending = TRUE, useFactory = FALSE) {
         url = self$getServiceUri(self$uri, "/", viewName)
         if (is.list(startKey)) {
@@ -118,14 +118,14 @@ HttpClientService <- R6::R6Class("HttpClientService", public = list(client = NUL
         } else {
             startKey = unbox(startKey)
         }
-        
+
         if (is.list(endKey)) {
             endKey = lapply(endKey, unbox)
         } else {
             endKey = unbox(endKey)
         }
-        
-        body = list(startKey = startKey, endKey = endKey, limit = tson.int(limit), 
+
+        body = list(startKey = startKey, endKey = endKey, limit = tson.int(limit),
             skip = tson.int(skip), descending = unbox(descending))
         response = self$client$post(url, body = body, query = list(useFactory = tolower(toString(useFactory))))
         if (response$status != 200) {

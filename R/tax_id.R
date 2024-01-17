@@ -1,11 +1,11 @@
 #' TaxId
 #'
 #' @export
-#' @format \code{\link{R6Class}} object.
+#' @format \code{\link{R6Class}} object, super class \code{\link{SciObject}}.
 #' @field type of type String.
 #' @field value of type String.
 #' @field isValid of type bool.
-TaxId <- R6::R6Class("TaxId", inherit = Base, public = list(type = NULL, value = NULL, 
+TaxId <- R6::R6Class("TaxId", inherit = SciObject, public = list(type = NULL, value = NULL,
     isValid = NULL, initialize = function(json = NULL) {
         super$initialize(json = json)
     }, init = function() {

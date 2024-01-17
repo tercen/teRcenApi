@@ -4,7 +4,7 @@
 #' @format \code{\link{R6Class}} object, super class \code{\link{ColorElement}}.
 #' @field color of type int inherited from super class \code{\link{ColorElement}}.
 #' @field stringValue of type String.
-StringColorElement <- R6::R6Class("StringColorElement", inherit = ColorElement, public = list(stringValue = NULL, 
+StringColorElement <- R6::R6Class("StringColorElement", inherit = ColorElement, public = list(stringValue = NULL,
     initialize = function(json = NULL) {
         super$initialize(json = json)
     }, init = function() {

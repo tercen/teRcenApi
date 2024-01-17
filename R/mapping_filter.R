@@ -6,7 +6,7 @@
 #' @field description of type String.
 #' @field isRequired of type bool.
 #' @field namedFilter object of class \code{\link{NamedFilter}}.
-MappingFilter <- R6::R6Class("MappingFilter", inherit = Base, public = list(name = NULL, 
+MappingFilter <- R6::R6Class("MappingFilter", inherit = Base, public = list(name = NULL,
     description = NULL, namedFilter = NULL, isRequired = NULL, initialize = function(json = NULL) {
         super$initialize(json = json)
     }, init = function() {

@@ -11,14 +11,14 @@
 #'    \item{\code{package(repoName,package)}}{method}
 #' }
 #' 
-CranLibraryService <- R6::R6Class("CranLibraryService", inherit = HttpClientService, 
+CranLibraryService <- R6::R6Class("CranLibraryService", inherit = HttpClientService,
     public = list(initialize = function(baseRestUri, client) {
         super$initialize(baseRestUri, client)
         self$uri = "api/v1/rlib"
-    }, findByOwnerNameVersion = function(startKey = NULL, endKey = NULL, limit = 20, 
+    }, findByOwnerNameVersion = function(startKey = NULL, endKey = NULL, limit = 20,
         skip = 0, descending = TRUE, useFactory = FALSE) {
-        return(self$findStartKeys("findByOwnerNameVersion", startKey = startKey, 
-            endKey = endKey, limit = limit, skip = skip, descending = descending, 
+        return(self$findStartKeys("findByOwnerNameVersion", startKey = startKey,
+            endKey = endKey, limit = limit, skip = skip, descending = descending,
             useFactory = useFactory))
     }, packagesGz = function(repoName) {
         answer = NULL

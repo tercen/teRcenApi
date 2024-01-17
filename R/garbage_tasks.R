@@ -9,7 +9,7 @@
 #' @field deletedTaskIds list of type String.
 #' @field addedTaskIds list of type String.
 #' @field deletedStepIds list of type String.
-GarbageTasks <- R6::R6Class("GarbageTasks", inherit = GarbageObject, public = list(workflowId = NULL, 
+GarbageTasks <- R6::R6Class("GarbageTasks", inherit = GarbageObject, public = list(workflowId = NULL,
     deletedTaskIds = NULL, addedTaskIds = NULL, deletedStepIds = NULL, initialize = function(json = NULL) {
         super$initialize(json = json)
     }, init = function() {

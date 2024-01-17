@@ -1,10 +1,10 @@
 #' ColumnPair
 #'
 #' @export
-#' @format \code{\link{R6Class}} object.
+#' @format \code{\link{R6Class}} object, super class \code{\link{SciObject}}.
 #' @field lColumns list of type String.
 #' @field rColumns list of type String.
-ColumnPair <- R6::R6Class("ColumnPair", inherit = Base, public = list(lColumns = NULL, 
+ColumnPair <- R6::R6Class("ColumnPair", inherit = SciObject, public = list(lColumns = NULL,
     rColumns = NULL, initialize = function(json = NULL) {
         super$initialize(json = json)
     }, init = function() {

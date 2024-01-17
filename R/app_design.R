@@ -1,15 +1,15 @@
 #' AppDesign
 #'
 #' @export
-#' @format \code{\link{R6Class}} object.
+#' @format \code{\link{R6Class}} object, super class \code{\link{SciObject}}.
 #' @field namespace of type String.
 #' @field description of type String.
 #' @field name of type String.
 #' @field type of type String.
 #' @field factors list of class \code{\link{MappingFactor}}.
 #' @field filters list of class \code{\link{MappingFilter}}.
-AppDesign <- R6::R6Class("AppDesign", inherit = Base, public = list(namespace = NULL, 
-    description = NULL, name = NULL, type = NULL, factors = NULL, filters = NULL, 
+AppDesign <- R6::R6Class("AppDesign", inherit = SciObject, public = list(namespace = NULL,
+    description = NULL, name = NULL, type = NULL, factors = NULL, filters = NULL,
     initialize = function(json = NULL) {
         super$initialize(json = json)
     }, init = function() {

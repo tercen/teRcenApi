@@ -1,9 +1,9 @@
 #' Url
 #'
 #' @export
-#' @format \code{\link{R6Class}} object.
+#' @format \code{\link{R6Class}} object, super class \code{\link{SciObject}}.
 #' @field uri of type String.
-Url <- R6::R6Class("Url", inherit = Base, public = list(uri = NULL, initialize = function(json = NULL) {
+Url <- R6::R6Class("Url", inherit = SciObject, public = list(uri = NULL, initialize = function(json = NULL) {
     super$initialize(json = json)
 }, init = function() {
     super$init()

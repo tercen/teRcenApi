@@ -4,10 +4,8 @@
 #' @format \code{\link{R6Class}} object, super class \code{\link{Document}}.
 #' @field description of type String inherited from super class \code{\link{Document}}.
 #' @field name of type String inherited from super class \code{\link{Document}}.
-#' @field createdBy of type String inherited from super class \code{\link{Document}}.
 #' @field tags list of type String inherited from super class \code{\link{Document}}.
 #' @field version of type String inherited from super class \code{\link{Document}}.
-#' @field authors list of type String inherited from super class \code{\link{Document}}.
 #' @field isPublic of type bool inherited from super class \code{\link{Document}}.
 #' @field isDeleted of type bool inherited from super class \code{\link{PersistentObject}}.
 #' @field rev of type String inherited from super class \code{\link{PersistentObject}}.
@@ -25,8 +23,8 @@
 #' @field urls list of class \code{\link{Url}} inherited from super class \code{\link{Document}}.
 #' @field meta list of class \code{\link{Pair}} inherited from super class \code{\link{Document}}.
 #' @field url object of class \code{\link{Url}} inherited from super class \code{\link{Document}}.
-SubscriptionPlan <- R6::R6Class("SubscriptionPlan", inherit = Document, public = list(providerKey = NULL, 
-    paymentProviderPlanId = NULL, checkoutSessionId = NULL, subscriptionId = NULL, 
+SubscriptionPlan <- R6::R6Class("SubscriptionPlan", inherit = Document, public = list(providerKey = NULL,
+    paymentProviderPlanId = NULL, checkoutSessionId = NULL, subscriptionId = NULL,
     status = NULL, paymentMethodStatus = NULL, ip = NULL, initialize = function(json = NULL) {
         super$initialize(json = json)
     }, init = function() {

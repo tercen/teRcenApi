@@ -1,7 +1,7 @@
 #' Task
 #'
 #' @export
-#' @format \code{\link{R6Class}} object, super class \code{\link{PersistentObject}}, sub classes \code{\link{RunComputationTask}}, \code{\link{SaveComputationResultTask}}, \code{\link{ComputationTask}}, \code{\link{ImportGitWorkflowTask}}, \code{\link{ExportWorkflowTask}}, \code{\link{CSVTask}}, \code{\link{CubeQueryTask}}, \code{\link{ImportWorkflowTask}}, \code{\link{TestOperatorTask}}, \code{\link{RunWebAppTask}}, \code{\link{ExportTableTask}}, \code{\link{ProjectTask}}, \code{\link{GlTask}}, \code{\link{CreateGitOperatorTask}}.
+#' @format \code{\link{R6Class}} object, super class \code{\link{PersistentObject}}, sub classes \code{\link{RunComputationTask}}, \code{\link{SaveComputationResultTask}}, \code{\link{ComputationTask}}, \code{\link{ImportGitWorkflowTask}}, \code{\link{ExportWorkflowTask}}, \code{\link{CSVTask}}, \code{\link{CubeQueryTask}}, \code{\link{ImportWorkflowTask}}, \code{\link{TestOperatorTask}}, \code{\link{ImportGitDatasetTask}}, \code{\link{RunWorkflowTask}}, \code{\link{RunWebAppTask}}, \code{\link{ExportTableTask}}, \code{\link{ProjectTask}}, \code{\link{GlTask}}, \code{\link{LibraryTask}}, \code{\link{CreateGitOperatorTask}}, \code{\link{GitProjectTask}}.
 #' @field isDeleted of type bool inherited from super class \code{\link{PersistentObject}}.
 #' @field rev of type String inherited from super class \code{\link{PersistentObject}}.
 #' @field id of type String inherited from super class \code{\link{IdObject}}.
@@ -17,9 +17,9 @@
 #' @field completedDate object of class \code{\link{Date}}.
 #' @field aclContext object of class \code{\link{AclContext}}.
 #' @field meta list of class \code{\link{Pair}}.
-Task <- R6::R6Class("Task", inherit = PersistentObject, public = list(environment = NULL, 
-    state = NULL, createdDate = NULL, lastModifiedDate = NULL, runDate = NULL, completedDate = NULL, 
-    duration = NULL, aclContext = NULL, owner = NULL, taskHash = NULL, channelId = NULL, 
+Task <- R6::R6Class("Task", inherit = PersistentObject, public = list(environment = NULL,
+    state = NULL, createdDate = NULL, lastModifiedDate = NULL, runDate = NULL, completedDate = NULL,
+    duration = NULL, aclContext = NULL, owner = NULL, taskHash = NULL, channelId = NULL,
     meta = NULL, initialize = function(json = NULL) {
         super$initialize(json = json)
     }, init = function() {

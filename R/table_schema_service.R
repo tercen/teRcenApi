@@ -4,23 +4,37 @@
 #' @format \code{\link{R6Class}} object.
 #' @section Methods:
 #' \describe{
+#'    \item{\code{findByQueryHash(ids)}}{method}
 #'    \item{\code{select(tableId,cnames,offset,limit)}}{method}
 #'    \item{\code{selectPairwise(tableId,cnames,offset,limit)}}{method}
 #'    \item{\code{selectStream(tableId,cnames,offset,limit)}}{method}
+#'    \item{\code{selectFileContentStream(tableId,filename)}}{method}
 #'    \item{\code{selectCSV(tableId,cnames,offset,limit,separator,quote,encoding)}}{method}
 #' }
 #' 
-TableSchemaService <- R6::R6Class("TableSchemaService", inherit = HttpClientService, 
+TableSchemaService <- R6::R6Class("TableSchemaService", inherit = HttpClientService,
     public = list(initialize = function(baseRestUri, client) {
         super$initialize(baseRestUri, client)
         self$uri = "api/v1/schema"
-    }, findByQueryHash = function(keys = NULL, useFactory = FALSE) {
-        return(self$findKeys("findByQueryHash", keys = keys, useFactory = useFactory))
-    }, findSchemaByDataDirectory = function(startKey = NULL, endKey = NULL, limit = 20, 
+    }, findSchemaByDataDirectory = function(startKey = NULL, endKey = NULL, limit = 20,
         skip = 0, descending = TRUE, useFactory = FALSE) {
-        return(self$findStartKeys("findSchemaByDataDirectory", startKey = startKey, 
-            endKey = endKey, limit = limit, skip = skip, descending = descending, 
+        return(self$findStartKeys("findSchemaByDataDirectory", startKey = startKey,
+            endKey = endKey, limit = limit, skip = skip, descending = descending,
             useFactory = useFactory))
+    }, findByQueryHash = function(ids) {
+        answer = NULL
+        response = NULL
+        uri = paste0("api/v1/schema", "/", "findByQueryHash")
+        params = list()
+        params[["ids"]] = lapply(ids, unbox)
+        url = self$getServiceUri(uri)
+        response = self$client$post(url, body = params)
+        if (response$status != 200) {
+            self$onResponseError(response, "findByQueryHash")
+        } else {
+            answer = lapply(response$content, createObjectFromJson)
+        }
+        return(answer)
     }, select = function(tableId, cnames, offset, limit) {
         answer = NULL
         response = NULL
@@ -68,6 +82,21 @@ TableSchemaService <- R6::R6Class("TableSchemaService", inherit = HttpClientServ
         response = self$client$post(url, body = params)
         if (response$status != 200) {
             self$onResponseError(response, "selectStream")
+        } else {
+            answer = response$content
+        }
+        return(answer)
+    }, selectFileContentStream = function(tableId, filename) {
+        answer = NULL
+        response = NULL
+        uri = paste0("api/v1/schema", "/", "selectFileContentStream")
+        params = list()
+        params[["tableId"]] = unbox(tableId)
+        params[["filename"]] = unbox(filename)
+        url = self$getServiceUri(uri)
+        response = self$client$get(url, query = list(params = toJSON(params)))
+        if (response$status != 200) {
+            self$onResponseError(response, "selectFileContentStream")
         } else {
             answer = response$content
         }

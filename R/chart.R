@@ -1,10 +1,10 @@
 #' Chart
 #'
 #' @export
-#' @format \code{\link{R6Class}} object, sub classes \code{\link{ChartLine}}, \code{\link{ChartPoint}}, \code{\link{ChartHeatmap}}, \code{\link{ChartBar}}, \code{\link{ChartSize}}.
+#' @format \code{\link{R6Class}} object, super class \code{\link{SciObject}}, sub classes \code{\link{ChartLine}}, \code{\link{ChartPoint}}, \code{\link{ChartHeatmap}}, \code{\link{ChartBar}}, \code{\link{ChartSize}}.
 #' @field name of type String.
 #' @field properties object of class \code{\link{Properties}}.
-Chart <- R6::R6Class("Chart", inherit = Base, public = list(name = NULL, properties = NULL, 
+Chart <- R6::R6Class("Chart", inherit = SciObject, public = list(name = NULL, properties = NULL,
     initialize = function(json = NULL) {
         super$initialize(json = json)
     }, init = function() {

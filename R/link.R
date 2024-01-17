@@ -5,7 +5,7 @@
 #' @field id of type String inherited from super class \code{\link{IdObject}}.
 #' @field inputId of type String.
 #' @field outputId of type String.
-Link <- R6::R6Class("Link", inherit = IdObject, public = list(inputId = NULL, outputId = NULL, 
+Link <- R6::R6Class("Link", inherit = IdObject, public = list(inputId = NULL, outputId = NULL,
     initialize = function(json = NULL) {
         super$initialize(json = json)
     }, init = function() {

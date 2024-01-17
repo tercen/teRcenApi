@@ -22,7 +22,7 @@
 #' @field urls list of class \code{\link{Url}} inherited from super class \code{\link{Document}}.
 #' @field meta list of class \code{\link{Pair}} inherited from super class \code{\link{Document}}.
 #' @field url object of class \code{\link{Url}} inherited from super class \code{\link{Document}}.
-IssueMessage <- R6::R6Class("IssueMessage", inherit = ProjectDocument, public = list(issueId = NULL, 
+IssueMessage <- R6::R6Class("IssueMessage", inherit = ProjectDocument, public = list(issueId = NULL,
     body = NULL, initialize = function(json = NULL) {
         super$initialize(json = json)
     }, init = function() {

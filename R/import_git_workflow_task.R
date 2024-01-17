@@ -23,7 +23,7 @@
 #' @field aclContext object of class \code{\link{AclContext}} inherited from super class \code{\link{Task}}.
 #' @field meta list of class \code{\link{Pair}} inherited from super class \code{\link{Task}}.
 #' @field url object of class \code{\link{Url}}.
-ImportGitWorkflowTask <- R6::R6Class("ImportGitWorkflowTask", inherit = ImportWorkflowTask, 
+ImportGitWorkflowTask <- R6::R6Class("ImportGitWorkflowTask", inherit = ImportWorkflowTask,
     public = list(url = NULL, version = NULL, initialize = function(json = NULL) {
         super$initialize(json = json)
     }, init = function() {

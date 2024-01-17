@@ -8,10 +8,8 @@
 #' @field folderId of type String inherited from super class \code{\link{ProjectDocument}}.
 #' @field description of type String inherited from super class \code{\link{Document}}.
 #' @field name of type String inherited from super class \code{\link{Document}}.
-#' @field createdBy of type String inherited from super class \code{\link{Document}}.
 #' @field tags list of type String inherited from super class \code{\link{Document}}.
 #' @field version of type String inherited from super class \code{\link{Document}}.
-#' @field authors list of type String inherited from super class \code{\link{Document}}.
 #' @field isPublic of type bool inherited from super class \code{\link{Document}}.
 #' @field isDeleted of type bool inherited from super class \code{\link{PersistentObject}}.
 #' @field rev of type String inherited from super class \code{\link{PersistentObject}}.
@@ -25,7 +23,7 @@
 #' @field meta list of class \code{\link{Pair}} inherited from super class \code{\link{Document}}.
 #' @field url object of class \code{\link{Url}} inherited from super class \code{\link{Document}}.
 #' @field query object of class \code{\link{CubeQuery}}.
-ComputedTableSchema <- R6::R6Class("ComputedTableSchema", inherit = Schema, public = list(query = NULL, 
+ComputedTableSchema <- R6::R6Class("ComputedTableSchema", inherit = Schema, public = list(query = NULL,
     initialize = function(json = NULL) {
         super$initialize(json = json)
     }, init = function() {

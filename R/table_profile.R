@@ -5,7 +5,7 @@
 #' @field name of type String inherited from super class \code{\link{Profile}}.
 #' @field nRows of type int.
 #' @field nCols of type int.
-TableProfile <- R6::R6Class("TableProfile", inherit = Profile, public = list(nRows = NULL, 
+TableProfile <- R6::R6Class("TableProfile", inherit = Profile, public = list(nRows = NULL,
     nCols = NULL, initialize = function(json = NULL) {
         super$initialize(json = json)
     }, init = function() {

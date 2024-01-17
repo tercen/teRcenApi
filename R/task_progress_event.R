@@ -10,7 +10,7 @@
 #' @field total of type int.
 #' @field actual of type int.
 #' @field date object of class \code{\link{Date}} inherited from super class \code{\link{Event}}.
-TaskProgressEvent <- R6::R6Class("TaskProgressEvent", inherit = TaskEvent, public = list(message = NULL, 
+TaskProgressEvent <- R6::R6Class("TaskProgressEvent", inherit = TaskEvent, public = list(message = NULL,
     total = NULL, actual = NULL, initialize = function(json = NULL) {
         super$initialize(json = json)
     }, init = function() {

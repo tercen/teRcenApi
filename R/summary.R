@@ -1,12 +1,12 @@
 #' Summary
 #'
 #' @export
-#' @format \code{\link{R6Class}} object.
+#' @format \code{\link{R6Class}} object, super class \code{\link{SciObject}}.
 #' @field tableSummary object of class \code{\link{TableSummary}}.
 #' @field computedTableSummary object of class \code{\link{TableSummary}}.
 #' @field queryTableSummary object of class \code{\link{TableSummary}}.
 #' @field taskSummary object of class \code{\link{TaskSummary}}.
-Summary <- R6::R6Class("Summary", inherit = Base, public = list(tableSummary = NULL, 
+Summary <- R6::R6Class("Summary", inherit = SciObject, public = list(tableSummary = NULL,
     computedTableSummary = NULL, queryTableSummary = NULL, taskSummary = NULL, initialize = function(json = NULL) {
         super$initialize(json = json)
     }, init = function() {

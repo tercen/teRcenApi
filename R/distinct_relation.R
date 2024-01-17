@@ -5,7 +5,7 @@
 #' @field id of type String inherited from super class \code{\link{IdObject}}.
 #' @field group list of type String.
 #' @field relation object of class \code{\link{Relation}}.
-DistinctRelation <- R6::R6Class("DistinctRelation", inherit = Relation, public = list(relation = NULL, 
+DistinctRelation <- R6::R6Class("DistinctRelation", inherit = Relation, public = list(relation = NULL,
     group = NULL, initialize = function(json = NULL) {
         super$initialize(json = json)
     }, init = function() {

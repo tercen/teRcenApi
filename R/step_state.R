@@ -1,10 +1,10 @@
 #' StepState
 #'
 #' @export
-#' @format \code{\link{R6Class}} object.
+#' @format \code{\link{R6Class}} object, super class \code{\link{SciObject}}.
 #' @field taskId of type String.
 #' @field taskState object of class \code{\link{State}}.
-StepState <- R6::R6Class("StepState", inherit = Base, public = list(taskId = NULL, 
+StepState <- R6::R6Class("StepState", inherit = SciObject, public = list(taskId = NULL,
     taskState = NULL, initialize = function(json = NULL) {
         super$initialize(json = json)
     }, init = function() {

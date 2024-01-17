@@ -6,7 +6,7 @@
 #' @field rev of type String inherited from super class \code{\link{PersistentObject}}.
 #' @field id of type String inherited from super class \code{\link{IdObject}}.
 #' @field name of type String.
-Lock <- R6::R6Class("Lock", inherit = PersistentObject, public = list(name = NULL, 
+Lock <- R6::R6Class("Lock", inherit = PersistentObject, public = list(name = NULL,
     initialize = function(json = NULL) {
         super$initialize(json = json)
     }, init = function() {

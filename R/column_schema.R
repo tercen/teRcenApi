@@ -8,7 +8,7 @@
 #' @field nRows of type int.
 #' @field size of type int.
 #' @field metaData object of class \code{\link{ColumnSchemaMetaData}}.
-ColumnSchema <- R6::R6Class("ColumnSchema", inherit = IdObject, public = list(name = NULL, 
+ColumnSchema <- R6::R6Class("ColumnSchema", inherit = IdObject, public = list(name = NULL,
     type = NULL, nRows = NULL, size = NULL, metaData = NULL, initialize = function(json = NULL) {
         super$initialize(json = json)
     }, init = function() {

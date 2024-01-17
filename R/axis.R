@@ -1,12 +1,12 @@
 #' Axis
 #'
 #' @export
-#' @format \code{\link{R6Class}} object.
+#' @format \code{\link{R6Class}} object, super class \code{\link{SciObject}}.
 #' @field axisExtent object of class \code{\link{Point}}.
 #' @field axisSettings object of class \code{\link{AxisSettings}}.
 #' @field graphicalFactor object of class \code{\link{GraphicalFactor}}.
-Axis <- R6::R6Class("Axis", inherit = Base, public = list(axisExtent = NULL, axisSettings = NULL, 
-    graphicalFactor = NULL, initialize = function(json = NULL) {
+Axis <- R6::R6Class("Axis", inherit = SciObject, public = list(axisExtent = NULL,
+    axisSettings = NULL, graphicalFactor = NULL, initialize = function(json = NULL) {
         super$initialize(json = json)
     }, init = function() {
         super$init()

@@ -1,7 +1,7 @@
 #'
 #' @export
 createObjectFromJson = function(json) {
-    if (is.null(json)) 
+    if (is.null(json))
         return(NULL)
     kind = json$kind
     if (kind == "Team") {
@@ -28,6 +28,9 @@ createObjectFromJson = function(json) {
     if (kind == "BillingInfo") {
         return(BillingInfo$new(json = json))
     }
+    if (kind == "PatchRecords") {
+        return(PatchRecords$new(json = json))
+    }
     if (kind == "Property") {
         return(Property$new(json = json))
     }
@@ -42,6 +45,9 @@ createObjectFromJson = function(json) {
     }
     if (kind == "ChartHeatmap") {
         return(ChartHeatmap$new(json = json))
+    }
+    if (kind == "StatisticNode") {
+        return(StatisticNode$new(json = json))
     }
     if (kind == "CubeQuery") {
         return(CubeQuery$new(json = json))
@@ -76,17 +82,20 @@ createObjectFromJson = function(json) {
     if (kind == "CubeAxisQuery") {
         return(CubeAxisQuery$new(json = json))
     }
+    if (kind == "GateNode") {
+        return(GateNode$new(json = json))
+    }
     if (kind == "TaskSummary") {
         return(TaskSummary$new(json = json))
-    }
-    if (kind == "RunningDependentState") {
-        return(RunningDependentState$new(json = json))
     }
     if (kind == "RampPalette") {
         return(RampPalette$new(json = json))
     }
     if (kind == "DistinctRelation") {
         return(DistinctRelation$new(json = json))
+    }
+    if (kind == "RunningDependentState") {
+        return(RunningDependentState$new(json = json))
     }
     if (kind == "ExportWorkflowTask") {
         return(ExportWorkflowTask$new(json = json))
@@ -102,6 +111,9 @@ createObjectFromJson = function(json) {
     }
     if (kind == "JoinOperator") {
         return(JoinOperator$new(json = json))
+    }
+    if (kind == "OperatorModel") {
+        return(OperatorModel$new(json = json))
     }
     if (kind == "CSVFileMetadata") {
         return(CSVFileMetadata$new(json = json))
@@ -121,6 +133,9 @@ createObjectFromJson = function(json) {
     if (kind == "FilterTopExpr") {
         return(FilterTopExpr$new(json = json))
     }
+    if (kind == "AxisSpec") {
+        return(AxisSpec$new(json = json))
+    }
     if (kind == "DoubleColorElement") {
         return(DoubleColorElement$new(json = json))
     }
@@ -133,11 +148,11 @@ createObjectFromJson = function(json) {
     if (kind == "Crosstab") {
         return(Crosstab$new(json = json))
     }
-    if (kind == "Issue") {
-        return(Issue$new(json = json))
-    }
     if (kind == "State") {
         return(State$new(json = json))
+    }
+    if (kind == "PatchRecord") {
+        return(PatchRecord$new(json = json))
     }
     if (kind == "Operator") {
         return(Operator$new(json = json))
@@ -178,8 +193,14 @@ createObjectFromJson = function(json) {
     if (kind == "RDescription") {
         return(RDescription$new(json = json))
     }
+    if (kind == "MetaFactor") {
+        return(MetaFactor$new(json = json))
+    }
     if (kind == "JetPalette") {
         return(JetPalette$new(json = json))
+    }
+    if (kind == "TableRelation") {
+        return(TableRelation$new(json = json))
     }
     if (kind == "Profile") {
         return(Profile$new(json = json))
@@ -253,6 +274,9 @@ createObjectFromJson = function(json) {
     if (kind == "RProxy") {
         return(RProxy$new(json = json))
     }
+    if (kind == "OperatorSpec") {
+        return(OperatorSpec$new(json = json))
+    }
     if (kind == "Pair") {
         return(Pair$new(json = json))
     }
@@ -291,6 +315,9 @@ createObjectFromJson = function(json) {
     }
     if (kind == "Worker") {
         return(Worker$new(json = json))
+    }
+    if (kind == "ImportGitDatasetTask") {
+        return(ImportGitDatasetTask$new(json = json))
     }
     if (kind == "Ace") {
         return(Ace$new(json = json))
@@ -352,6 +379,9 @@ createObjectFromJson = function(json) {
     if (kind == "CanceledState") {
         return(CanceledState$new(json = json))
     }
+    if (kind == "RunWorkflowTask") {
+        return(RunWorkflowTask$new(json = json))
+    }
     if (kind == "GraphicalFactor") {
         return(GraphicalFactor$new(json = json))
     }
@@ -373,8 +403,14 @@ createObjectFromJson = function(json) {
     if (kind == "SearchResult") {
         return(SearchResult$new(json = json))
     }
+    if (kind == "GateOperatorModel") {
+        return(GateOperatorModel$new(json = json))
+    }
     if (kind == "ChartSize") {
         return(ChartSize$new(json = json))
+    }
+    if (kind == "AnnotationModel") {
+        return(AnnotationModel$new(json = json))
     }
     if (kind == "Schema") {
         return(Schema$new(json = json))
@@ -387,6 +423,12 @@ createObjectFromJson = function(json) {
     }
     if (kind == "OutStep") {
         return(OutStep$new(json = json))
+    }
+    if (kind == "LibraryTask") {
+        return(LibraryTask$new(json = json))
+    }
+    if (kind == "PreProcessor") {
+        return(PreProcessor$new(json = json))
     }
     if (kind == "InputPort") {
         return(InputPort$new(json = json))
@@ -429,6 +471,9 @@ createObjectFromJson = function(json) {
     }
     if (kind == "Step") {
         return(Step$new(json = json))
+    }
+    if (kind == "FilterExpr2d") {
+        return(FilterExpr2d$new(json = json))
     }
     if (kind == "FactorsProperty") {
         return(FactorsProperty$new(json = json))
@@ -475,11 +520,8 @@ createObjectFromJson = function(json) {
     if (kind == "CreateGitOperatorTask") {
         return(CreateGitOperatorTask$new(json = json))
     }
-    if (kind == "TaxId") {
-        return(TaxId$new(json = json))
-    }
-    if (kind == "IssueMessage") {
-        return(IssueMessage$new(json = json))
+    if (kind == "CrosstabSpec") {
+        return(CrosstabSpec$new(json = json))
     }
     if (kind == "FilterExpr") {
         return(FilterExpr$new(json = json))
@@ -487,8 +529,14 @@ createObjectFromJson = function(json) {
     if (kind == "TableSchema") {
         return(TableSchema$new(json = json))
     }
+    if (kind == "TaxId") {
+        return(TaxId$new(json = json))
+    }
     if (kind == "Plan") {
         return(Plan$new(json = json))
+    }
+    if (kind == "SciObject") {
+        return(SciObject$new(json = json))
     }
     if (kind == "CSVParserParam") {
         return(CSVParserParam$new(json = json))
@@ -517,6 +565,9 @@ createObjectFromJson = function(json) {
     if (kind == "AppDesign") {
         return(AppDesign$new(json = json))
     }
+    if (kind == "GarbageTasks2") {
+        return(GarbageTasks2$new(json = json))
+    }
     if (kind == "Workflow") {
         return(Workflow$new(json = json))
     }
@@ -534,6 +585,9 @@ createObjectFromJson = function(json) {
     }
     if (kind == "ExportModel") {
         return(ExportModel$new(json = json))
+    }
+    if (kind == "AnnotationOperatorModel") {
+        return(AnnotationOperatorModel$new(json = json))
     }
     if (kind == "Axis") {
         return(Axis$new(json = json))
@@ -562,6 +616,9 @@ createObjectFromJson = function(json) {
     if (kind == "ColumnSchema") {
         return(ColumnSchema$new(json = json))
     }
+    if (kind == "GitProjectTask") {
+        return(GitProjectTask$new(json = json))
+    }
     if (kind == "ComputedTableSchema") {
         return(ComputedTableSchema$new(json = json))
     }
@@ -583,11 +640,11 @@ createObjectFromJson = function(json) {
     if (kind == "FormulaProperty") {
         return(FormulaProperty$new(json = json))
     }
-    if (kind == "GroupByRelation") {
-        return(GroupByRelation$new(json = json))
-    }
     if (kind == "UserSecret") {
         return(UserSecret$new(json = json))
+    }
+    if (kind == "GroupByRelation") {
+        return(GroupByRelation$new(json = json))
     }
     stop("bad kind")
 }

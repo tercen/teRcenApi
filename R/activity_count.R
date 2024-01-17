@@ -4,7 +4,7 @@
 #' @format \code{\link{R6Class}} object.
 #' @field objectId of type String.
 #' @field count of type int.
-ActivityCount <- R6::R6Class("ActivityCount", inherit = Base, public = list(objectId = NULL, 
+ActivityCount <- R6::R6Class("ActivityCount", inherit = Base, public = list(objectId = NULL,
     count = NULL, initialize = function(json = NULL) {
         super$initialize(json = json)
     }, init = function() {

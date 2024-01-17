@@ -6,10 +6,8 @@
 #' @field folderId of type String inherited from super class \code{\link{ProjectDocument}}.
 #' @field description of type String inherited from super class \code{\link{Document}}.
 #' @field name of type String inherited from super class \code{\link{Document}}.
-#' @field createdBy of type String inherited from super class \code{\link{Document}}.
 #' @field tags list of type String inherited from super class \code{\link{Document}}.
 #' @field version of type String inherited from super class \code{\link{Document}}.
-#' @field authors list of type String inherited from super class \code{\link{Document}}.
 #' @field isPublic of type bool inherited from super class \code{\link{Document}}.
 #' @field isDeleted of type bool inherited from super class \code{\link{PersistentObject}}.
 #' @field rev of type String inherited from super class \code{\link{PersistentObject}}.
@@ -23,7 +21,7 @@
 #' @field links list of class \code{\link{Link}}.
 #' @field steps list of class \code{\link{Step}}.
 #' @field offset object of class \code{\link{Point}}.
-Workflow <- R6::R6Class("Workflow", inherit = ProjectDocument, public = list(links = NULL, 
+Workflow <- R6::R6Class("Workflow", inherit = ProjectDocument, public = list(links = NULL,
     steps = NULL, offset = NULL, initialize = function(json = NULL) {
         super$initialize(json = json)
     }, init = function() {

@@ -8,13 +8,13 @@
 #'    \item{\code{getExternalStorageFolders(projectId,volume,path)}}{method}
 #' }
 #' 
-FolderService <- R6::R6Class("FolderService", inherit = HttpClientService, public = list(initialize = function(baseRestUri, 
+FolderService <- R6::R6Class("FolderService", inherit = HttpClientService, public = list(initialize = function(baseRestUri,
     client) {
     super$initialize(baseRestUri, client)
     self$uri = "api/v1/folder"
-}, findFolderByParentFolderAndName = function(startKey = NULL, endKey = NULL, limit = 20, 
+}, findFolderByParentFolderAndName = function(startKey = NULL, endKey = NULL, limit = 20,
     skip = 0, descending = TRUE, useFactory = FALSE) {
-    return(self$findStartKeys("findFolderByParentFolderAndName", startKey = startKey, 
+    return(self$findStartKeys("findFolderByParentFolderAndName", startKey = startKey,
         endKey = endKey, limit = limit, skip = skip, descending = descending, useFactory = useFactory))
 }, getOrCreate = function(projectId, path) {
     answer = NULL

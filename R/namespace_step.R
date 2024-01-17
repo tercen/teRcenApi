@@ -4,6 +4,7 @@
 #' @format \code{\link{R6Class}} object, super class \code{\link{RelationStep}}, sub classes \code{\link{DataStep}}, \code{\link{MeltStep}}, \code{\link{JoinStep}}, \code{\link{WizardStep}}, \code{\link{CrossTabStep}}.
 #' @field groupId of type String inherited from super class \code{\link{Step}}.
 #' @field name of type String inherited from super class \code{\link{Step}}.
+#' @field description of type String inherited from super class \code{\link{Step}}.
 #' @field id of type String inherited from super class \code{\link{IdObject}}.
 #' @field inputs list of class \code{\link{InputPort}} inherited from super class \code{\link{Step}}.
 #' @field outputs list of class \code{\link{OutputPort}} inherited from super class \code{\link{Step}}.

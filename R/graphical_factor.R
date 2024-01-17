@@ -1,10 +1,10 @@
 #' GraphicalFactor
 #'
 #' @export
-#' @format \code{\link{R6Class}} object.
+#' @format \code{\link{R6Class}} object, super class \code{\link{SciObject}}.
 #' @field factor object of class \code{\link{Factor}}.
 #' @field rectangle object of class \code{\link{Rectangle}}.
-GraphicalFactor <- R6::R6Class("GraphicalFactor", inherit = Base, public = list(factor = NULL, 
+GraphicalFactor <- R6::R6Class("GraphicalFactor", inherit = SciObject, public = list(factor = NULL,
     rectangle = NULL, initialize = function(json = NULL) {
         super$initialize(json = json)
     }, init = function() {

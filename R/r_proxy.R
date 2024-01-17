@@ -1,10 +1,10 @@
 #' RProxy
 #'
 #' @export
-#' @format \code{\link{R6Class}} object.
+#' @format \code{\link{R6Class}} object, super class \code{\link{SciObject}}.
 #' @field name of type String.
 #' @field targetUrl of type String.
-RProxy <- R6::R6Class("RProxy", inherit = Base, public = list(name = NULL, targetUrl = NULL, 
+RProxy <- R6::R6Class("RProxy", inherit = SciObject, public = list(name = NULL, targetUrl = NULL,
     initialize = function(json = NULL) {
         super$initialize(json = json)
     }, init = function() {

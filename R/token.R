@@ -1,12 +1,12 @@
 #' Token
 #'
 #' @export
-#' @format \code{\link{R6Class}} object.
+#' @format \code{\link{R6Class}} object, super class \code{\link{SciObject}}.
 #' @field userId of type String.
 #' @field token of type String.
 #' @field domain of type String.
 #' @field expiry object of class \code{\link{Date}}.
-Token <- R6::R6Class("Token", inherit = Base, public = list(userId = NULL, expiry = NULL, 
+Token <- R6::R6Class("Token", inherit = SciObject, public = list(userId = NULL, expiry = NULL,
     token = NULL, domain = NULL, initialize = function(json = NULL) {
         super$initialize(json = json)
     }, init = function() {

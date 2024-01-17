@@ -11,17 +11,17 @@
 #'    \item{\code{cloneProject(projectId,project)}}{method}
 #' }
 #' 
-ProjectService <- R6::R6Class("ProjectService", inherit = HttpClientService, public = list(initialize = function(baseRestUri, 
+ProjectService <- R6::R6Class("ProjectService", inherit = HttpClientService, public = list(initialize = function(baseRestUri,
     client) {
     super$initialize(baseRestUri, client)
     self$uri = "api/v1/project"
-}, findByIsPublicAndLastModifiedDate = function(startKey = NULL, endKey = NULL, limit = 20, 
+}, findByIsPublicAndLastModifiedDate = function(startKey = NULL, endKey = NULL, limit = 20,
     skip = 0, descending = TRUE, useFactory = FALSE) {
-    return(self$findStartKeys("findByIsPublicAndLastModifiedDate", startKey = startKey, 
+    return(self$findStartKeys("findByIsPublicAndLastModifiedDate", startKey = startKey,
         endKey = endKey, limit = limit, skip = skip, descending = descending, useFactory = useFactory))
-}, findByTeamAndIsPublicAndLastModifiedDate = function(startKey = NULL, endKey = NULL, 
+}, findByTeamAndIsPublicAndLastModifiedDate = function(startKey = NULL, endKey = NULL,
     limit = 20, skip = 0, descending = TRUE, useFactory = FALSE) {
-    return(self$findStartKeys("findByTeamAndIsPublicAndLastModifiedDate", startKey = startKey, 
+    return(self$findStartKeys("findByTeamAndIsPublicAndLastModifiedDate", startKey = startKey,
         endKey = endKey, limit = limit, skip = skip, descending = descending, useFactory = useFactory))
 }, profiles = function(projectId) {
     answer = NULL

@@ -4,7 +4,7 @@
 #' @format \code{\link{R6Class}} object, super class \code{\link{Profile}}.
 #' @field name of type String inherited from super class \code{\link{Profile}}.
 #' @field cpuTime of type double.
-CpuTimeProfile <- R6::R6Class("CpuTimeProfile", inherit = Profile, public = list(cpuTime = NULL, 
+CpuTimeProfile <- R6::R6Class("CpuTimeProfile", inherit = Profile, public = list(cpuTime = NULL,
     initialize = function(json = NULL) {
         super$initialize(json = json)
     }, init = function() {

@@ -5,7 +5,7 @@
 #' @field name of type String inherited from super class \code{\link{Property}}.
 #' @field description of type String inherited from super class \code{\link{Property}}.
 #' @field defaultValue of type String.
-StringProperty <- R6::R6Class("StringProperty", inherit = Property, public = list(defaultValue = NULL, 
+StringProperty <- R6::R6Class("StringProperty", inherit = Property, public = list(defaultValue = NULL,
     initialize = function(json = NULL) {
         super$initialize(json = json)
     }, init = function() {

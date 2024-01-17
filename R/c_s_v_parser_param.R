@@ -1,15 +1,15 @@
 #' CSVParserParam
 #'
 #' @export
-#' @format \code{\link{R6Class}} object.
+#' @format \code{\link{R6Class}} object, super class \code{\link{SciObject}}.
 #' @field separator of type String.
 #' @field encoding of type String.
 #' @field quote of type String.
 #' @field hasHeaders of type bool.
 #' @field allowMalformed of type bool.
 #' @field comment of type String.
-CSVParserParam <- R6::R6Class("CSVParserParam", inherit = Base, public = list(separator = NULL, 
-    encoding = NULL, quote = NULL, hasHeaders = NULL, allowMalformed = NULL, comment = NULL, 
+CSVParserParam <- R6::R6Class("CSVParserParam", inherit = SciObject, public = list(separator = NULL,
+    encoding = NULL, quote = NULL, hasHeaders = NULL, allowMalformed = NULL, comment = NULL,
     initialize = function(json = NULL) {
         super$initialize(json = json)
     }, init = function() {

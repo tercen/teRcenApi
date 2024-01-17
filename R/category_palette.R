@@ -6,7 +6,7 @@
 #' @field properties list of class \code{\link{PropertyValue}} inherited from super class \code{\link{Palette}}.
 #' @field colorList object of class \code{\link{ColorList}}.
 #' @field stringColorElements list of class \code{\link{StringColorElement}}.
-CategoryPalette <- R6::R6Class("CategoryPalette", inherit = Palette, public = list(colorList = NULL, 
+CategoryPalette <- R6::R6Class("CategoryPalette", inherit = Palette, public = list(colorList = NULL,
     stringColorElements = NULL, initialize = function(json = NULL) {
         super$initialize(json = json)
     }, init = function() {

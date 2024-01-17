@@ -11,8 +11,8 @@
 #' @field timeout of type int.
 #' @field storageSize of type String.
 #' @field cpusetCpus of type String.
-RunProfile <- R6::R6Class("RunProfile", inherit = Profile, public = list(memory = NULL, 
-    kernelMemory = NULL, blkioWeight = NULL, pidsLimit = NULL, ulimits_nofile = NULL, 
+RunProfile <- R6::R6Class("RunProfile", inherit = Profile, public = list(memory = NULL,
+    kernelMemory = NULL, blkioWeight = NULL, pidsLimit = NULL, ulimits_nofile = NULL,
     timeout = NULL, storageSize = NULL, cpusetCpus = NULL, initialize = function(json = NULL) {
         super$initialize(json = json)
     }, init = function() {

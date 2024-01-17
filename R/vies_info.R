@@ -1,15 +1,15 @@
 #' ViesInfo
 #'
 #' @export
-#' @format \code{\link{R6Class}} object.
+#' @format \code{\link{R6Class}} object, super class \code{\link{SciObject}}.
 #' @field countryCode of type String.
 #' @field vatNumber of type String.
 #' @field requestDate of type String.
 #' @field valid of type bool.
 #' @field name of type String.
 #' @field address of type String.
-ViesInfo <- R6::R6Class("ViesInfo", inherit = Base, public = list(countryCode = NULL, 
-    vatNumber = NULL, requestDate = NULL, valid = NULL, name = NULL, address = NULL, 
+ViesInfo <- R6::R6Class("ViesInfo", inherit = SciObject, public = list(countryCode = NULL,
+    vatNumber = NULL, requestDate = NULL, valid = NULL, name = NULL, address = NULL,
     initialize = function(json = NULL) {
         super$initialize(json = json)
     }, init = function() {

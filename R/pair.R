@@ -1,10 +1,10 @@
 #' Pair
 #'
 #' @export
-#' @format \code{\link{R6Class}} object.
+#' @format \code{\link{R6Class}} object, super class \code{\link{SciObject}}.
 #' @field key of type String.
 #' @field value of type String.
-Pair <- R6::R6Class("Pair", inherit = Base, public = list(key = NULL, value = NULL, 
+Pair <- R6::R6Class("Pair", inherit = SciObject, public = list(key = NULL, value = NULL,
     initialize = function(json = NULL) {
         super$initialize(json = json)
     }, init = function() {

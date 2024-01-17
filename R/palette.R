@@ -1,10 +1,10 @@
 #' Palette
 #'
 #' @export
-#' @format \code{\link{R6Class}} object, sub classes \code{\link{JetPalette}}, \code{\link{RampPalette}}, \code{\link{CategoryPalette}}.
+#' @format \code{\link{R6Class}} object, super class \code{\link{SciObject}}, sub classes \code{\link{JetPalette}}, \code{\link{RampPalette}}, \code{\link{CategoryPalette}}.
 #' @field backcolor of type int.
 #' @field properties list of class \code{\link{PropertyValue}}.
-Palette <- R6::R6Class("Palette", inherit = Base, public = list(backcolor = NULL, 
+Palette <- R6::R6Class("Palette", inherit = SciObject, public = list(backcolor = NULL,
     properties = NULL, initialize = function(json = NULL) {
         super$initialize(json = json)
     }, init = function() {

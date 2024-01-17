@@ -11,9 +11,10 @@
 #' @field errors list of class \code{\link{Factor}}.
 #' @field labels list of class \code{\link{Factor}}.
 #' @field colors list of class \code{\link{Factor}}.
-CubeAxisQuery <- R6::R6Class("CubeAxisQuery", inherit = Base, public = list(pointSize = NULL, 
-    chartType = NULL, yAxis = NULL, yAxisSettings = NULL, xAxis = NULL, xAxisSettings = NULL, 
-    errors = NULL, labels = NULL, colors = NULL, initialize = function(json = NULL) {
+#' @field preprocessors list of class \code{\link{PreProcessor}}.
+CubeAxisQuery <- R6::R6Class("CubeAxisQuery", inherit = Base, public = list(pointSize = NULL,
+    chartType = NULL, yAxis = NULL, yAxisSettings = NULL, xAxis = NULL, xAxisSettings = NULL,
+    errors = NULL, labels = NULL, colors = NULL, preprocessors = NULL, initialize = function(json = NULL) {
         super$initialize(json = json)
     }, init = function() {
         super$init()
@@ -26,6 +27,7 @@ CubeAxisQuery <- R6::R6Class("CubeAxisQuery", inherit = Base, public = list(poin
         self$errors = list()
         self$labels = list()
         self$colors = list()
+        self$preprocessors = list()
     }, initJson = function(json) {
         super$initJson(json)
         self$pointSize = json$pointSize
@@ -37,6 +39,7 @@ CubeAxisQuery <- R6::R6Class("CubeAxisQuery", inherit = Base, public = list(poin
         self$errors = lapply(json$errors, createObjectFromJson)
         self$labels = lapply(json$labels, createObjectFromJson)
         self$colors = lapply(json$colors, createObjectFromJson)
+        self$preprocessors = lapply(json$preprocessors, createObjectFromJson)
     }, toTson = function() {
         m = super$toTson()
         m$kind = tson.scalar("CubeAxisQuery")
@@ -49,5 +52,6 @@ CubeAxisQuery <- R6::R6Class("CubeAxisQuery", inherit = Base, public = list(poin
         m$errors = lapply(self$errors, function(each) each$toTson())
         m$labels = lapply(self$labels, function(each) each$toTson())
         m$colors = lapply(self$colors, function(each) each$toTson())
+        m$preprocessors = lapply(self$preprocessors, function(each) each$toTson())
         return(m)
     }))

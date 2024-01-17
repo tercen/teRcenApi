@@ -1,10 +1,10 @@
 #' XYAxisList
 #'
 #' @export
-#' @format \code{\link{R6Class}} object.
+#' @format \code{\link{R6Class}} object, super class \code{\link{SciObject}}.
 #' @field rectangleSelections list of class \code{\link{Rectangle}}.
 #' @field xyAxis list of class \code{\link{XYAxis}}.
-XYAxisList <- R6::R6Class("XYAxisList", inherit = Base, public = list(rectangleSelections = NULL, 
+XYAxisList <- R6::R6Class("XYAxisList", inherit = SciObject, public = list(rectangleSelections = NULL,
     xyAxis = NULL, initialize = function(json = NULL) {
         super$initialize(json = json)
     }, init = function() {

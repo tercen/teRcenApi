@@ -1,9 +1,9 @@
 #' ColorList
 #'
 #' @export
-#' @format \code{\link{R6Class}} object.
+#' @format \code{\link{R6Class}} object, super class \code{\link{SciObject}}.
 #' @field name of type String.
-ColorList <- R6::R6Class("ColorList", inherit = Base, public = list(name = NULL, 
+ColorList <- R6::R6Class("ColorList", inherit = SciObject, public = list(name = NULL,
     initialize = function(json = NULL) {
         super$initialize(json = json)
     }, init = function() {

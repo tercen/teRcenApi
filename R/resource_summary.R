@@ -1,12 +1,12 @@
 #' ResourceSummary
 #'
 #' @export
-#' @format \code{\link{R6Class}} object.
+#' @format \code{\link{R6Class}} object, super class \code{\link{SciObject}}.
 #' @field storage of type double.
 #' @field usedStorage of type double.
 #' @field cpuTime of type double.
 #' @field usedCpuTime of type double.
-ResourceSummary <- R6::R6Class("ResourceSummary", inherit = Base, public = list(storage = NULL, 
+ResourceSummary <- R6::R6Class("ResourceSummary", inherit = SciObject, public = list(storage = NULL,
     usedStorage = NULL, cpuTime = NULL, usedCpuTime = NULL, initialize = function(json = NULL) {
         super$initialize(json = json)
     }, init = function() {

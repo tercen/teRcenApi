@@ -14,8 +14,8 @@
 #' @field isPublic of type bool.
 #' @field date object of class \code{\link{Date}}.
 #' @field properties list of class \code{\link{Pair}}.
-Activity <- R6::R6Class("Activity", inherit = PersistentObject, public = list(type = NULL, 
-    objectKind = NULL, date = NULL, teamId = NULL, projectId = NULL, userId = NULL, 
+Activity <- R6::R6Class("Activity", inherit = PersistentObject, public = list(type = NULL,
+    objectKind = NULL, date = NULL, teamId = NULL, projectId = NULL, userId = NULL,
     projectName = NULL, isPublic = NULL, properties = NULL, initialize = function(json = NULL) {
         super$initialize(json = json)
     }, init = function() {

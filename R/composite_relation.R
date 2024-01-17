@@ -5,7 +5,7 @@
 #' @field id of type String inherited from super class \code{\link{IdObject}}.
 #' @field joinOperators list of class \code{\link{JoinOperator}}.
 #' @field mainRelation object of class \code{\link{Relation}}.
-CompositeRelation <- R6::R6Class("CompositeRelation", inherit = Relation, public = list(joinOperators = NULL, 
+CompositeRelation <- R6::R6Class("CompositeRelation", inherit = Relation, public = list(joinOperators = NULL,
     mainRelation = NULL, initialize = function(json = NULL) {
         super$initialize(json = json)
     }, init = function() {

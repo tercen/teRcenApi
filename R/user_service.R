@@ -20,6 +20,7 @@
 #'    \item{\code{isTokenValid(token)}}{method}
 #'    \item{\code{setTeamPrivilege(username,principal,privilege)}}{method}
 #'    \item{\code{getServerVersion(module)}}{method}
+#'    \item{\code{getClientConfig(keys)}}{method}
 #'    \item{\code{getInvited(email)}}{method}
 #'    \item{\code{sendValidationMail(email)}}{method}
 #'    \item{\code{sendResetPasswordEmail(email)}}{method}
@@ -28,15 +29,15 @@
 #'    \item{\code{canCreatePrivateProject(teamOrUserId)}}{method}
 #' }
 #' 
-UserService <- R6::R6Class("UserService", inherit = HttpClientService, public = list(initialize = function(baseRestUri, 
+UserService <- R6::R6Class("UserService", inherit = HttpClientService, public = list(initialize = function(baseRestUri,
     client) {
     super$initialize(baseRestUri, client)
     self$uri = "api/v1/user"
 }, findTeamMembers = function(keys = NULL, useFactory = FALSE) {
     return(self$findKeys("teamMembers", keys = keys, useFactory = useFactory))
-}, findUserByCreatedDateAndName = function(startKey = NULL, endKey = NULL, limit = 20, 
+}, findUserByCreatedDateAndName = function(startKey = NULL, endKey = NULL, limit = 20,
     skip = 0, descending = TRUE, useFactory = FALSE) {
-    return(self$findStartKeys("findUserByCreatedDateAndName", startKey = startKey, 
+    return(self$findStartKeys("findUserByCreatedDateAndName", startKey = startKey,
         endKey = endKey, limit = limit, skip = skip, descending = descending, useFactory = useFactory))
 }, findUserByEmail = function(keys = NULL, useFactory = FALSE) {
     return(self$findKeys("userByEmail", keys = keys, useFactory = useFactory))
@@ -272,6 +273,20 @@ UserService <- R6::R6Class("UserService", inherit = HttpClientService, public = 
         self$onResponseError(response, "getServerVersion")
     } else {
         answer = createObjectFromJson(response$content)
+    }
+    return(answer)
+}, getClientConfig = function(keys) {
+    answer = NULL
+    response = NULL
+    uri = paste0("api/v1/user", "/", "getClientConfig")
+    params = list()
+    params[["keys"]] = lapply(keys, unbox)
+    url = self$getServiceUri(uri)
+    response = self$client$post(url, body = params)
+    if (response$status != 200) {
+        self$onResponseError(response, "getClientConfig")
+    } else {
+        answer = lapply(response$content, createObjectFromJson)
     }
     return(answer)
 }, getInvited = function(email) {

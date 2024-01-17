@@ -1,10 +1,10 @@
 #' SimpleRelation
 #'
 #' @export
-#' @format \code{\link{R6Class}} object, super class \code{\link{Relation}}, sub classes \code{\link{ReferenceRelation}}.
+#' @format \code{\link{R6Class}} object, super class \code{\link{Relation}}, sub classes \code{\link{TableRelation}}.
 #' @field id of type String inherited from super class \code{\link{IdObject}}.
 #' @field index of type int.
-SimpleRelation <- R6::R6Class("SimpleRelation", inherit = Relation, public = list(index = NULL, 
+SimpleRelation <- R6::R6Class("SimpleRelation", inherit = Relation, public = list(index = NULL,
     initialize = function(json = NULL) {
         super$initialize(json = json)
     }, init = function() {

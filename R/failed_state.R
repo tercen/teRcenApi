@@ -4,7 +4,7 @@
 #' @format \code{\link{R6Class}} object, super class \code{\link{State}}.
 #' @field error of type String.
 #' @field reason of type String.
-FailedState <- R6::R6Class("FailedState", inherit = State, public = list(error = NULL, 
+FailedState <- R6::R6Class("FailedState", inherit = State, public = list(error = NULL,
     reason = NULL, initialize = function(json = NULL) {
         super$initialize(json = json)
     }, init = function() {

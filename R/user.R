@@ -4,10 +4,8 @@
 #' @format \code{\link{R6Class}} object, super class \code{\link{Document}}, sub classes \code{\link{Team}}.
 #' @field description of type String inherited from super class \code{\link{Document}}.
 #' @field name of type String inherited from super class \code{\link{Document}}.
-#' @field createdBy of type String inherited from super class \code{\link{Document}}.
 #' @field tags list of type String inherited from super class \code{\link{Document}}.
 #' @field version of type String inherited from super class \code{\link{Document}}.
-#' @field authors list of type String inherited from super class \code{\link{Document}}.
 #' @field isPublic of type bool inherited from super class \code{\link{Document}}.
 #' @field isDeleted of type bool inherited from super class \code{\link{PersistentObject}}.
 #' @field rev of type String inherited from super class \code{\link{PersistentObject}}.
@@ -27,8 +25,8 @@
 #' @field url object of class \code{\link{Url}} inherited from super class \code{\link{Document}}.
 #' @field teamAcl object of class \code{\link{Acl}}.
 #' @field billingInfo object of class \code{\link{BillingInfo}}.
-User <- R6::R6Class("User", inherit = Document, public = list(email = NULL, isValidated = NULL, 
-    domain = NULL, roles = NULL, teamAcl = NULL, invitedByUsername = NULL, invitationCounts = NULL, 
+User <- R6::R6Class("User", inherit = Document, public = list(email = NULL, isValidated = NULL,
+    domain = NULL, roles = NULL, teamAcl = NULL, invitedByUsername = NULL, invitationCounts = NULL,
     maxInvitation = NULL, billingInfo = NULL, initialize = function(json = NULL) {
         super$initialize(json = json)
     }, init = function() {

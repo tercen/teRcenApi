@@ -1,14 +1,14 @@
 #' Profiles
 #'
 #' @export
-#' @format \code{\link{R6Class}} object.
+#' @format \code{\link{R6Class}} object, super class \code{\link{SciObject}}.
 #' @field apiProfile object of class \code{\link{ApiCallProfile}}.
 #' @field tableProfile object of class \code{\link{TableProfile}}.
 #' @field cpuTimeProfile object of class \code{\link{CpuTimeProfile}}.
 #' @field storageProfile object of class \code{\link{StorageProfile}}.
 #' @field runProfile object of class \code{\link{RunProfile}}.
-Profiles <- R6::R6Class("Profiles", inherit = Base, public = list(apiProfile = NULL, 
-    tableProfile = NULL, cpuTimeProfile = NULL, storageProfile = NULL, runProfile = NULL, 
+Profiles <- R6::R6Class("Profiles", inherit = SciObject, public = list(apiProfile = NULL,
+    tableProfile = NULL, cpuTimeProfile = NULL, storageProfile = NULL, runProfile = NULL,
     initialize = function(json = NULL) {
         super$initialize(json = json)
     }, init = function() {
