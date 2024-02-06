@@ -50,7 +50,9 @@ jobs:
         install.packages('dplyr')
         install.packages('uuid')
         install.packages('base64enc')
-        install.packages('tercen', repos = c(TERCEN='https://cran.tercen.com/api/v1/rlib/tercen', CRAN='https://cran.tercen.com/api/v1/rlib/CRAN'))
+        install.packages('remotes')
+        remotes::install_github('tercen/tercen', ref = '0.13.5')
+        #install.packages('tercen', repos = c(TERCEN='https://cran.tercen.com/api/v1/rlib/tercen', CRAN='https://cran.tercen.com/api/v1/rlib/CRAN'))
       shell: Rscript {0}
       
     - name: Build and upload package script
