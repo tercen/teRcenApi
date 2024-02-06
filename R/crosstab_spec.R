@@ -1,10 +1,10 @@
 #' CrosstabSpec
 #'
 #' @export
-#' @format \code{\link{R6Class}} object.
+#' @format \code{\link{R6Class}} object, super class \code{\link{OperatorInputSpec}}.
 #' @field metaFactors list of class \code{\link{MetaFactor}}.
 #' @field axis list of class \code{\link{AxisSpec}}.
-CrosstabSpec <- R6::R6Class("CrosstabSpec", inherit = Base, public = list(metaFactors = NULL,
+CrosstabSpec <- R6::R6Class("CrosstabSpec", inherit = OperatorInputSpec, public = list(metaFactors = NULL,
     axis = NULL, initialize = function(json = NULL) {
         super$initialize(json = json)
     }, init = function() {

@@ -1,7 +1,7 @@
 #' Factor
 #'
 #' @export
-#' @format \code{\link{R6Class}} object, super class \code{\link{SciObject}}, sub classes \code{\link{Attribute}}, \code{\link{MappingFactor}}.
+#' @format \code{\link{R6Class}} object, super class \code{\link{SciObject}}, sub classes \code{\link{MappingFactor}}, \code{\link{MetaFactor}}, \code{\link{Attribute}}.
 #' @field name of type String.
 #' @field type of type String.
 Factor <- R6::R6Class("Factor", inherit = SciObject, public = list(name = NULL, type = NULL,

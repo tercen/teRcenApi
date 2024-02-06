@@ -17,6 +17,7 @@
 #'    \item{\code{resourceSummary(userId)}}{method}
 #'    \item{\code{profiles(userId)}}{method}
 #'    \item{\code{createToken(userId,validityInSeconds)}}{method}
+#'    \item{\code{createTokenForTask(userId,validityInSeconds,taskId)}}{method}
 #'    \item{\code{isTokenValid(token)}}{method}
 #'    \item{\code{setTeamPrivilege(username,principal,privilege)}}{method}
 #'    \item{\code{getServerVersion(module)}}{method}
@@ -227,6 +228,22 @@ UserService <- R6::R6Class("UserService", inherit = HttpClientService, public = 
     response = self$client$post(url, body = params)
     if (response$status != 200) {
         self$onResponseError(response, "createToken")
+    } else {
+        answer = response$content[[1]]
+    }
+    return(answer)
+}, createTokenForTask = function(userId, validityInSeconds, taskId) {
+    answer = NULL
+    response = NULL
+    uri = paste0("api/v1/user", "/", "createTokenForTask")
+    params = list()
+    params[["userId"]] = unbox(userId)
+    params[["validityInSeconds"]] = unbox(as.integer(validityInSeconds))
+    params[["taskId"]] = unbox(taskId)
+    url = self$getServiceUri(uri)
+    response = self$client$post(url, body = params)
+    if (response$status != 200) {
+        self$onResponseError(response, "createTokenForTask")
     } else {
         answer = response$content[[1]]
     }

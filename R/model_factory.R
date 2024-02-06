@@ -22,6 +22,9 @@ createObjectFromJson = function(json) {
     if (kind == "StorageProfile") {
         return(StorageProfile$new(json = json))
     }
+    if (kind == "OperatorOutputSpec") {
+        return(OperatorOutputSpec$new(json = json))
+    }
     if (kind == "ResourceSummary") {
         return(ResourceSummary$new(json = json))
     }
@@ -387,6 +390,9 @@ createObjectFromJson = function(json) {
     }
     if (kind == "RenameRelation") {
         return(RenameRelation$new(json = json))
+    }
+    if (kind == "OperatorInputSpec") {
+        return(OperatorInputSpec$new(json = json))
     }
     if (kind == "ChartLine") {
         return(ChartLine$new(json = json))

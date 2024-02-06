@@ -1,38 +1,35 @@
 #' MappingFactor
 #'
 #' @export
-#' @format \code{\link{R6Class}} object, super class \code{\link{Factor}}.
+#' @format \code{\link{R6Class}} object, super class \code{\link{MetaFactor}}.
+#' @field description of type String inherited from super class \code{\link{MetaFactor}}.
+#' @field ontologyMapping of type String inherited from super class \code{\link{MetaFactor}}.
+#' @field crosstabMapping of type String inherited from super class \code{\link{MetaFactor}}.
+#' @field cardinality of type String inherited from super class \code{\link{MetaFactor}}.
 #' @field name of type String inherited from super class \code{\link{Factor}}.
 #' @field type of type String inherited from super class \code{\link{Factor}}.
-#' @field isSingle of type bool.
-#' @field description of type String.
 #' @field factorName of type String.
+#' @field isSingle of type bool.
 #' @field isRequired of type bool.
-#' @field factors list of class \code{\link{Factor}}.
-MappingFactor <- R6::R6Class("MappingFactor", inherit = Factor, public = list(isSingle = NULL,
-    description = NULL, factorName = NULL, factors = NULL, isRequired = NULL, initialize = function(json = NULL) {
+#' @field factors list of class \code{\link{Factor}} inherited from super class \code{\link{MetaFactor}}.
+MappingFactor <- R6::R6Class("MappingFactor", inherit = MetaFactor, public = list(factorName = NULL,
+    isSingle = NULL, isRequired = NULL, initialize = function(json = NULL) {
         super$initialize(json = json)
     }, init = function() {
         super$init()
-        self$isSingle = TRUE
-        self$description = ""
         self$factorName = ""
+        self$isSingle = TRUE
         self$isRequired = TRUE
-        self$factors = list()
     }, initJson = function(json) {
         super$initJson(json)
-        self$isSingle = json$isSingle
-        self$description = json$description
         self$factorName = json$factorName
+        self$isSingle = json$isSingle
         self$isRequired = json$isRequired
-        self$factors = lapply(json$factors, createObjectFromJson)
     }, toTson = function() {
         m = super$toTson()
         m$kind = tson.scalar("MappingFactor")
-        m$isSingle = tson.scalar(self$isSingle)
-        m$description = tson.scalar(self$description)
         m$factorName = tson.scalar(self$factorName)
-        m$factors = lapply(self$factors, function(each) each$toTson())
+        m$isSingle = tson.scalar(self$isSingle)
         m$isRequired = tson.scalar(self$isRequired)
         return(m)
     }))
