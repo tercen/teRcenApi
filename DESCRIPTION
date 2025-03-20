@@ -1,7 +1,7 @@
 Package: tercenApi
 Type: Package
 Title: Tercen R api
-Version: 0.13.2
+Version: 0.13.3
 Date: 2025-03-20
 Author: Alexandre Maurel
 Maintainer: Alexandre Maurel <alexandre.maurel@tercen.com>
